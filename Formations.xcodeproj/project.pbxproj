@@ -17,6 +17,8 @@
 		DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
 		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
+		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
+		DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF7588B1F7EC7C700065475 /* TestViewController.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		DB16273A1F7EAF6300A3D709 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Storyboard.swift"; sourceTree = "<group>"; };
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
+		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
+		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				DB1627271F7EA02800A3D709 /* Extensions */,
 				DB1627281F7EA02800A3D709 /* Models */,
 				DB1627321F7EA02800A3D709 /* Widgets */,
+				DBF758891F7EC7C700065475 /* Tests */,
 				DB1627351F7EA08400A3D709 /* AppDelegate.swift */,
 				DB1627341F7EA08400A3D709 /* LandingViewController.swift */,
 				DB1627331F7EA08300A3D709 /* Bridging-Header.h */,
@@ -194,6 +199,15 @@
 			path = Widgets;
 			sourceTree = "<group>";
 		};
+		DBF758891F7EC7C700065475 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DBF7588B1F7EC7C700065475 /* TestViewController.swift */,
+				DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
 				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
 				DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */,
 				DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */,
@@ -338,6 +353,7 @@
 				DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */,
 				DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */,
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
+				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
