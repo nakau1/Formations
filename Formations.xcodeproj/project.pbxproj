@@ -11,12 +11,12 @@
 		DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */; };
 		DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16271D1F7E9BFF00A3D709 /* LaunchScreen.storyboard */; };
 		DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627351F7EA08400A3D709 /* AppDelegate.swift */; };
-		DB1627371F7EA4DD00A3D709 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16272F1F7EA02800A3D709 /* TeamEditViewController.swift */; };
 		DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16273A1F7EAF6300A3D709 /* R.generated.swift */; };
 		DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16272E1F7EA02800A3D709 /* TeamEditViewController.storyboard */; };
 		DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
+		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
 /* End PBXBuildFile section */
 
@@ -336,9 +336,8 @@
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
 				DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */,
-				DB1627371F7EA4DD00A3D709 /* LandingViewController.swift in Sources */,
 				DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */,
-				DB1627371F7EA4DD00A3D709 /* ViewController.swift in Sources */,
+				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
