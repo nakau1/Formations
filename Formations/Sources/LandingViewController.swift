@@ -14,6 +14,12 @@ class LandingViewController: UITableViewController {
                 }),
                 ]
             ),
+            Section("テスト", [
+                Row("テスト画面", handler: { vc in
+                    vc.push(TestViewController.create())
+                }),
+                ]
+            ),
         ]
     }
     
