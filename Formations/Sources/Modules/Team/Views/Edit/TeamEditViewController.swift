@@ -28,6 +28,6 @@ private extension TeamEditViewController {
     
     /// ビューの初期処理
     func prepare() {
-        
+        prepareNavigationBar()
     }
 }
