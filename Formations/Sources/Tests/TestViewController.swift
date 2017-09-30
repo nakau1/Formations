@@ -10,9 +10,7 @@ class TestViewController: UIViewController {
     
     // MARK: ファクトリメソッド
     class func create() -> UIViewController {
-        return R.storyboard.testViewController.instantiate(self) { vc in
-            
-        }
+        return R.storyboard.testViewController.instantiate(self)
     }
     
     override func viewDidLoad() {
@@ -20,6 +18,6 @@ class TestViewController: UIViewController {
     }
     
     @IBAction private func didTapTest() {
-        print(1)
+        
     }
 }

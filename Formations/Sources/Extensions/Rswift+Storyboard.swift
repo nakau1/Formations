@@ -24,10 +24,11 @@ extension StoryboardResourceWithInitialControllerType {
 
 extension UIStoryboard {
     
-    func instatiate<T: UIViewController>(_ type: T.Type, _ storyboardIdentifier: String) -> T {
+    func instatiate<T: UIViewController>(_ type: T.Type, id storyboardIdentifier: String, setup: ((T)->Void)? = nil) -> T {
         guard let vc = self.instantiateViewController(withIdentifier: storyboardIdentifier) as? T else {
             fatalError("faild create view-controller from storyboard.")
         }
+        setup?(vc)
         return vc
     }
 }

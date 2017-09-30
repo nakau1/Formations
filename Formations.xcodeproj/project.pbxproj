@@ -15,6 +15,14 @@
 		DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16273A1F7EAF6300A3D709 /* R.generated.swift */; };
 		DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16272E1F7EA02800A3D709 /* TeamEditViewController.storyboard */; };
 		DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */; };
+		DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AB0E1F7FDD3E00EEADD5 /* Popup.swift */; };
+		DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AB121F7FDDA200EEADD5 /* PopupZoomAnimation.swift */; };
+		DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC99A1F7FFF660000B8E0 /* PopupFadeAnimation.swift */; };
+		DB5EC99D1F8089540000B8E0 /* PopupNoneAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC99C1F8089540000B8E0 /* PopupNoneAnimation.swift */; };
+		DB5EC99F1F8089630000B8E0 /* PopupRiseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC99E1F8089630000B8E0 /* PopupRiseAnimation.swift */; };
+		DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A01F80A3160000B8E0 /* PopupLeftDrawAnimation.swift */; };
+		DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A21F80A6D40000B8E0 /* PopupRightDrawAnimation.swift */; };
+		DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A41F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
 		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
@@ -38,6 +46,14 @@
 		DB1627351F7EA08400A3D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB16273A1F7EAF6300A3D709 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Storyboard.swift"; sourceTree = "<group>"; };
+		DB36AB0E1F7FDD3E00EEADD5 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		DB36AB121F7FDDA200EEADD5 /* PopupZoomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupZoomAnimation.swift; sourceTree = "<group>"; };
+		DB5EC99A1F7FFF660000B8E0 /* PopupFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupFadeAnimation.swift; sourceTree = "<group>"; };
+		DB5EC99C1F8089540000B8E0 /* PopupNoneAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupNoneAnimation.swift; sourceTree = "<group>"; };
+		DB5EC99E1F8089630000B8E0 /* PopupRiseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupRiseAnimation.swift; sourceTree = "<group>"; };
+		DB5EC9A01F80A3160000B8E0 /* PopupLeftDrawAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLeftDrawAnimation.swift; sourceTree = "<group>"; };
+		DB5EC9A21F80A6D40000B8E0 /* PopupRightDrawAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupRightDrawAnimation.swift; sourceTree = "<group>"; };
+		DB5EC9A41F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBottomDrawAnimation.swift; sourceTree = "<group>"; };
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
 		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -108,8 +124,7 @@
 			children = (
 				DB1627291F7EA02800A3D709 /* Modules */,
 				DB1627271F7EA02800A3D709 /* Extensions */,
-				DB1627281F7EA02800A3D709 /* Models */,
-				DB1627321F7EA02800A3D709 /* Widgets */,
+				DB36AAD41F7ECC6600EEADD5 /* Widgets */,
 				DBF758891F7EC7C700065475 /* Tests */,
 				DB1627351F7EA08400A3D709 /* AppDelegate.swift */,
 				DB1627341F7EA08400A3D709 /* LandingViewController.swift */,
@@ -126,13 +141,6 @@
 				DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		DB1627281F7EA02800A3D709 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		DB1627291F7EA02800A3D709 /* Modules */ = {
@@ -192,11 +200,27 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
-		DB1627321F7EA02800A3D709 /* Widgets */ = {
+		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				DB36AAD51F7ECC6600EEADD5 /* Popup */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		DB36AAD51F7ECC6600EEADD5 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				DB36AB0E1F7FDD3E00EEADD5 /* Popup.swift */,
+				DB5EC99C1F8089540000B8E0 /* PopupNoneAnimation.swift */,
+				DB5EC99A1F7FFF660000B8E0 /* PopupFadeAnimation.swift */,
+				DB36AB121F7FDDA200EEADD5 /* PopupZoomAnimation.swift */,
+				DB5EC99E1F8089630000B8E0 /* PopupRiseAnimation.swift */,
+				DB5EC9A01F80A3160000B8E0 /* PopupLeftDrawAnimation.swift */,
+				DB5EC9A21F80A6D40000B8E0 /* PopupRightDrawAnimation.swift */,
+				DB5EC9A41F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		DBF758891F7EC7C700065475 /* Tests */ = {
@@ -348,13 +372,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
+				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
+				DB5EC99F1F8089630000B8E0 /* PopupRiseAnimation.swift in Sources */,
 				DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */,
 				DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */,
+				DB5EC99D1F8089540000B8E0 /* PopupNoneAnimation.swift in Sources */,
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
+				DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */,
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
+				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
+				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
+				DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
