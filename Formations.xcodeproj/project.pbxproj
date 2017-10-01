@@ -10,6 +10,12 @@
 		CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */; };
 		CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B271F80F2890079CDC9 /* TextPicker.swift */; };
 		CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */; };
+		CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B2D1F8102140079CDC9 /* Team.swift */; };
+		CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B2F1F8102220079CDC9 /* TeamModel.swift */; };
+		CEF99B371F8102C10079CDC9 /* TeamMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B361F8102970079CDC9 /* TeamMenuViewController.storyboard */; };
+		CEF99B381F8102C40079CDC9 /* TeamListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B341F81028D0079CDC9 /* TeamListViewController.storyboard */; };
+		CEF99B391F8102D70079CDC9 /* TeamMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B351F8102970079CDC9 /* TeamMenuViewController.swift */; };
+		CEF99B3A1F8102DA0079CDC9 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B331F81028D0079CDC9 /* TeamListViewController.swift */; };
 		DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1627181F7E9BFF00A3D709 /* Main.storyboard */; };
 		DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */; };
 		DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16271D1F7E9BFF00A3D709 /* LaunchScreen.storyboard */; };
@@ -40,6 +46,12 @@
 		CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEF99B271F80F2890079CDC9 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
 		CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
+		CEF99B2D1F8102140079CDC9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		CEF99B2F1F8102220079CDC9 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		CEF99B331F81028D0079CDC9 /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		CEF99B341F81028D0079CDC9 /* TeamListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamListViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B351F8102970079CDC9 /* TeamMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMenuViewController.swift; sourceTree = "<group>"; };
+		CEF99B361F8102970079CDC9 /* TeamMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamMenuViewController.storyboard; sourceTree = "<group>"; };
 		DB1627111F7E9BFF00A3D709 /* Formations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1627191F7E9BFF00A3D709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +112,33 @@
 				CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		CEF99B2C1F8102000079CDC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B2D1F8102140079CDC9 /* Team.swift */,
+				CEF99B2F1F8102220079CDC9 /* TeamModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF99B311F8102310079CDC9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B331F81028D0079CDC9 /* TeamListViewController.swift */,
+				CEF99B341F81028D0079CDC9 /* TeamListViewController.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		CEF99B321F8102380079CDC9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B351F8102970079CDC9 /* TeamMenuViewController.swift */,
+				CEF99B361F8102970079CDC9 /* TeamMenuViewController.storyboard */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		D277411A4BF813A66739E474 /* Pods */ = {
@@ -178,24 +217,17 @@
 			isa = PBXGroup;
 			children = (
 				DB16272C1F7EA02800A3D709 /* Views */,
-				DB16272B1F7EA02800A3D709 /* Models */,
+				CEF99B2C1F8102000079CDC9 /* Models */,
 			);
 			path = Team;
-			sourceTree = "<group>";
-		};
-		DB16272B1F7EA02800A3D709 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		DB16272C1F7EA02800A3D709 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEF99B321F8102380079CDC9 /* Menu */,
+				CEF99B311F8102310079CDC9 /* List */,
 				DB16272D1F7EA02800A3D709 /* Edit */,
-				DB1627301F7EA02800A3D709 /* List */,
-				DB1627311F7EA02800A3D709 /* Menu */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,20 +239,6 @@
 				DB16272E1F7EA02800A3D709 /* TeamEditViewController.storyboard */,
 			);
 			path = Edit;
-			sourceTree = "<group>";
-		};
-		DB1627301F7EA02800A3D709 /* List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		DB1627311F7EA02800A3D709 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
@@ -321,11 +339,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
-				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
 				DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */,
-				CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */,
 				DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */,
+				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
+				CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */,
+				CEF99B371F8102C10079CDC9 /* TeamMenuViewController.storyboard in Resources */,
+				CEF99B381F8102C40079CDC9 /* TeamListViewController.storyboard in Resources */,
+				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
 				DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
@@ -409,12 +430,15 @@
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
 				DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */,
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
-				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
+				CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */,
 				CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */,
 				DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */,
 				CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */,
+				CEF99B391F8102D70079CDC9 /* TeamMenuViewController.swift in Sources */,
+				CEF99B3A1F8102DA0079CDC9 /* TeamListViewController.swift in Sources */,
+				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

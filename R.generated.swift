@@ -54,7 +54,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
@@ -62,6 +62,10 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `TeamEditViewController`.
     static let teamEditViewController = _R.storyboard.teamEditViewController()
+    /// Storyboard `TeamListViewController`.
+    static let teamListViewController = _R.storyboard.teamListViewController()
+    /// Storyboard `TeamMenuViewController`.
+    static let teamMenuViewController = _R.storyboard.teamMenuViewController()
     /// Storyboard `TestViewController`.
     static let testViewController = _R.storyboard.testViewController()
     /// Storyboard `TextPicker`.
@@ -80,6 +84,16 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "TeamEditViewController", bundle: ...)`
     static func teamEditViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.teamEditViewController)
+    }
+    
+    /// `UIStoryboard(name: "TeamListViewController", bundle: ...)`
+    static func teamListViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.teamListViewController)
+    }
+    
+    /// `UIStoryboard(name: "TeamMenuViewController", bundle: ...)`
+    static func teamMenuViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.teamMenuViewController)
     }
     
     /// `UIStoryboard(name: "TestViewController", bundle: ...)`
@@ -142,6 +156,24 @@ struct _R {
       
       let bundle = R.hostingBundle
       let name = "TeamEditViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct teamListViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = TeamListViewController
+      
+      let bundle = R.hostingBundle
+      let name = "TeamListViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct teamMenuViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = TeamMenuViewController
+      
+      let bundle = R.hostingBundle
+      let name = "TeamMenuViewController"
       
       fileprivate init() {}
     }
