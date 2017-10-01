@@ -49,6 +49,8 @@
 		DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A01F80A3160000B8E0 /* PopupLeftDrawAnimation.swift */; };
 		DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A21F80A6D40000B8E0 /* PopupRightDrawAnimation.swift */; };
 		DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A41F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift */; };
+		DB5EC9A81F8126860000B8E0 /* CircleColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */; };
+		DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
 		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
@@ -106,6 +108,8 @@
 		DB5EC9A01F80A3160000B8E0 /* PopupLeftDrawAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLeftDrawAnimation.swift; sourceTree = "<group>"; };
 		DB5EC9A21F80A6D40000B8E0 /* PopupRightDrawAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupRightDrawAnimation.swift; sourceTree = "<group>"; };
 		DB5EC9A41F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBottomDrawAnimation.swift; sourceTree = "<group>"; };
+		DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleColorButton.swift; sourceTree = "<group>"; };
+		DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageButton.swift; sourceTree = "<group>"; };
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
 		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -129,13 +133,6 @@
 				BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CEF99B211F80E3F80079CDC9 /* ImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		CEF99B241F80F1E20079CDC9 /* Picker */ = {
@@ -407,8 +404,8 @@
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				DB5EC9A61F8125C80000B8E0 /* CircleButton */,
 				CEF99B241F80F1E20079CDC9 /* Picker */,
-				CEF99B211F80E3F80079CDC9 /* ImagePicker */,
 				DB36AAD51F7ECC6600EEADD5 /* Popup */,
 			);
 			path = Widgets;
@@ -427,6 +424,15 @@
 				DB5EC9A41F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift */,
 			);
 			path = Popup;
+			sourceTree = "<group>";
+		};
+		DB5EC9A61F8125C80000B8E0 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */,
+				DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 		DBF758891F7EC7C700065475 /* Tests */ = {
@@ -588,6 +594,7 @@
 			files = (
 				CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
+				DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */,
 				CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */,
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
@@ -597,6 +604,7 @@
 				DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */,
 				DB5EC99D1F8089540000B8E0 /* PopupNoneAnimation.swift in Sources */,
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
+				DB5EC9A81F8126860000B8E0 /* CircleColorButton.swift in Sources */,
 				DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */,
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
