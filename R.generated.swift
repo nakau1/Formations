@@ -169,7 +169,7 @@ struct _R {
   
   struct storyboard {
     struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = TeamListViewController
+      typealias InitialController = FormationListViewController
       
       let bundle = R.hostingBundle
       let name = "FormationListViewController"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */; };
 		CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */; };
 		CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B271F80F2890079CDC9 /* TextPicker.swift */; };
 		CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */; };
@@ -59,6 +60,7 @@
 		4AC58933A3C5D0C5D98E5F7D /* Pods-Formations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Formations/Pods-Formations.debug.xcconfig"; sourceTree = "<group>"; };
 		787E086D03DDD25B0F2C562C /* Pods-Formations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Formations/Pods-Formations.release.xcconfig"; sourceTree = "<group>"; };
 		BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Common.swift"; sourceTree = "<group>"; };
 		CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEF99B271F80F2890079CDC9 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
 		CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */,
 				DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */,
+				CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			files = (
 				CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
+				CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */,
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
 				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
