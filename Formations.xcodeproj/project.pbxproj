@@ -10,6 +10,28 @@
 		CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */; };
 		CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B271F80F2890079CDC9 /* TextPicker.swift */; };
 		CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */; };
+		CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B2D1F8102140079CDC9 /* Team.swift */; };
+		CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B2F1F8102220079CDC9 /* TeamModel.swift */; };
+		CEF99B371F8102C10079CDC9 /* TeamMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B361F8102970079CDC9 /* TeamMenuViewController.storyboard */; };
+		CEF99B381F8102C40079CDC9 /* TeamListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B341F81028D0079CDC9 /* TeamListViewController.storyboard */; };
+		CEF99B391F8102D70079CDC9 /* TeamMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B351F8102970079CDC9 /* TeamMenuViewController.swift */; };
+		CEF99B3A1F8102DA0079CDC9 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B331F81028D0079CDC9 /* TeamListViewController.swift */; };
+		CEF99B591F8105E30079CDC9 /* PlayerEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B4C1F8105730079CDC9 /* PlayerEditViewController.storyboard */; };
+		CEF99B5A1F8105E30079CDC9 /* PlayerListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B4F1F8105730079CDC9 /* PlayerListViewController.storyboard */; };
+		CEF99B5B1F8105E30079CDC9 /* FormationTemplateEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B411F8105730079CDC9 /* FormationTemplateEditViewController.storyboard */; };
+		CEF99B5C1F8105E30079CDC9 /* FormationTemplateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B441F8105730079CDC9 /* FormationTemplateListViewController.storyboard */; };
+		CEF99B5D1F8105E30079CDC9 /* FormationListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B571F8105730079CDC9 /* FormationListViewController.storyboard */; };
+		CEF99B5E1F8106020079CDC9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B481F8105730079CDC9 /* Player.swift */; };
+		CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B491F8105730079CDC9 /* PlayerModel.swift */; };
+		CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B4D1F8105730079CDC9 /* PlayerEditViewController.swift */; };
+		CEF99B611F8106020079CDC9 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B501F8105730079CDC9 /* PlayerListViewController.swift */; };
+		CEF99B621F8106020079CDC9 /* FormationTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B3D1F8105730079CDC9 /* FormationTemplate.swift */; };
+		CEF99B631F8106020079CDC9 /* FormationTemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B3E1F8105730079CDC9 /* FormationTemplateModel.swift */; };
+		CEF99B641F8106020079CDC9 /* FormationTemplateEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B421F8105730079CDC9 /* FormationTemplateEditViewController.swift */; };
+		CEF99B651F8106020079CDC9 /* FormationTemplateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B451F8105730079CDC9 /* FormationTemplateListViewController.swift */; };
+		CEF99B661F8106020079CDC9 /* Formation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B531F8105730079CDC9 /* Formation.swift */; };
+		CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B541F8105730079CDC9 /* FormationModel.swift */; };
+		CEF99B681F8106020079CDC9 /* FormationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B581F8105730079CDC9 /* FormationListViewController.swift */; };
 		DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1627181F7E9BFF00A3D709 /* Main.storyboard */; };
 		DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */; };
 		DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16271D1F7E9BFF00A3D709 /* LaunchScreen.storyboard */; };
@@ -40,6 +62,28 @@
 		CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEF99B271F80F2890079CDC9 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
 		CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
+		CEF99B2D1F8102140079CDC9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		CEF99B2F1F8102220079CDC9 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		CEF99B331F81028D0079CDC9 /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		CEF99B341F81028D0079CDC9 /* TeamListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamListViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B351F8102970079CDC9 /* TeamMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMenuViewController.swift; sourceTree = "<group>"; };
+		CEF99B361F8102970079CDC9 /* TeamMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamMenuViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B3D1F8105730079CDC9 /* FormationTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplate.swift; sourceTree = "<group>"; };
+		CEF99B3E1F8105730079CDC9 /* FormationTemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateModel.swift; sourceTree = "<group>"; };
+		CEF99B411F8105730079CDC9 /* FormationTemplateEditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationTemplateEditViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B421F8105730079CDC9 /* FormationTemplateEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateEditViewController.swift; sourceTree = "<group>"; };
+		CEF99B441F8105730079CDC9 /* FormationTemplateListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationTemplateListViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B451F8105730079CDC9 /* FormationTemplateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateListViewController.swift; sourceTree = "<group>"; };
+		CEF99B481F8105730079CDC9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CEF99B491F8105730079CDC9 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		CEF99B4C1F8105730079CDC9 /* PlayerEditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerEditViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B4D1F8105730079CDC9 /* PlayerEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEditViewController.swift; sourceTree = "<group>"; };
+		CEF99B4F1F8105730079CDC9 /* PlayerListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerListViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B501F8105730079CDC9 /* PlayerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
+		CEF99B531F8105730079CDC9 /* Formation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formation.swift; sourceTree = "<group>"; };
+		CEF99B541F8105730079CDC9 /* FormationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationModel.swift; sourceTree = "<group>"; };
+		CEF99B571F8105730079CDC9 /* FormationListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationListViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B581F8105730079CDC9 /* FormationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationListViewController.swift; sourceTree = "<group>"; };
 		DB1627111F7E9BFF00A3D709 /* Formations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1627191F7E9BFF00A3D709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +144,158 @@
 				CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		CEF99B2C1F8102000079CDC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B2D1F8102140079CDC9 /* Team.swift */,
+				CEF99B2F1F8102220079CDC9 /* TeamModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF99B311F8102310079CDC9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B331F81028D0079CDC9 /* TeamListViewController.swift */,
+				CEF99B341F81028D0079CDC9 /* TeamListViewController.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		CEF99B321F8102380079CDC9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B351F8102970079CDC9 /* TeamMenuViewController.swift */,
+				CEF99B361F8102970079CDC9 /* TeamMenuViewController.storyboard */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CEF99B3B1F8105730079CDC9 /* FormationTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B3F1F8105730079CDC9 /* Views */,
+				CEF99B3C1F8105730079CDC9 /* Models */,
+			);
+			path = FormationTemplate;
+			sourceTree = "<group>";
+		};
+		CEF99B3C1F8105730079CDC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B3D1F8105730079CDC9 /* FormationTemplate.swift */,
+				CEF99B3E1F8105730079CDC9 /* FormationTemplateModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF99B3F1F8105730079CDC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B431F8105730079CDC9 /* List */,
+				CEF99B401F8105730079CDC9 /* Edit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF99B401F8105730079CDC9 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B421F8105730079CDC9 /* FormationTemplateEditViewController.swift */,
+				CEF99B411F8105730079CDC9 /* FormationTemplateEditViewController.storyboard */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		CEF99B431F8105730079CDC9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B451F8105730079CDC9 /* FormationTemplateListViewController.swift */,
+				CEF99B441F8105730079CDC9 /* FormationTemplateListViewController.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		CEF99B461F8105730079CDC9 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B4A1F8105730079CDC9 /* Views */,
+				CEF99B471F8105730079CDC9 /* Models */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CEF99B471F8105730079CDC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B481F8105730079CDC9 /* Player.swift */,
+				CEF99B491F8105730079CDC9 /* PlayerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF99B4A1F8105730079CDC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B4E1F8105730079CDC9 /* List */,
+				CEF99B4B1F8105730079CDC9 /* Edit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF99B4B1F8105730079CDC9 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B4D1F8105730079CDC9 /* PlayerEditViewController.swift */,
+				CEF99B4C1F8105730079CDC9 /* PlayerEditViewController.storyboard */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		CEF99B4E1F8105730079CDC9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B501F8105730079CDC9 /* PlayerListViewController.swift */,
+				CEF99B4F1F8105730079CDC9 /* PlayerListViewController.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		CEF99B511F8105730079CDC9 /* Formation */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B551F8105730079CDC9 /* Views */,
+				CEF99B521F8105730079CDC9 /* Models */,
+			);
+			path = Formation;
+			sourceTree = "<group>";
+		};
+		CEF99B521F8105730079CDC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B531F8105730079CDC9 /* Formation.swift */,
+				CEF99B541F8105730079CDC9 /* FormationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF99B551F8105730079CDC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B561F8105730079CDC9 /* List */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF99B561F8105730079CDC9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B581F8105730079CDC9 /* FormationListViewController.swift */,
+				CEF99B571F8105730079CDC9 /* FormationListViewController.storyboard */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		D277411A4BF813A66739E474 /* Pods */ = {
@@ -170,6 +366,9 @@
 			isa = PBXGroup;
 			children = (
 				DB16272A1F7EA02800A3D709 /* Team */,
+				CEF99B461F8105730079CDC9 /* Player */,
+				CEF99B3B1F8105730079CDC9 /* FormationTemplate */,
+				CEF99B511F8105730079CDC9 /* Formation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -178,24 +377,17 @@
 			isa = PBXGroup;
 			children = (
 				DB16272C1F7EA02800A3D709 /* Views */,
-				DB16272B1F7EA02800A3D709 /* Models */,
+				CEF99B2C1F8102000079CDC9 /* Models */,
 			);
 			path = Team;
-			sourceTree = "<group>";
-		};
-		DB16272B1F7EA02800A3D709 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		DB16272C1F7EA02800A3D709 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEF99B321F8102380079CDC9 /* Menu */,
+				CEF99B311F8102310079CDC9 /* List */,
 				DB16272D1F7EA02800A3D709 /* Edit */,
-				DB1627301F7EA02800A3D709 /* List */,
-				DB1627311F7EA02800A3D709 /* Menu */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,20 +399,6 @@
 				DB16272E1F7EA02800A3D709 /* TeamEditViewController.storyboard */,
 			);
 			path = Edit;
-			sourceTree = "<group>";
-		};
-		DB1627301F7EA02800A3D709 /* List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		DB1627311F7EA02800A3D709 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
@@ -321,11 +499,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
-				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
+				CEF99B591F8105E30079CDC9 /* PlayerEditViewController.storyboard in Resources */,
+				CEF99B5A1F8105E30079CDC9 /* PlayerListViewController.storyboard in Resources */,
+				CEF99B5B1F8105E30079CDC9 /* FormationTemplateEditViewController.storyboard in Resources */,
+				CEF99B5C1F8105E30079CDC9 /* FormationTemplateListViewController.storyboard in Resources */,
+				CEF99B5D1F8105E30079CDC9 /* FormationListViewController.storyboard in Resources */,
 				DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */,
-				CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */,
 				DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */,
+				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
+				CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */,
+				CEF99B371F8102C10079CDC9 /* TeamMenuViewController.storyboard in Resources */,
+				CEF99B381F8102C40079CDC9 /* TeamListViewController.storyboard in Resources */,
+				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
 				DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
@@ -409,12 +595,26 @@
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
 				DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */,
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
-				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
+				CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */,
 				CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */,
 				DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */,
 				CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */,
+				CEF99B391F8102D70079CDC9 /* TeamMenuViewController.swift in Sources */,
+				CEF99B3A1F8102DA0079CDC9 /* TeamListViewController.swift in Sources */,
+				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
+				CEF99B5E1F8106020079CDC9 /* Player.swift in Sources */,
+				CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */,
+				CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */,
+				CEF99B611F8106020079CDC9 /* PlayerListViewController.swift in Sources */,
+				CEF99B621F8106020079CDC9 /* FormationTemplate.swift in Sources */,
+				CEF99B631F8106020079CDC9 /* FormationTemplateModel.swift in Sources */,
+				CEF99B641F8106020079CDC9 /* FormationTemplateEditViewController.swift in Sources */,
+				CEF99B651F8106020079CDC9 /* FormationTemplateListViewController.swift in Sources */,
+				CEF99B661F8106020079CDC9 /* Formation.swift in Sources */,
+				CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */,
+				CEF99B681F8106020079CDC9 /* FormationListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

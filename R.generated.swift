@@ -54,18 +54,47 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 12 storyboards.
   struct storyboard {
+    /// Storyboard `FormationListViewController`.
+    static let formationListViewController = _R.storyboard.formationListViewController()
+    /// Storyboard `FormationTemplateEditViewController`.
+    static let formationTemplateEditViewController = _R.storyboard.formationTemplateEditViewController()
+    /// Storyboard `FormationTemplateListViewController`.
+    static let formationTemplateListViewController = _R.storyboard.formationTemplateListViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `PlayerEditViewController`.
+    static let playerEditViewController = _R.storyboard.playerEditViewController()
+    /// Storyboard `PlayerListViewController`.
+    static let playerListViewController = _R.storyboard.playerListViewController()
     /// Storyboard `TeamEditViewController`.
     static let teamEditViewController = _R.storyboard.teamEditViewController()
+    /// Storyboard `TeamListViewController`.
+    static let teamListViewController = _R.storyboard.teamListViewController()
+    /// Storyboard `TeamMenuViewController`.
+    static let teamMenuViewController = _R.storyboard.teamMenuViewController()
     /// Storyboard `TestViewController`.
     static let testViewController = _R.storyboard.testViewController()
     /// Storyboard `TextPicker`.
     static let textPicker = _R.storyboard.textPicker()
+    
+    /// `UIStoryboard(name: "FormationListViewController", bundle: ...)`
+    static func formationListViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.formationListViewController)
+    }
+    
+    /// `UIStoryboard(name: "FormationTemplateEditViewController", bundle: ...)`
+    static func formationTemplateEditViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.formationTemplateEditViewController)
+    }
+    
+    /// `UIStoryboard(name: "FormationTemplateListViewController", bundle: ...)`
+    static func formationTemplateListViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.formationTemplateListViewController)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -77,9 +106,29 @@ struct R: Rswift.Validatable {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     
+    /// `UIStoryboard(name: "PlayerEditViewController", bundle: ...)`
+    static func playerEditViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.playerEditViewController)
+    }
+    
+    /// `UIStoryboard(name: "PlayerListViewController", bundle: ...)`
+    static func playerListViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.playerListViewController)
+    }
+    
     /// `UIStoryboard(name: "TeamEditViewController", bundle: ...)`
     static func teamEditViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.teamEditViewController)
+    }
+    
+    /// `UIStoryboard(name: "TeamListViewController", bundle: ...)`
+    static func teamListViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.teamListViewController)
+    }
+    
+    /// `UIStoryboard(name: "TeamMenuViewController", bundle: ...)`
+    static func teamMenuViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.teamMenuViewController)
     }
     
     /// `UIStoryboard(name: "TestViewController", bundle: ...)`
@@ -119,6 +168,33 @@ struct _R {
   }
   
   struct storyboard {
+    struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = TeamListViewController
+      
+      let bundle = R.hostingBundle
+      let name = "FormationListViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct formationTemplateEditViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = FormationTemplateEditViewController
+      
+      let bundle = R.hostingBundle
+      let name = "FormationTemplateEditViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct formationTemplateListViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = FormationTemplateListViewController
+      
+      let bundle = R.hostingBundle
+      let name = "FormationTemplateListViewController"
+      
+      fileprivate init() {}
+    }
+    
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
@@ -137,11 +213,47 @@ struct _R {
       fileprivate init() {}
     }
     
+    struct playerEditViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = PlayerEditViewController
+      
+      let bundle = R.hostingBundle
+      let name = "PlayerEditViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct playerListViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = PlayerListViewController
+      
+      let bundle = R.hostingBundle
+      let name = "PlayerListViewController"
+      
+      fileprivate init() {}
+    }
+    
     struct teamEditViewController: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = TeamEditViewController
       
       let bundle = R.hostingBundle
       let name = "TeamEditViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct teamListViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = TeamListViewController
+      
+      let bundle = R.hostingBundle
+      let name = "TeamListViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct teamMenuViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = TeamMenuViewController
+      
+      let bundle = R.hostingBundle
+      let name = "TeamMenuViewController"
       
       fileprivate init() {}
     }
