@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,16 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-5w-7u3">
-                                <rect key="frame" x="137" y="311.5" width="100" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.7843137255" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-5w-7u3" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="15x-Gf-fBX"/>
-                                    <constraint firstAttribute="height" constant="44" id="fBN-5Z-xD0"/>
+                                    <constraint firstAttribute="width" constant="200" id="15x-Gf-fBX"/>
+                                    <constraint firstAttribute="width" secondItem="iuX-5w-7u3" secondAttribute="height" multiplier="1:1" id="psL-cv-Cna"/>
                                 </constraints>
-                                <state key="normal" title="テスト">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="sample-emblem2"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapTest" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwJ-Rl-ubg"/>
                                 </connections>
@@ -45,4 +48,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample-emblem2" width="166" height="166"/>
+    </resources>
 </document>

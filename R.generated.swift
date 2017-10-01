@@ -31,8 +31,30 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
+    /// Image `sample-emblem1`.
+    static let sampleEmblem1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "sample-emblem1")
+    /// Image `sample-emblem2`.
+    static let sampleEmblem2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "sample-emblem2")
+    /// Image `sample-emblem3`.
+    static let sampleEmblem3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "sample-emblem3")
+    
+    /// `UIImage(named: "sample-emblem1", bundle: ..., traitCollection: ...)`
+    static func sampleEmblem1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.sampleEmblem1, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "sample-emblem2", bundle: ..., traitCollection: ...)`
+    static func sampleEmblem2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.sampleEmblem2, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "sample-emblem3", bundle: ..., traitCollection: ...)`
+    static func sampleEmblem3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.sampleEmblem3, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -151,7 +173,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -162,12 +184,20 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try storyboard.validate()
+  }
+  
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try testViewController.validate()
+    }
+    
     struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = FormationListViewController
       
@@ -258,11 +288,15 @@ struct _R {
       fileprivate init() {}
     }
     
-    struct testViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct testViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = TestViewController
       
       let bundle = R.hostingBundle
       let name = "TestViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "sample-emblem2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'sample-emblem2' is used in storyboard 'TestViewController', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
