@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEF99B231F80E4320079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B221F80E4320079CDC9 /* ImagePicker.swift */; };
+		CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */; };
+		CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B271F80F2890079CDC9 /* TextPicker.swift */; };
+		CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */; };
 		DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1627181F7E9BFF00A3D709 /* Main.storyboard */; };
 		DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */; };
 		DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16271D1F7E9BFF00A3D709 /* LaunchScreen.storyboard */; };
@@ -35,7 +37,9 @@
 		4AC58933A3C5D0C5D98E5F7D /* Pods-Formations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Formations/Pods-Formations.debug.xcconfig"; sourceTree = "<group>"; };
 		787E086D03DDD25B0F2C562C /* Pods-Formations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Formations/Pods-Formations.release.xcconfig"; sourceTree = "<group>"; };
 		BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEF99B221F80E4320079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CEF99B271F80F2890079CDC9 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
+		CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
 		DB1627111F7E9BFF00A3D709 /* Formations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1627191F7E9BFF00A3D709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,9 +88,18 @@
 		CEF99B211F80E3F80079CDC9 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				CEF99B221F80E4320079CDC9 /* ImagePicker.swift */,
 			);
 			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		CEF99B241F80F1E20079CDC9 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */,
+				CEF99B271F80F2890079CDC9 /* TextPicker.swift */,
+				CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 		D277411A4BF813A66739E474 /* Pods */ = {
@@ -213,6 +226,7 @@
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				CEF99B241F80F1E20079CDC9 /* Picker */,
 				CEF99B211F80E3F80079CDC9 /* ImagePicker */,
 				DB36AAD51F7ECC6600EEADD5 /* Popup */,
 			);
@@ -310,6 +324,7 @@
 				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
 				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
 				DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */,
+				CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */,
 				DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */,
 				DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */,
 			);
@@ -396,9 +411,10 @@
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
-				CEF99B231F80E4320079CDC9 /* ImagePicker.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
+				CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */,
 				DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */,
+				CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

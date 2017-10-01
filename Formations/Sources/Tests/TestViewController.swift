@@ -18,8 +18,13 @@ class TestViewController: UIViewController {
     }
     
     @IBAction private func didTapTest() {
-		ImagePicker.show(from: self) { image in
-			print(image)
+		
+		let items = UIFont.familyNames.map {
+			TextPicker.item($0)
+		}
+		
+		TextPicker.show(from: self, items: items) { item in
+			print(item)
 		}
     }
 }
