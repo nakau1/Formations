@@ -54,7 +54,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
@@ -64,6 +64,8 @@ struct R: Rswift.Validatable {
     static let teamEditViewController = _R.storyboard.teamEditViewController()
     /// Storyboard `TestViewController`.
     static let testViewController = _R.storyboard.testViewController()
+    /// Storyboard `TextPicker`.
+    static let textPicker = _R.storyboard.textPicker()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -83,6 +85,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "TestViewController", bundle: ...)`
     static func testViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.testViewController)
+    }
+    
+    /// `UIStoryboard(name: "TextPicker", bundle: ...)`
+    static func textPicker(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.textPicker)
     }
     
     fileprivate init() {}
@@ -144,6 +151,15 @@ struct _R {
       
       let bundle = R.hostingBundle
       let name = "TestViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct textPicker: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = TextPicker
+      
+      let bundle = R.hostingBundle
+      let name = "TextPicker"
       
       fileprivate init() {}
     }
