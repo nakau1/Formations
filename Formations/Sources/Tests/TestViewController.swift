@@ -18,6 +18,8 @@ class TestViewController: UIViewController {
     }
     
     @IBAction private func didTapTest() {
-        
+		ImagePicker.show(from: self) { image in
+			print(image)
+		}
     }
 }
