@@ -56,7 +56,6 @@
 		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
 		DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF7588B1F7EC7C700065475 /* TestViewController.swift */; };
 		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
-		E411E4671F8320D1003B397D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4661F8320D1003B397D /* Model.swift */; };
 		E438491A1F836046004F9248 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43849191F836024004F9248 /* BackgroundView.swift */; };
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
@@ -118,7 +117,6 @@
 		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		E411E4661F8320D1003B397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E43849191F836024004F9248 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -458,7 +456,6 @@
 		E411E4631F832016003B397D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E411E4661F8320D1003B397D /* Model.swift */,
 				E411E4641F83203A003B397D /* Image.swift */,
 			);
 			path = Models;
@@ -621,7 +618,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
-				E411E4671F8320D1003B397D /* Model.swift in Sources */,
 				CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */,
 				E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
