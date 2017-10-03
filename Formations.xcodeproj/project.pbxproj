@@ -58,6 +58,9 @@
 		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
 		E438491A1F836046004F9248 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43849191F836024004F9248 /* BackgroundView.swift */; };
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
+		E4A8A1C81F838D5600A689E4 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C71F838D5600A689E4 /* RealmModel.swift */; };
+		E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */; };
+		E4EE6B451F83A26100472F12 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EE6B441F83A26100472F12 /* Fixture.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +122,9 @@
 		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E43849191F836024004F9248 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
+		E4A8A1C71F838D5600A689E4 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierGeneratable.swift; sourceTree = "<group>"; };
+		E4EE6B441F83A26100472F12 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +462,9 @@
 		E411E4631F832016003B397D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4A8A1C71F838D5600A689E4 /* RealmModel.swift */,
+				E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */,
+				E4EE6B441F83A26100472F12 /* Fixture.swift */,
 				E411E4641F83203A003B397D /* Image.swift */,
 			);
 			path = Models;
@@ -629,12 +638,14 @@
 				DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */,
 				DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */,
 				DB5EC99D1F8089540000B8E0 /* PopupNoneAnimation.swift in Sources */,
+				E4A8A1C81F838D5600A689E4 /* RealmModel.swift in Sources */,
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
 				DB5EC9A81F8126860000B8E0 /* CircleColorButton.swift in Sources */,
 				DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */,
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
+				E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */,
 				CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */,
 				CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */,
 				DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */,
@@ -646,6 +657,7 @@
 				CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */,
 				CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */,
 				CEF99B611F8106020079CDC9 /* PlayerListViewController.swift in Sources */,
+				E4EE6B451F83A26100472F12 /* Fixture.swift in Sources */,
 				CEF99B621F8106020079CDC9 /* FormationTemplate.swift in Sources */,
 				CEF99B631F8106020079CDC9 /* FormationTemplateModel.swift in Sources */,
 				CEF99B641F8106020079CDC9 /* FormationTemplateEditViewController.swift in Sources */,
