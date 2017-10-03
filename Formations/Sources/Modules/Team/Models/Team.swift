@@ -52,7 +52,17 @@ class Team: RealmSwift.Object {
     
     func loadSmallEmblemImage() -> Self {
         if smallEmblemImage == nil {
-            smallEmblemImage = Image.teamEmblemSmall(id: id).load()
+            smallEmblemImage = Image.teamSmallEmblem(id: id).load()
+        }
+        return self
+    }
+    
+    /// チーム画像(背景用)
+    var teamImage: UIImage?
+    
+    func loadTeamImage() -> Self {
+        if teamImage == nil {
+            teamImage = Image.teamImage(id: id).load()
         }
         return self
     }
@@ -84,7 +94,7 @@ class Team: RealmSwift.Object {
     override class func primaryKey() -> String? { return "id" }
     
     override class func ignoredProperties() -> [String] {
-        return ["emblemImage", "smallEmblemImage"]
+        return ["emblemImage", "smallEmblemImage", "teamImage"]
     }
     
     override var description: String {
