@@ -10,7 +10,8 @@ enum Image {
     case playerThumb(id: String)
     case playerFull(id: String)
     case teamEmblem(id: String)
-    case teamEmblemSmall(id: String)
+    case teamSmallEmblem(id: String)
+    case teamImage(id: String)
     case test(id: String)
     case testOrigin(id: String)
     
@@ -26,7 +27,7 @@ enum Image {
         switch self {
         case let .playerFace(id), let .playerThumb(id), let .playerFull(id):
             return "\(Category.players.rawValue)/\(id)"
-        case let .teamEmblem(id), let .teamEmblemSmall(id):
+        case let .teamEmblem(id), let .teamSmallEmblem(id), let .teamImage(id):
             return "\(Category.teams.rawValue)/\(id)"
         case .test, .testOrigin:
             return Category.test.rawValue
@@ -39,7 +40,8 @@ enum Image {
         case .playerThumb:        return "thumb"
         case .playerFull:         return "full"
         case .teamEmblem:         return "emblem"
-        case .teamEmblemSmall:    return "emblem_small"
+        case .teamSmallEmblem:    return "small_emblem"
+        case .teamImage:          return "image"
         case let .test(id):       return id
         case let .testOrigin(id): return id + "_org"
         }

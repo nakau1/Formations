@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>positionText</key>
+		<string>GK</string>
+		<key>uniformNumber</key>
+		<string>1</string>
+		<key>name</key>
+		<string>東口 順昭</string>
+		<key>familyName</key>
+		<string>東口</string>
+		<key>internationalName</key>
+		<string>Masaaki HIGASHIGUCHI</string>
+		<key>shortenedName</key>
+		<string>HIGASHIGUCHI</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>GK</string>
+		<key>uniformNumber</key>
+		<string>18</string>
+		<key>name</key>
+		<string>藤ヶ谷 陽介</string>
+		<key>familyName</key>
+		<string>藤ヶ谷</string>
+		<key>internationalName</key>
+		<string>Yosuke FUJIGAYA</string>
+		<key>shortenedName</key>
+		<string>FUJIGAYA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>3</string>
+		<key>name</key>
+		<string>西野 貴治</string>
+		<key>familyName</key>
+		<string>西野</string>
+		<key>internationalName</key>
+		<string>Takaharu NISHINO</string>
+		<key>shortenedName</key>
+		<string>NISHINO</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>4</string>
+		<key>name</key>
+		<string>藤春 廣輝</string>
+		<key>familyName</key>
+		<string>藤春</string>
+		<key>internationalName</key>
+		<string>Hiroki FUJIHARU</string>
+		<key>shortenedName</key>
+		<string>FUJIHARU</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>5</string>
+		<key>name</key>
+		<string>丹羽 大輝</string>
+		<key>familyName</key>
+		<string>丹羽</string>
+		<key>internationalName</key>
+		<string>Daiki NIWA</string>
+		<key>shortenedName</key>
+		<string>NIWA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>6</string>
+		<key>name</key>
+		<string>金 正也</string>
+		<key>familyName</key>
+		<string>金</string>
+		<key>internationalName</key>
+		<string>Jungya KIM</string>
+		<key>shortenedName</key>
+		<string>KIM</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>8</string>
+		<key>name</key>
+		<string>岩下 敬輔</string>
+		<key>familyName</key>
+		<string>岩下</string>
+		<key>internationalName</key>
+		<string>Keisuke IWASHITA</string>
+		<key>shortenedName</key>
+		<string>IWASHITA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>14</string>
+		<key>name</key>
+		<string>米倉 恒貴</string>
+		<key>familyName</key>
+		<string>米倉</string>
+		<key>internationalName</key>
+		<string>Koki YONEKURA</string>
+		<key>shortenedName</key>
+		<string>YONEKURA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>15</string>
+		<key>name</key>
+		<string>今野 泰幸</string>
+		<key>familyName</key>
+		<string>今野</string>
+		<key>internationalName</key>
+		<string>Yasuyuki KONNO</string>
+		<key>shortenedName</key>
+		<string>KONNO</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>22</string>
+		<key>name</key>
+		<string>オ・ジェソク</string>
+		<key>familyName</key>
+		<string>オ・ジェソク</string>
+		<key>internationalName</key>
+		<string>Oh JaeSuk</string>
+		<key>shortenedName</key>
+		<string>JaeSuk</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>DF</string>
+		<key>uniformNumber</key>
+		<string>35</string>
+		<key>name</key>
+		<string>初瀬 亮</string>
+		<key>familyName</key>
+		<string>初瀬</string>
+		<key>internationalName</key>
+		<string>Ryo HATSUSE</string>
+		<key>shortenedName</key>
+		<string>HATSUSE</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>MF</string>
+		<key>uniformNumber</key>
+		<string>7</string>
+		<key>name</key>
+		<string>遠藤 保仁</string>
+		<key>familyName</key>
+		<string>遠藤</string>
+		<key>internationalName</key>
+		<string>Yasuhito ENDO</string>
+		<key>shortenedName</key>
+		<string>ENDO</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>MF</string>
+		<key>uniformNumber</key>
+		<string>10</string>
+		<key>name</key>
+		<string>倉田 秋</string>
+		<key>familyName</key>
+		<string>倉田</string>
+		<key>internationalName</key>
+		<string>Shu KURATA</string>
+		<key>shortenedName</key>
+		<string>KURATA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>MF</string>
+		<key>uniformNumber</key>
+		<string>13</string>
+		<key>name</key>
+		<string>阿部 浩之</string>
+		<key>familyName</key>
+		<string>阿部</string>
+		<key>internationalName</key>
+		<string>Hiroyuki ABE</string>
+		<key>shortenedName</key>
+		<string>ABE</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>MF</string>
+		<key>uniformNumber</key>
+		<string>19</string>
+		<key>name</key>
+		<string>大森 晃太郎</string>
+		<key>familyName</key>
+		<string>大森</string>
+		<key>internationalName</key>
+		<string>Kotaro OMORI</string>
+		<key>shortenedName</key>
+		<string>OMORI</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>MF</string>
+		<key>uniformNumber</key>
+		<string>21</string>
+		<key>name</key>
+		<string>井手口 陽介</string>
+		<key>familyName</key>
+		<string>井手口</string>
+		<key>internationalName</key>
+		<string>Yosuke IDEGUCHI</string>
+		<key>shortenedName</key>
+		<string>IDEGUCHI</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>MF</string>
+		<key>uniformNumber</key>
+		<string>25</string>
+		<key>name</key>
+		<string>藤本 淳吾</string>
+		<key>familyName</key>
+		<string>藤本</string>
+		<key>internationalName</key>
+		<string>Jungo FUJIMOTO</string>
+		<key>shortenedName</key>
+		<string>FUJIMOTO</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>FW</string>
+		<key>uniformNumber</key>
+		<string>9</string>
+		<key>name</key>
+		<string>アデミウソン</string>
+		<key>familyName</key>
+		<string>アデミウソン</string>
+		<key>internationalName</key>
+		<string>ADEMILSON</string>
+		<key>shortenedName</key>
+		<string>ADEMILSON</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>FW</string>
+		<key>uniformNumber</key>
+		<string>20</string>
+		<key>name</key>
+		<string>長沢 駿</string>
+		<key>familyName</key>
+		<string>長沢</string>
+		<key>internationalName</key>
+		<string>Shun NAGASAWA</string>
+		<key>shortenedName</key>
+		<string>NAGASAWA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>FW</string>
+		<key>uniformNumber</key>
+		<string>23</string>
+		<key>name</key>
+		<string>呉屋 大翔</string>
+		<key>familyName</key>
+		<string>呉屋</string>
+		<key>internationalName</key>
+		<string>Hiroto GOYA</string>
+		<key>shortenedName</key>
+		<string>GOYA</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>FW</string>
+		<key>uniformNumber</key>
+		<string>29</string>
+		<key>name</key>
+		<string>パトリック</string>
+		<key>familyName</key>
+		<string>パトリック</string>
+		<key>internationalName</key>
+		<string>PATRIC</string>
+		<key>shortenedName</key>
+		<string>PATRIC</string>
+	</dict>
+	<dict>
+		<key>positionText</key>
+		<string>FW</string>
+		<key>uniformNumber</key>
+		<string>39</string>
+		<key>name</key>
+		<string>宇佐美 貴史</string>
+		<key>familyName</key>
+		<string>宇佐美</string>
+		<key>internationalName</key>
+		<string>Takashi Usami</string>
+		<key>shortenedName</key>
+		<string>Usami</string>
+	</dict>
+</array>
+</plist>

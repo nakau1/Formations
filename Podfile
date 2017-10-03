@@ -5,4 +5,5 @@ target 'Formations' do
   use_frameworks!
   
   pod 'R.swift'
+  pod 'RealmSwift'
 end
