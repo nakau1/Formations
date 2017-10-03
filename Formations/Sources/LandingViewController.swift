@@ -23,6 +23,7 @@ class LandingViewController: UITableViewController {
             Section("DB", [
                 Row("パス", handler: { vc in
                     print("open " + RealmModel.realmPath)
+                    print("open " + Image.documentDirectory)
                 }),
                 Row("オブジェクト生成", handler: { vc in
                     let o = Realm.Team.create()

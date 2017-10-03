@@ -65,4 +65,9 @@ class RealmModel<T: RealmSwift.Object> {
     }
 }
 
-
+extension RealmSwift.Results {
+    
+    func toArray() -> [Element] {
+        return self.map { $0 }
+    }
+}
