@@ -31,14 +31,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
+    /// Image `default-background`.
+    static let defaultBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "default-background")
     /// Image `sample-emblem1`.
     static let sampleEmblem1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "sample-emblem1")
     /// Image `sample-emblem2`.
     static let sampleEmblem2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "sample-emblem2")
     /// Image `sample-emblem3`.
     static let sampleEmblem3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "sample-emblem3")
+    
+    /// `UIImage(named: "default-background", bundle: ..., traitCollection: ...)`
+    static func defaultBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.defaultBackground, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "sample-emblem1", bundle: ..., traitCollection: ...)`
     static func sampleEmblem1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {

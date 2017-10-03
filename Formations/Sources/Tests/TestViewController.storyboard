@@ -18,7 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-5w-7u3" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-emblem2" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-wv-Nmu" customClass="BackgroundView" customModule="Formations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.90980392160000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aTE-wv-Nmu" secondAttribute="height" multiplier="414:736" id="GhL-mK-ovr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-5w-7u3" customClass="CircleColorButton" customModule="Formations" customModuleProvider="target">
                                 <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="15x-Gf-fBX"/>
@@ -38,6 +45,12 @@
                         <color key="backgroundColor" red="0.72156864399999998" green="0.88627451660000001" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iuX-5w-7u3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3AM-59-l9Q"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8yI-bU-aCq"/>
+                            <constraint firstAttribute="bottom" secondItem="aTE-wv-Nmu" secondAttribute="bottom" id="UEM-Mp-AeA"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UsH-OJ-OSl"/>
+                            <constraint firstAttribute="trailing" secondItem="aTE-wv-Nmu" secondAttribute="trailing" id="fot-Zg-xMz"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="goh-qe-gpf"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="inr-6m-HJT"/>
                             <constraint firstItem="iuX-5w-7u3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwd-bJ-c0q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,6 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
