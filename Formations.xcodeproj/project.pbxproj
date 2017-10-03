@@ -55,6 +55,8 @@
 		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
 		DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF7588B1F7EC7C700065475 /* TestViewController.swift */; };
+		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
+		E411E4671F8320D1003B397D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4661F8320D1003B397D /* Model.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
 		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		E411E4661F8320D1003B397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				DB1627291F7EA02800A3D709 /* Modules */,
+				E411E4631F832016003B397D /* Models */,
 				DB1627271F7EA02800A3D709 /* Extensions */,
 				DB36AAD41F7ECC6600EEADD5 /* Widgets */,
 				DBF758891F7EC7C700065475 /* Tests */,
@@ -442,6 +447,15 @@
 				DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		E411E4631F832016003B397D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E411E4661F8320D1003B397D /* Model.swift */,
+				E411E4641F83203A003B397D /* Image.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,11 +606,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
+				E411E4671F8320D1003B397D /* Model.swift in Sources */,
 				CEF99B2E1F8102140079CDC9 /* Team.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */,
 				CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */,
-				DB1627361F7EA4D500A3D709 /* AppDelegate.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
 				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
 				DB5EC99F1F8089630000B8E0 /* PopupRiseAnimation.swift in Sources */,
@@ -623,6 +638,7 @@
 				CEF99B621F8106020079CDC9 /* FormationTemplate.swift in Sources */,
 				CEF99B631F8106020079CDC9 /* FormationTemplateModel.swift in Sources */,
 				CEF99B641F8106020079CDC9 /* FormationTemplateEditViewController.swift in Sources */,
+				E411E4651F83203A003B397D /* Image.swift in Sources */,
 				CEF99B651F8106020079CDC9 /* FormationTemplateListViewController.swift in Sources */,
 				CEF99B661F8106020079CDC9 /* Formation.swift in Sources */,
 				CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */,

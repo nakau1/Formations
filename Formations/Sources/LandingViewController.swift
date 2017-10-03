@@ -20,6 +20,27 @@ class LandingViewController: UITableViewController {
                 }),
                 ]
             ),
+            Section("画像", [
+                Row("パス", handler: { vc in
+                    print(Image.playerFace(id: "hoge").path)
+                }),
+                Row("保存1", handler: { vc in
+                    R.image.sampleEmblem1()?.save(.playerFace(id: "gamba"))
+                }),
+                Row("保存2", handler: { vc in
+                    R.image.sampleEmblem2()?.save(.playerFace(id: "gamba"))
+                }),
+                Row("保存3", handler: { vc in
+                    R.image.sampleEmblem3()?.save(.playerThumb(id: "gamba"))
+                }),
+                Row("削除", handler: { vc in
+                    Image.playerFace(id: "gamba").delete()
+                }),
+                Row("カテゴリ削除", handler: { vc in
+                    Image.delete(category: .players, id: "gamba")
+                }),
+                ]
+            ),
         ]
     }
     
