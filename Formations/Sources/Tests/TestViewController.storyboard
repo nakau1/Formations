@@ -18,7 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-5w-7u3" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-emblem2" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-wv-Nmu" customClass="BackgroundView" customModule="Formations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-241.5" width="375" height="1150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aTE-wv-Nmu" secondAttribute="height" multiplier="15:46" id="GhL-mK-ovr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-5w-7u3" customClass="CircleColorButton" customModule="Formations" customModuleProvider="target">
                                 <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="15x-Gf-fBX"/>
@@ -38,6 +44,9 @@
                         <color key="backgroundColor" red="0.72156864399999998" green="0.88627451660000001" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iuX-5w-7u3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3AM-59-l9Q"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Q5n-xY-W6i"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zzu-XH-dc1"/>
+                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="goh-qe-gpf"/>
                             <constraint firstItem="iuX-5w-7u3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwd-bJ-c0q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

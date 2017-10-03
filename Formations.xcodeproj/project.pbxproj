@@ -57,6 +57,7 @@
 		DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF7588B1F7EC7C700065475 /* TestViewController.swift */; };
 		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
 		E411E4671F8320D1003B397D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4661F8320D1003B397D /* Model.swift */; };
+		E438491A1F836046004F9248 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43849191F836024004F9248 /* BackgroundView.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,7 @@
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E411E4661F8320D1003B397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E43849191F836024004F9248 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +411,7 @@
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				E43849181F83600C004F9248 /* Background */,
 				DB5EC9A61F8125C80000B8E0 /* CircleButton */,
 				CEF99B241F80F1E20079CDC9 /* Picker */,
 				DB36AAD51F7ECC6600EEADD5 /* Popup */,
@@ -456,6 +459,14 @@
 				E411E4641F83203A003B397D /* Image.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E43849181F83600C004F9248 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				E43849191F836024004F9248 /* BackgroundView.swift */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,6 +654,7 @@
 				CEF99B661F8106020079CDC9 /* Formation.swift in Sources */,
 				CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */,
 				CEF99B681F8106020079CDC9 /* FormationListViewController.swift in Sources */,
+				E438491A1F836046004F9248 /* BackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
