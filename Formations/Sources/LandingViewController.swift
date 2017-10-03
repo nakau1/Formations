@@ -24,17 +24,43 @@ class LandingViewController: UITableViewController {
                 Row("パス", handler: { vc in
                     print(Image.playerFace(id: "hoge").path)
                 }),
-                Row("保存1", handler: { vc in
-                    R.image.sampleEmblem1()?.save(.playerFace(id: "gamba"))
+                Row("リサイズ", handler: { vc in
+                    let image = R.image.defaultBackground()!
+                    image.resized(to: CGSize(100, 100)).save(.playerFace(id: "gamba"))
                 }),
-                Row("保存2", handler: { vc in
-                    R.image.sampleEmblem2()?.save(.playerFace(id: "gamba"))
+                Row("スケール", handler: { vc in
+                    let image = R.image.defaultBackground()!
+                    image.scaled(to: CGSize(100, 100)).save(.playerFace(id: "gamba"))
                 }),
-                Row("保存3", handler: { vc in
-                    R.image.sampleEmblem3()?.save(.playerThumb(id: "gamba"))
+                Row("クロップ", handler: { vc in
+                    let image = R.image.defaultBackground()!
+                    image.cropped(to: CGRect(0, 10, 100, 120)).save(.playerFace(id: "gamba"))
                 }),
-                Row("削除", handler: { vc in
-                    Image.playerFace(id: "gamba").delete()
+                Row("合成", handler: { vc in
+                    let image1 = R.image.defaultBackground()!
+                    let image2 = R.image.sampleEmblem1()!
+                    image1.synthesized(image: image2).save(.playerFace(id: "gamba"))
+                }),
+                Row("複数合成", handler: { vc in
+                    let image = [
+                        R.image.defaultBackground()!,
+                        R.image.sampleEmblem1()!,
+                        R.image.sampleEmblem2()!,
+                        R.image.sampleEmblem3()!
+                        ].synthesize()
+                    image?.save(.playerFace(id: "gamba"))
+                }),
+                Row("色埋め", handler: { vc in
+                    UIImage.filled(color: .red, size: CGSize(100, 100)).save(.playerFace(id: "gamba"))
+                }),
+                Row("透明", handler: { vc in
+                    UIImage.transparentImage(size: CGSize(345, 456)).save(.playerFace(id: "gamba"))
+                }),
+                Row("調整", handler: { vc in
+                    let image = R.image.defaultBackground()!
+                    image.adjusted(to: CGSize(200, 300)).save(.playerFace(id: "gamba"))
+                    image.adjusted(to: CGSize(500, 100)).save(.playerFull(id: "gamba"))
+                    image.adjusted(to: CGSize(300, 1200)).save(.playerThumb(id: "gamba"))
                 }),
                 Row("カテゴリ削除", handler: { vc in
                     Image.delete(category: .players, id: "gamba")
