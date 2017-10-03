@@ -4,6 +4,15 @@
 // =============================================================================
 import Foundation
 
-class PlayerModel {
-	
+class PlayerModel: RealmModel<Player>, IdentifierGeneratable {
+    
+    override func create() -> Entity {
+        let ret = super.create()
+        ret.id = generateIdentifier()
+        return ret
+    }
+}
+
+extension Realm {
+    static let Player = PlayerModel()
 }
