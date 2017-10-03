@@ -15,12 +15,7 @@ extension CGRect {
 	}
 	
 	init(size: CGSize, centerOf parentSize: CGSize) {
-		self.init(
-			(parentSize.width - size.width) / 2,
-			(parentSize.height - size.height) / 2,
-			size.width,
-			size.height
-		)
+        self.init(origin: size.center(of: parentSize), size: size)
 	}
 	
 	init(width: CGFloat, height: CGFloat) {
@@ -40,10 +35,28 @@ extension CGSize {
 	init(_ width: CGFloat, _ height: CGFloat) {
 		self.init(width: width, height: height)
 	}
+    
+    func center(of size: CGSize) -> CGPoint {
+        return CGPoint(
+            x: (size.width  - self.width)  / 2,
+            y: (size.height - self.height) / 2
+        )
+    }
 	
 	static func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
 		return CGSize(lhs.width * rhs, lhs.height * rhs)
 	}
+}
+
+extension CGFloat {
+    
+    var int: Int {
+        return Int(self)
+    }
+    
+    static func %(lhs: CGFloat, rhs: CGFloat) -> CGFloat {
+        return (lhs.int % rhs.int).f
+    }
 }
 
 extension Int {
