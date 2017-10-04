@@ -769,10 +769,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `Landing`.
     static let landing: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "Landing")
+    /// Reuse identifier `teamMenu`.
+    static let teamMenu: Rswift.ReuseIdentifier<TeamMenuTableViewCell> = Rswift.ReuseIdentifier(identifier: "teamMenu")
     
     fileprivate init() {}
   }
@@ -902,6 +904,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try testViewController.validate()
+      try teamMenuViewController.validate()
     }
     
     struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
@@ -985,11 +988,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct teamMenuViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct teamMenuViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = TeamMenuViewController
       
       let bundle = R.hostingBundle
       let name = "TeamMenuViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'TeamMenuViewController', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
