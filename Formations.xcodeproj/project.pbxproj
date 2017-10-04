@@ -106,6 +106,8 @@
 		E420B6041F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */; };
 		E420B6061F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */; };
 		E420B6081F84B7DE007C2EB5 /* EditHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E420B6071F84B7DE007C2EB5 /* EditHeaderTableViewCell.xib */; };
+		E420B60E1F84BCA0007C2EB5 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B60C1F84BC9F007C2EB5 /* ColorPicker.swift */; };
+		E420B60F1F84BCA0007C2EB5 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E420B60D1F84BCA0007C2EB5 /* ColorPicker.storyboard */; };
 		E42E2B561F83B9380060D244 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E42E2B551F83B8DE0060D244 /* data.plist */; };
 		E438491A1F836046004F9248 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43849191F836024004F9248 /* BackgroundView.swift */; };
 		E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44FDBC41F8491DE00B502EC /* Enums.swift */; };
@@ -222,6 +224,8 @@
 		E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightableTableViewCell.swift; sourceTree = "<group>"; };
 		E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E420B6071F84B7DE007C2EB5 /* EditHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E420B60C1F84BC9F007C2EB5 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		E420B60D1F84BCA0007C2EB5 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		E42E2B551F83B8DE0060D244 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		E43849191F836024004F9248 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		E44FDBC41F8491DE00B502EC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 				CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */,
 				CEF99B271F80F2890079CDC9 /* TextPicker.swift */,
 				CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */,
+				E420B60C1F84BC9F007C2EB5 /* ColorPicker.swift */,
+				E420B60D1F84BCA0007C2EB5 /* ColorPicker.storyboard */,
 			);
 			path = Picker;
 			sourceTree = "<group>";
@@ -742,6 +748,7 @@
 				CEF99B591F8105E30079CDC9 /* PlayerEditViewController.storyboard in Resources */,
 				DBF79B311F83C9A600FCB2BE /* player-sample10-2.jpg in Resources */,
 				DBF79B4E1F83C9A600FCB2BE /* player-sample4-1.jpg in Resources */,
+				E420B60F1F84BCA0007C2EB5 /* ColorPicker.storyboard in Resources */,
 				DBF79B4A1F83C9A600FCB2BE /* player-sample35-1.jpg in Resources */,
 				DBF79B441F83C9A600FCB2BE /* player-sample25-1.jpg in Resources */,
 				DBF79B3C1F83C9A600FCB2BE /* player-sample20-1.jpg in Resources */,
@@ -893,6 +900,7 @@
 				CEF99B3A1F8102DA0079CDC9 /* TeamListViewController.swift in Sources */,
 				DBF79B5E1F83D26400FCB2BE /* PositionBoardView.swift in Sources */,
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
+				E420B60E1F84BCA0007C2EB5 /* ColorPicker.swift in Sources */,
 				CEF99B5E1F8106020079CDC9 /* Player.swift in Sources */,
 				CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */,
 				CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */,

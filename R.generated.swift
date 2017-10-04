@@ -792,8 +792,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 12 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 13 storyboards.
   struct storyboard {
+    /// Storyboard `ColorPicker`.
+    static let colorPicker = _R.storyboard.colorPicker()
     /// Storyboard `FormationListViewController`.
     static let formationListViewController = _R.storyboard.formationListViewController()
     /// Storyboard `FormationTemplateEditViewController`.
@@ -818,6 +820,11 @@ struct R: Rswift.Validatable {
     static let testViewController = _R.storyboard.testViewController()
     /// Storyboard `TextPicker`.
     static let textPicker = _R.storyboard.textPicker()
+    
+    /// `UIStoryboard(name: "ColorPicker", bundle: ...)`
+    static func colorPicker(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.colorPicker)
+    }
     
     /// `UIStoryboard(name: "FormationListViewController", bundle: ...)`
     static func formationListViewController(_: Void = ()) -> UIKit.UIStoryboard {
@@ -922,8 +929,16 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try testViewController.validate()
       try teamMenuViewController.validate()
+    }
+    
+    struct colorPicker: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = ColorPicker
+      
+      let bundle = R.hostingBundle
+      let name = "ColorPicker"
+      
+      fileprivate init() {}
     }
     
     struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
@@ -1020,15 +1035,11 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct testViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+    struct testViewController: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = TestViewController
       
       let bundle = R.hostingBundle
       let name = "TestViewController"
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "sample-emblem2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'sample-emblem2' is used in storyboard 'TestViewController', but couldn't be loaded.") }
-      }
       
       fileprivate init() {}
     }
