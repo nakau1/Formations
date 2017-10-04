@@ -110,6 +110,7 @@
 		E420B60F1F84BCA0007C2EB5 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E420B60D1F84BCA0007C2EB5 /* ColorPicker.storyboard */; };
 		E42E2B561F83B9380060D244 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E42E2B551F83B8DE0060D244 /* data.plist */; };
 		E438491A1F836046004F9248 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43849191F836024004F9248 /* BackgroundView.swift */; };
+		E44DA2871F85126B0022460B /* String+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DA2861F85126B0022460B /* String+Common.swift */; };
 		E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44FDBC41F8491DE00B502EC /* Enums.swift */; };
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
 		E4A8A1C81F838D5600A689E4 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C71F838D5600A689E4 /* RealmModel.swift */; };
@@ -228,6 +229,7 @@
 		E420B60D1F84BCA0007C2EB5 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		E42E2B551F83B8DE0060D244 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		E43849191F836024004F9248 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		E44DA2861F85126B0022460B /* String+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Common.swift"; sourceTree = "<group>"; };
 		E44FDBC41F8491DE00B502EC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
 		E4A8A1C71F838D5600A689E4 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */,
+				E44DA2861F85126B0022460B /* String+Common.swift */,
 				CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */,
 				E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */,
 				DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */,
@@ -898,6 +901,7 @@
 				CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */,
 				CEF99B391F8102D70079CDC9 /* TeamMenuViewController.swift in Sources */,
 				CEF99B3A1F8102DA0079CDC9 /* TeamListViewController.swift in Sources */,
+				E44DA2871F85126B0022460B /* String+Common.swift in Sources */,
 				DBF79B5E1F83D26400FCB2BE /* PositionBoardView.swift in Sources */,
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 				E420B60E1F84BCA0007C2EB5 /* ColorPicker.swift in Sources */,
