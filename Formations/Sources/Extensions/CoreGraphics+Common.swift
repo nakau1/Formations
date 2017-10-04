@@ -28,6 +28,14 @@ extension CGPoint {
 	init(_ x: CGFloat, _ y: CGFloat) {
 		self.init(x: x, y: y)
 	}
+    
+    static func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+        return CGPoint(lhs.x + rhs.x, lhs.y + rhs.y)
+    }
+    
+    static func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+        return CGPoint(lhs.x - rhs.x, lhs.y - rhs.y)
+    }
 }
 
 extension CGSize {
@@ -46,6 +54,55 @@ extension CGSize {
 	static func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
 		return CGSize(lhs.width * rhs, lhs.height * rhs)
 	}
+    
+    static func +(lhs: CGSize, rhs: CGSize) -> CGSize {
+        return CGSize(lhs.width + rhs.width, lhs.height + rhs.height)
+    }
+    
+    static func -(lhs: CGSize, rhs: CGSize) -> CGSize {
+        return CGSize(lhs.width - rhs.width, lhs.height - rhs.height)
+    }
+}
+
+struct CGPercentage: Comparable {
+    
+    var x: CGFloat = 0
+    var y: CGFloat = 0
+    
+    init() {}
+    
+    init(_ x: CGFloat, _ y: CGFloat) {
+        self.x = (0 <= x) ? ((x < 1.f) ? x : 1.f) : 0.f
+        self.y = (0 <= y) ? ((y < 1.f) ? y : 1.f) : 0.f
+    }
+    
+    static func *(lhs: CGPoint, rhs: CGPercentage) -> CGPoint {
+        return CGPoint(lhs.x * rhs.x, lhs.y * rhs.y)
+    }
+    
+    static func *(lhs: CGSize, rhs: CGPercentage) -> CGSize {
+        return CGSize(lhs.width * rhs.x, lhs.height * rhs.y)
+    }
+    
+    static func ==(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return lhs.y == rhs.y && lhs.x == rhs.x
+    }
+    
+    static func <(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y < rhs.y) || (lhs.y == rhs.y && lhs.x < rhs.x)
+    }
+    
+    static func <=(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y <= rhs.y) || (lhs.y == rhs.y && lhs.x <= rhs.x)
+    }
+    
+    static func >=(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y >= rhs.y) || (lhs.y == rhs.y && lhs.x >= rhs.x)
+    }
+    
+    static func >(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y > rhs.y) || (lhs.y == rhs.y && lhs.x > rhs.x)
+    }
 }
 
 extension CGFloat {
