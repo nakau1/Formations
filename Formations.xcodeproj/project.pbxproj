@@ -513,8 +513,8 @@
 		DB16272C1F7EA02800A3D709 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEF99B321F8102380079CDC9 /* Menu */,
 				CEF99B311F8102310079CDC9 /* List */,
+				CEF99B321F8102380079CDC9 /* Menu */,
 				DB16272D1F7EA02800A3D709 /* Edit */,
 			);
 			path = Views;
