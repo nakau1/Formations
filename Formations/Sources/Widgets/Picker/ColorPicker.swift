@@ -44,12 +44,7 @@ class ColorPicker: UIViewController {
         prepare()
     }
     
-    private var currentColor: UIColor = UIColor.black {
-        didSet {
-            if !isViewLoaded { return }
-			
-        }
-    }
+    private var currentColor = UIColor.black
     
     @IBAction private func didTapMinus(_ button: UIButton) {
         let slider = sliders[button.tag]
@@ -71,6 +66,9 @@ class ColorPicker: UIViewController {
     
     @IBAction private func didTapRecent(_ button: UIButton) {
         currentColor = recentButton(button.tag).backgroundColor!
+        updateSliders(color: currentColor)
+        updateCurrentColorButton(color: currentColor)
+        updateHexTextLabels(color: currentColor)
     }
     
     @IBAction private func didChangeSlider(_ slider: UISlider) {
@@ -79,7 +77,8 @@ class ColorPicker: UIViewController {
     }
     
     @IBAction private func didTapCurrentColor() {
-        
+        saveRecentColor(currentColor)
+        updateRecentColors()
     }
     
     @IBAction private func didTapApply() {
@@ -166,10 +165,16 @@ class ColorPicker: UIViewController {
     
     private func saveRecentColor(_ color: UIColor) {
         var hexStrings: [String] = UserDefaults.standard.array(forKey: RecentlyColorsUserDefaultsKey) as? [String] ?? []
-        hexStrings.insert(hexString(color: color), at: 0)
+        let newValue = hexString(color: color)
+        if let index = hexStrings.index(of: newValue) {
+            hexStrings.remove(at: index)
+        }
+        hexStrings.insert(newValue, at: 0)
         if hexStrings.count > recentColorsCount {
             hexStrings.removeLast()
         }
+        UserDefaults.standard.set(hexStrings, forKey: RecentlyColorsUserDefaultsKey)
+        UserDefaults.standard.synchronize()
     }
     
     // MARK: - Get Element
