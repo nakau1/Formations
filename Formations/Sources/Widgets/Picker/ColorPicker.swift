@@ -24,8 +24,6 @@ class ColorPicker: UIViewController {
     
     @IBOutlet private var hexTextLabels: [UILabel]!
     
-    @IBOutlet private var hexTextField: UITextField!
-	
     private var selected: SelectedHandler!
     
     // カラーピッカーを表示する
@@ -54,8 +52,6 @@ class ColorPicker: UIViewController {
     }
     
     @IBAction private func didTapMinus(_ button: UIButton) {
-        updateByTextField()
-        
         let slider = sliders[button.tag]
         if slider.value > 0 {
             slider.value -= 1
@@ -65,8 +61,6 @@ class ColorPicker: UIViewController {
     }
     
     @IBAction private func didTapPlus(_ button: UIButton) {
-        updateByTextField()
-        
         let slider = sliders[button.tag]
         if slider.value < 255 {
             slider.value += 1
@@ -112,13 +106,12 @@ class ColorPicker: UIViewController {
         currentColorButton.setBackgroundImage(coloredImage(color), for: .normal)
     }
     
-    private func updateHexTextField(color: UIColor) {
-        hexTextField.text = hexString(color: color)
+    private func updateHexTextLabels(color: UIColor) {
+        let hex = hexString(color: color)
+        (0..<6).forEach { i in
+            hexTextLabel(i).text = hex[i]
+        }
     }
-    
-    
-    
-    
     
     private func updateBySliders() {
         let r = sliderValue(.red)   / maxCGFloat
@@ -127,21 +120,8 @@ class ColorPicker: UIViewController {
         currentColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         
         updateCurrentColorButton(color: currentColor)
-        updateHexTextField(color: currentColor)
+        updateHexTextLabels(color: currentColor)
     }
-    
-    private func updateByTextField() {
-        if !hexTextField.isFirstResponder { return }
-        hexTextField.resignFirstResponder()
-        
-        currentColor = color(hexString: hexTextField.text!.uppercased())
-        
-        updateCurrentColorButton(color: currentColor)
-        updateHexTextField(color: currentColor)
-        updateSliders(color: currentColor)
-    }
-    
-
     
     // MARK: - Prepare (on viewDidLoad)
     
@@ -161,7 +141,7 @@ class ColorPicker: UIViewController {
     
     private func prepareCurrentColor() {
         updateCurrentColorButton(color: currentColor)
-        updateHexTextField(color: currentColor)
+        updateHexTextLabels(color: currentColor)
         updateSliders(color: currentColor)
     }
     
