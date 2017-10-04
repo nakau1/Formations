@@ -64,7 +64,8 @@ extension CGSize {
     }
 }
 
-struct CGPercentage {
+struct CGPercentage: Comparable {
+    
     var x: CGFloat = 0
     var y: CGFloat = 0
     
@@ -81,6 +82,26 @@ struct CGPercentage {
     
     static func *(lhs: CGSize, rhs: CGPercentage) -> CGSize {
         return CGSize(lhs.width * rhs.x, lhs.height * rhs.y)
+    }
+    
+    static func ==(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return lhs.y == rhs.y && lhs.x == rhs.x
+    }
+    
+    static func <(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y < rhs.y) || (lhs.y == rhs.y && lhs.x < rhs.x)
+    }
+    
+    static func <=(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y <= rhs.y) || (lhs.y == rhs.y && lhs.x <= rhs.x)
+    }
+    
+    static func >=(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y >= rhs.y) || (lhs.y == rhs.y && lhs.x >= rhs.x)
+    }
+    
+    static func >(lhs: CGPercentage, rhs: CGPercentage) -> Bool {
+        return (lhs.y > rhs.y) || (lhs.y == rhs.y && lhs.x > rhs.x)
     }
 }
 
