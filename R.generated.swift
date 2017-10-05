@@ -1024,7 +1024,6 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'TeamListViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "sample1.png") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'sample1.png' is used in storyboard 'TeamListViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

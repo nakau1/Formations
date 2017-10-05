@@ -4,9 +4,12 @@
 // =============================================================================
 import UIKit
 import Rswift
+import RealmSwift
 
 // MARK: - Controller Definition -
 class TeamListViewController: UIViewController {
+    
+    var teams: RealmSwift.Results<Team>!
     
     // MARK: ファクトリメソッド
     class func create() -> UIViewController {
@@ -16,36 +19,6 @@ class TeamListViewController: UIViewController {
     }
     
     // MARK: ライフサイクル
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        prepare()
-    }
-}
-
-// MARK: - Private -
-private extension TeamListViewController {
-    
-    /// ビューの初期処理
-    func prepare() {
-        prepareNavigationBar()
-    }
-}
-
-class TeamListCollectionViewCell: UICollectionViewCell {
-
-}
-
-/*
-class TeamListViewController: UIViewController {
-    
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    
-    var teams = [Team]()
-    
-    class func create() -> UIViewController {
-        return R.storyboard.teamList.instantiate(self).withinNavigation
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +43,7 @@ extension TeamListViewController: UICollectionViewDataSource, UICollectionViewDe
 extension TeamListViewController: TeamListCollectionViewCellDelegate {
     
     func didTapTeamButton(_ team: Team) {
-        push(TeamMenuViewController.create(team))
+        //push(TeamMenuViewController.create(team))
     }
     
     func didTapAddButton() {
@@ -78,12 +51,13 @@ extension TeamListViewController: TeamListCollectionViewCellDelegate {
     }
 }
 
+// MARK: - Private -
 private extension TeamListViewController {
     
+    /// ビューの初期処理
     func prepare() {
         prepareNavigationBar()
-        teams = App.Model.Team.select().toArray()
-        collectionView.reloadData()
+        teams = Realm.Team.select()
     }
     
     func isAddRow(at indexPath: IndexPath) -> Bool {
@@ -94,7 +68,6 @@ private extension TeamListViewController {
 protocol TeamListCollectionViewCellDelegate: class {
     
     func didTapTeamButton(_ team: Team)
-    
     func didTapAddButton()
 }
 
@@ -105,7 +78,7 @@ class TeamListCollectionViewCell: UICollectionViewCell {
         case add
     }
     
-    @IBOutlet private weak var emblemButton: UIButton!
+    @IBOutlet private weak var emblemButton: CircleImageButton!
     @IBOutlet private weak var nameLabel: UILabel!
     
     weak var delegate: TeamListCollectionViewCellDelegate?
@@ -114,13 +87,13 @@ class TeamListCollectionViewCell: UICollectionViewCell {
         didSet {
             switch mode {
             case .team(let team):
-                setupEmblemButton(image: R.image.sample1())
-                setupNameLabel(text: team.name)
-                setupEmblemButton(color: team.mainColor)
+                emblemButton.borderColor = team.mainColor
+                emblemButton.buttonImage = team.loadSmallEmblemImage().smallEmblemImage
+                nameLabel.text = team.name
             case .add:
-                setupEmblemButton(image: R.image.sample4())
-                setupNameLabel(text: nil)
-                setupEmblemButton(color: UIColor.black)
+                emblemButton.borderColor = .darkGray
+                emblemButton.buttonImage = .addImage
+                nameLabel.text = ""
             }
         }
     }
@@ -131,22 +104,5 @@ class TeamListCollectionViewCell: UICollectionViewCell {
         case .add:            delegate?.didTapAddButton()
         }
     }
-    
-    private func setupNameLabel(text: String?) {
-        nameLabel.text = text
-        nameLabel.shadowColor = UIColor.black
-        nameLabel.shadowOffset = CGSize(0, 1)
-    }
-    
-    private func setupEmblemButton(image: UIImage?) {
-        emblemButton.setImage(image, for: .normal)
-    }
-    
-    private func setupEmblemButton(color: UIColor) {
-        emblemButton.layer.cornerRadius = emblemButton.bounds.width / 2
-        emblemButton.layer.borderWidth = 2
-        emblemButton.layer.borderColor = color.withAlphaComponent(0.75).cgColor
-        emblemButton.backgroundColor = color.withAlphaComponent(0.2)
-    }
 }
-*/
+

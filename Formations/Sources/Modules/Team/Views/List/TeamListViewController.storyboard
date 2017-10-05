@@ -22,14 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-background" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-S4-8nS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-background" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-S4-8nS" customClass="BackgroundView" customModule="Formations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="-32" width="375" height="667"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="KFj-S4-8nS" secondAttribute="height" multiplier="414:736" id="ZGV-ol-XdF"/>
+                                    <constraint firstAttribute="width" secondItem="KFj-S4-8nS" secondAttribute="height" multiplier="414:736" id="ukY-wi-1XP"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-8j-QIJ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-8j-QIJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NHV-0e-UWA">
                                     <size key="itemSize" width="182" height="200"/>
@@ -45,35 +46,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="182" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マンチェスター・ユナイテッド" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-5e-PFh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="マンチェスター・ユナイテッド" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-5e-PFh">
                                                     <rect key="frame" x="8" y="165" width="166" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-LE-LcQ">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-LE-LcQ" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="19" width="142" height="142"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="MJs-LE-LcQ" secondAttribute="height" multiplier="1:1" id="1cH-Za-oxw"/>
-                                                    </constraints>
                                                     <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                                    <state key="normal" image="sample1.png"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.1764705926" green="0.49803921579999999" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="didTapEmblemButton" destination="DEy-mG-sdZ" eventType="touchUpInside" id="9a3-k9-Jvr"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="VVb-5e-PFh" firstAttribute="leading" secondItem="DEy-mG-sdZ" secondAttribute="leading" constant="8" id="0pp-Dk-3qE"/>
-                                            <constraint firstAttribute="trailing" secondItem="MJs-LE-LcQ" secondAttribute="trailing" constant="20" id="8aC-8e-jgp"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VVb-5e-PFh" secondAttribute="bottom" constant="8" id="HGj-l2-tc6"/>
-                                            <constraint firstItem="VVb-5e-PFh" firstAttribute="top" secondItem="MJs-LE-LcQ" secondAttribute="bottom" constant="4" id="bDZ-8q-fOZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="VVb-5e-PFh" secondAttribute="trailing" constant="8" id="bgQ-fz-VlW"/>
-                                            <constraint firstItem="MJs-LE-LcQ" firstAttribute="leading" secondItem="DEy-mG-sdZ" secondAttribute="leading" constant="20" id="mfo-3V-VoK"/>
-                                            <constraint firstItem="MJs-LE-LcQ" firstAttribute="centerY" secondItem="DEy-mG-sdZ" secondAttribute="centerY" constant="-10" id="ovp-Is-KfJ"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="emblemButton" destination="MJs-LE-LcQ" id="64M-56-16P"/>
                                             <outlet property="nameLabel" destination="VVb-5e-PFh" id="uPD-7R-ONz"/>
@@ -88,20 +83,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KFj-S4-8nS" firstAttribute="leading" secondItem="F3I-mo-0Br" secondAttribute="leading" id="Wb9-Ae-YJr"/>
-                            <constraint firstAttribute="trailing" secondItem="KFj-S4-8nS" secondAttribute="trailing" id="XSX-bX-pXF"/>
-                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="leading" secondItem="F3I-mo-0Br" secondAttribute="leading" id="ogb-eI-pxN"/>
-                            <constraint firstItem="Ycg-AN-lbR" firstAttribute="top" secondItem="8vi-8j-QIJ" secondAttribute="bottom" id="ozQ-zR-Gye"/>
-                            <constraint firstAttribute="trailing" secondItem="8vi-8j-QIJ" secondAttribute="trailing" id="pMB-Ad-UE3"/>
-                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="top" secondItem="uIj-F4-Gbr" secondAttribute="bottom" id="rCO-i2-mDm"/>
-                            <constraint firstItem="KFj-S4-8nS" firstAttribute="centerY" secondItem="F3I-mo-0Br" secondAttribute="centerY" id="vvT-s1-3Tn"/>
+                            <constraint firstAttribute="bottom" secondItem="KFj-S4-8nS" secondAttribute="bottom" priority="750" id="Bnz-n1-kvI"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="top" secondItem="F3I-mo-0Br" secondAttribute="top" priority="750" id="bAa-Li-jYL"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="centerX" secondItem="F3I-mo-0Br" secondAttribute="centerX" id="k5d-8y-aHu"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="leading" secondItem="F3I-mo-0Br" secondAttribute="leading" id="l6n-ap-niQ"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="centerY" secondItem="F3I-mo-0Br" secondAttribute="centerY" id="pFw-bP-H8i"/>
+                            <constraint firstAttribute="trailing" secondItem="KFj-S4-8nS" secondAttribute="trailing" id="qUl-bd-kAO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vgx-yr-4sf"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <connections>
-                        <outlet property="collectionView" destination="8vi-8j-QIJ" id="v1b-rG-bR4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qf2-A5-96y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +101,5 @@
     </scenes>
     <resources>
         <image name="default-background" width="414" height="736"/>
-        <image name="sample1.png" width="16" height="16"/>
     </resources>
 </document>
