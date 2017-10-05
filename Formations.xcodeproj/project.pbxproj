@@ -102,6 +102,7 @@
 		DBF79B5A1F83C9A600FCB2BE /* team-sample-emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF79B2C1F83C9A600FCB2BE /* team-sample-emblem.png */; };
 		DBF79B5B1F83C9A600FCB2BE /* team-sample-image.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF79B2D1F83C9A600FCB2BE /* team-sample-image.png */; };
 		DBF79B5E1F83D26400FCB2BE /* PositionBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF79B5D1F83D26400FCB2BE /* PositionBoardView.swift */; };
+		E4069CB51F86280C002996F5 /* Rswift+CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */; };
 		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
 		E420B6041F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */; };
 		E420B6061F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */; };
@@ -222,6 +223,7 @@
 		DBF79B2C1F83C9A600FCB2BE /* team-sample-emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team-sample-emblem.png"; sourceTree = "<group>"; };
 		DBF79B2D1F83C9A600FCB2BE /* team-sample-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team-sample-image.png"; sourceTree = "<group>"; };
 		DBF79B5D1F83D26400FCB2BE /* PositionBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionBoardView.swift; sourceTree = "<group>"; };
+		E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+CellIdentifier.swift"; sourceTree = "<group>"; };
 		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightableTableViewCell.swift; sourceTree = "<group>"; };
 		E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */,
+				E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */,
 				E44DA2861F85126B0022460B /* String+Common.swift */,
 				CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */,
 				E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */,
@@ -913,6 +916,7 @@
 				CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */,
 				CEF99B611F8106020079CDC9 /* PlayerListViewController.swift in Sources */,
 				E4EE6B451F83A26100472F12 /* Fixture.swift in Sources */,
+				E4069CB51F86280C002996F5 /* Rswift+CellIdentifier.swift in Sources */,
 				CEF99B621F8106020079CDC9 /* FormationTemplate.swift in Sources */,
 				CEF99B631F8106020079CDC9 /* FormationTemplateModel.swift in Sources */,
 				CEF99B641F8106020079CDC9 /* FormationTemplateEditViewController.swift in Sources */,
