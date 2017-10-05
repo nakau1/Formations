@@ -71,22 +71,22 @@ class Team: RealmSwift.Object {
     
     /// チームカラー(メイン)
     var mainColor: UIColor {
-        return UIColor.blue
+        return UIColor(hexString: mainColorRGB) ?? .white
     }
     
     /// チームカラー(サブ)
     var subColor: UIColor {
-        return UIColor.blue
+        return UIColor(hexString: subColorRGB) ?? .white
     }
     
     /// チームカラー(オプション1)
-    var option1Color: UIColor {
-        return UIColor.blue
+    var option1Color: UIColor? {
+        return UIColor(hexString: option1ColorRGB)
     }
     
     /// チームカラー(オプション2)
-    var option2Color: UIColor {
-        return UIColor.blue
+    var option2Color: UIColor? {
+        return UIColor(hexString: option2ColorRGB)
     }
     
     // MARK: - Specs
