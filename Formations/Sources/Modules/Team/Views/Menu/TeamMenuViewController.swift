@@ -56,7 +56,7 @@ class TeamMenuViewController: UIViewController {
             case .players:
                 viewController.push(PlayerListViewController.create())
             case .team:
-                viewController.push(TeamEditViewController.create())
+                viewController.push(TeamEditViewController.create(for: team))
             }
         }
     }
@@ -70,11 +70,6 @@ class TeamMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepare()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
     }
 }
 

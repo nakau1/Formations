@@ -20,10 +20,6 @@
         <scene sceneID="AeS-h6-5D3">
             <objects>
                 <viewController title="Formation" id="Z2o-ZR-k3d" customClass="TeamMenuViewController" customModule="Formations" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nm9-fX-YCY"/>
-                        <viewControllerLayoutGuide type="bottom" id="WI3-cn-9yx"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zfv-4L-j45">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,16 +97,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="65Y-O9-wAL" firstAttribute="leading" secondItem="Zfv-4L-j45" secondAttribute="leading" id="ChW-Ef-HeY"/>
+                            <constraint firstItem="65Y-O9-wAL" firstAttribute="leading" secondItem="BTg-A9-5FJ" secondAttribute="leading" id="ChW-Ef-HeY"/>
                             <constraint firstItem="65Y-O9-wAL" firstAttribute="top" secondItem="Zfv-4L-j45" secondAttribute="top" id="Fdb-xT-Baj"/>
                             <constraint firstAttribute="bottom" secondItem="65Y-O9-wAL" secondAttribute="bottom" id="GDB-Xk-K0h"/>
-                            <constraint firstItem="WI3-cn-9yx" firstAttribute="top" secondItem="5tW-pR-82d" secondAttribute="bottom" id="RyV-cl-bwq"/>
-                            <constraint firstItem="5tW-pR-82d" firstAttribute="trailing" secondItem="4DP-zV-tmN" secondAttribute="trailing" id="STS-iR-B4Y"/>
-                            <constraint firstItem="5tW-pR-82d" firstAttribute="top" secondItem="Nm9-fX-YCY" secondAttribute="bottom" id="fHv-dr-Mov"/>
-                            <constraint firstAttribute="trailing" secondItem="65Y-O9-wAL" secondAttribute="trailing" id="lg0-ck-nad"/>
-                            <constraint firstItem="5tW-pR-82d" firstAttribute="leading" secondItem="4DP-zV-tmN" secondAttribute="leading" id="sQR-Pk-hxB"/>
+                            <constraint firstItem="BTg-A9-5FJ" firstAttribute="bottom" secondItem="5tW-pR-82d" secondAttribute="bottom" id="RyV-cl-bwq"/>
+                            <constraint firstItem="5tW-pR-82d" firstAttribute="trailing" secondItem="BTg-A9-5FJ" secondAttribute="trailing" id="STS-iR-B4Y"/>
+                            <constraint firstItem="5tW-pR-82d" firstAttribute="top" secondItem="BTg-A9-5FJ" secondAttribute="top" id="fHv-dr-Mov"/>
+                            <constraint firstItem="BTg-A9-5FJ" firstAttribute="trailing" secondItem="65Y-O9-wAL" secondAttribute="trailing" id="lg0-ck-nad"/>
+                            <constraint firstItem="5tW-pR-82d" firstAttribute="leading" secondItem="BTg-A9-5FJ" secondAttribute="leading" id="sQR-Pk-hxB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4DP-zV-tmN"/>
+                        <viewLayoutGuide key="safeArea" id="BTg-A9-5FJ"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>

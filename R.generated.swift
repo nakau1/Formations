@@ -777,10 +777,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 8 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `Landing`.
     static let landing: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "Landing")
+    /// Reuse identifier `TeamEditColor`.
+    static let teamEditColor: Rswift.ReuseIdentifier<TeamEditColorTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditColor")
+    /// Reuse identifier `TeamEditImage`.
+    static let teamEditImage: Rswift.ReuseIdentifier<TeamEditImageTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditImage")
+    /// Reuse identifier `TeamEditName`.
+    static let teamEditName: Rswift.ReuseIdentifier<TeamEditNameTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditName")
+    /// Reuse identifier `TeamEditShortName`.
+    static let teamEditShortName: Rswift.ReuseIdentifier<TeamEditNameTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditShortName")
+    /// Reuse identifier `header`.
+    static let header: Rswift.ReuseIdentifier<EditHeaderTableViewCell> = Rswift.ReuseIdentifier(identifier: "header")
     /// Reuse identifier `teamList`.
     static let teamList: Rswift.ReuseIdentifier<TeamListCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "teamList")
     /// Reuse identifier `teamMenu`.
@@ -915,8 +925,11 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
-    struct _EditHeaderTableViewCell: Rswift.NibResourceType {
+    struct _EditHeaderTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = EditHeaderTableViewCell
+      
       let bundle = R.hostingBundle
+      let identifier = "header"
       let name = "EditHeaderTableViewCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> EditHeaderTableViewCell? {
@@ -932,6 +945,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try teamListViewController.validate()
+      try teamEditViewController.validate()
       try teamMenuViewController.validate()
     }
     
@@ -1007,11 +1021,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct teamEditViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct teamEditViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = TeamEditViewController
       
       let bundle = R.hostingBundle
       let name = "TeamEditViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'TeamEditViewController', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }

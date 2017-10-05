@@ -15,10 +15,6 @@
         <scene sceneID="1ab-ce-aKb">
             <objects>
                 <viewController title="Formations FC" id="Nra-lB-ILS" customClass="TeamListViewController" customModule="Formations" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uIj-F4-Gbr"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ycg-AN-lbR"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F3I-mo-0Br">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,16 +89,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vgx-yr-4sf" firstAttribute="trailing" secondItem="8vi-8j-QIJ" secondAttribute="trailing" id="DmE-tq-EyJ"/>
+                            <constraint firstItem="Rs5-F2-69F" firstAttribute="trailing" secondItem="8vi-8j-QIJ" secondAttribute="trailing" id="DmE-tq-EyJ"/>
                             <constraint firstItem="KFj-S4-8nS" firstAttribute="top" secondItem="F3I-mo-0Br" secondAttribute="top" id="EUx-LJ-xIQ"/>
-                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="leading" secondItem="Vgx-yr-4sf" secondAttribute="leading" id="GXs-kj-Xc2"/>
-                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="top" secondItem="uIj-F4-Gbr" secondAttribute="bottom" id="ZGb-o9-kaA"/>
+                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="leading" secondItem="Rs5-F2-69F" secondAttribute="leading" id="GXs-kj-Xc2"/>
+                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="top" secondItem="Rs5-F2-69F" secondAttribute="top" id="ZGb-o9-kaA"/>
                             <constraint firstAttribute="bottom" secondItem="KFj-S4-8nS" secondAttribute="bottom" id="aXm-fh-E4a"/>
-                            <constraint firstItem="Ycg-AN-lbR" firstAttribute="top" secondItem="8vi-8j-QIJ" secondAttribute="bottom" id="rtc-B9-py6"/>
-                            <constraint firstAttribute="trailing" secondItem="KFj-S4-8nS" secondAttribute="trailing" id="uRq-2P-J4H"/>
-                            <constraint firstItem="KFj-S4-8nS" firstAttribute="leading" secondItem="F3I-mo-0Br" secondAttribute="leading" id="zzl-Yz-m61"/>
+                            <constraint firstItem="Rs5-F2-69F" firstAttribute="bottom" secondItem="8vi-8j-QIJ" secondAttribute="bottom" id="rtc-B9-py6"/>
+                            <constraint firstItem="Rs5-F2-69F" firstAttribute="trailing" secondItem="KFj-S4-8nS" secondAttribute="trailing" id="uRq-2P-J4H"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="leading" secondItem="Rs5-F2-69F" secondAttribute="leading" id="zzl-Yz-m61"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vgx-yr-4sf"/>
+                        <viewLayoutGuide key="safeArea" id="Rs5-F2-69F"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
