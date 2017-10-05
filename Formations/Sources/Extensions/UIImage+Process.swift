@@ -13,6 +13,10 @@ extension UIImage {
         return imageFromContext(size) { _ in }
     }
     
+    var retina: UIImage {
+        return UIImage(cgImage: self.cgImage!, scale: UIScreen.main.scale, orientation: .up)
+    }
+    
     /// 指定のサイズに拡大縮小した画像を生成して返す
     /// - parameter size: サイズ
     /// - returns: 拡大縮小した画像

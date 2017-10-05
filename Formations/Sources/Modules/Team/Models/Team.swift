@@ -52,7 +52,7 @@ class Team: RealmSwift.Object {
     
     func loadSmallEmblemImage() -> Self {
         if smallEmblemImage == nil {
-            smallEmblemImage = Image.teamSmallEmblem(id: id).load()
+            smallEmblemImage = Image.teamSmallEmblem(id: id).load()?.retina
         }
         return self
     }

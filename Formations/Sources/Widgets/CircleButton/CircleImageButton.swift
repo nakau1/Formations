@@ -50,7 +50,6 @@ import UIKit
     }
     
     private func renderImage() {
-        setBackgroundImage(buttonImage, for: .normal)
-//        setImage(buttonImage, for: .normal)
+        setImage(buttonImage, for: .normal)
     }
 }
