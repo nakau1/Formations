@@ -1,27 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nra-lB-ILS">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Team List View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Formations FC-->
+        <scene sceneID="1ab-ce-aKb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TeamListViewController" customModule="Formations" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="Formations FC" id="Nra-lB-ILS" customClass="TeamListViewController" customModule="Formations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uIj-F4-Gbr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ycg-AN-lbR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F3I-mo-0Br">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-background" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-S4-8nS" customClass="BackgroundView" customModule="Formations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-8j-QIJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NHV-0e-UWA">
+                                    <size key="itemSize" width="182" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamList" id="DEy-mG-sdZ" customClass="TeamListCollectionViewCell" customModule="Formations" customModuleProvider="target">
+                                        <rect key="frame" x="69" y="0.0" width="182" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マンチェスター・ユナイテッド" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-5e-PFh">
+                                                    <rect key="frame" x="0.0" y="174" width="182" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-LE-LcQ" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="16" width="150" height="150"/>
+                                                    <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="MJs-LE-LcQ" secondAttribute="height" multiplier="1:1" id="Lt3-ax-nyv"/>
+                                                    </constraints>
+                                                    <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.1764705926" green="0.49803921579999999" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapEmblemButton" destination="DEy-mG-sdZ" eventType="touchUpInside" id="9a3-k9-Jvr"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="VVb-5e-PFh" secondAttribute="bottom" constant="2" id="DWh-8O-Thr"/>
+                                            <constraint firstItem="MJs-LE-LcQ" firstAttribute="leading" secondItem="DEy-mG-sdZ" secondAttribute="leadingMargin" constant="16" id="IbC-Sm-mwV"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="MJs-LE-LcQ" secondAttribute="trailing" constant="16" id="Itk-j9-zeC"/>
+                                            <constraint firstItem="VVb-5e-PFh" firstAttribute="top" secondItem="MJs-LE-LcQ" secondAttribute="bottom" constant="8" id="K1s-v9-b3m"/>
+                                            <constraint firstItem="VVb-5e-PFh" firstAttribute="leading" secondItem="DEy-mG-sdZ" secondAttribute="leadingMargin" id="U16-Gv-kdk"/>
+                                            <constraint firstItem="VVb-5e-PFh" firstAttribute="trailing" secondItem="DEy-mG-sdZ" secondAttribute="trailingMargin" id="afx-bU-D2Z"/>
+                                            <constraint firstItem="MJs-LE-LcQ" firstAttribute="top" secondItem="DEy-mG-sdZ" secondAttribute="topMargin" constant="16" id="bOk-t1-UQ3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="emblemButton" destination="MJs-LE-LcQ" id="64M-56-16P"/>
+                                            <outlet property="nameLabel" destination="VVb-5e-PFh" id="uPD-7R-ONz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nra-lB-ILS" id="rw7-fd-iS2"/>
+                                    <outlet property="delegate" destination="Nra-lB-ILS" id="OVi-sG-lzG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vgx-yr-4sf" firstAttribute="trailing" secondItem="8vi-8j-QIJ" secondAttribute="trailing" id="DmE-tq-EyJ"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="top" secondItem="F3I-mo-0Br" secondAttribute="top" id="EUx-LJ-xIQ"/>
+                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="leading" secondItem="Vgx-yr-4sf" secondAttribute="leading" id="GXs-kj-Xc2"/>
+                            <constraint firstItem="8vi-8j-QIJ" firstAttribute="top" secondItem="uIj-F4-Gbr" secondAttribute="bottom" id="ZGb-o9-kaA"/>
+                            <constraint firstAttribute="bottom" secondItem="KFj-S4-8nS" secondAttribute="bottom" id="aXm-fh-E4a"/>
+                            <constraint firstItem="Ycg-AN-lbR" firstAttribute="top" secondItem="8vi-8j-QIJ" secondAttribute="bottom" id="rtc-B9-py6"/>
+                            <constraint firstAttribute="trailing" secondItem="KFj-S4-8nS" secondAttribute="trailing" id="uRq-2P-J4H"/>
+                            <constraint firstItem="KFj-S4-8nS" firstAttribute="leading" secondItem="F3I-mo-0Br" secondAttribute="leading" id="zzl-Yz-m61"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vgx-yr-4sf"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf2-A5-96y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-168.75" y="177.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default-background" width="414" height="736"/>
+    </resources>
 </document>

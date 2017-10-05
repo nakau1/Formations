@@ -33,7 +33,7 @@ class TeamModel: RealmModel<Team>, IdentifierGeneratable {
             let emblemImage = entity.loadEmblemImage().emblemImage?.adjusted(to: CGSize(400, 400), shouldExpand: true)
             Image.teamEmblem(id: entity.id).save(emblemImage)
             
-            let smallEmblemImage = entity.loadSmallEmblemImage().smallEmblemImage?.adjusted(to: CGSize(210, 210), shouldExpand: true)
+            let smallEmblemImage = entity.loadSmallEmblemImage().smallEmblemImage?.adjusted(to: CGSize(273, 273), shouldExpand: true)
             Image.teamSmallEmblem(id: entity.id).save(smallEmblemImage)
             
             let teamImage = entity.loadTeamImage().teamImage?.adjusted(to: CGSize(828, 1472), shouldExpand: true)

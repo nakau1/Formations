@@ -10,7 +10,7 @@ class LandingViewController: UITableViewController {
         return [
             Section("アプリ", [
                 Row("スタート", handler: { vc in
-                    vc.present(TeamEditViewController.create().withinNavigation)
+                    vc.present(TeamListViewController.create().withinNavigation)
                 }),
                 ]
             ),
