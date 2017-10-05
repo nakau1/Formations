@@ -9,6 +9,8 @@ class BackgroundView: UIImageView {
     
     private static let NotificationImageKey = "image"
     
+    @IBInspectable var isObserveChangeImage: Bool = true
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         if image == nil {
@@ -25,7 +27,7 @@ class BackgroundView: UIImageView {
     }
     
     @objc func didReceiveDidChangeImage(notification: Notification) {
-        if let image = notification.userInfo?[BackgroundView.NotificationImageKey] as? UIImage {
+        if let image = notification.userInfo?[BackgroundView.NotificationImageKey] as? UIImage, isObserveChangeImage {
             self.image = image
         }
     }
