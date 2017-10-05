@@ -26,6 +26,7 @@ class TeamListViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource & UICollectionViewDelegate
 extension TeamListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,10 +41,11 @@ extension TeamListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 }
 
+// MARK: - TeamListCollectionViewCellDelegate
 extension TeamListViewController: TeamListCollectionViewCellDelegate {
     
     func didTapTeamButton(_ team: Team) {
-        //push(TeamMenuViewController.create(team))
+        push(TeamMenuViewController.create(for: team))
     }
     
     func didTapAddButton() {
@@ -51,7 +53,7 @@ extension TeamListViewController: TeamListCollectionViewCellDelegate {
     }
 }
 
-// MARK: - Private -
+// MARK: - Private
 private extension TeamListViewController {
     
     /// ビューの初期処理
@@ -65,12 +67,14 @@ private extension TeamListViewController {
     }
 }
 
+// MARK: - CellDelegate -
 protocol TeamListCollectionViewCellDelegate: class {
     
     func didTapTeamButton(_ team: Team)
     func didTapAddButton()
 }
 
+// MARK: - Cell -
 class TeamListCollectionViewCell: UICollectionViewCell {
     
     enum Mode {

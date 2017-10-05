@@ -25,6 +25,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-background" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-S4-8nS" customClass="BackgroundView" customModule="Formations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isObserveChangeImage" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-8j-QIJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>

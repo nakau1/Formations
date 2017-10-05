@@ -9,7 +9,7 @@ import Rswift
 class TeamMenuViewController: UIViewController {
     
     // MARK: ファクトリメソッド
-    class func create(team: Team) -> UIViewController {
+    class func create(for team: Team) -> UIViewController {
         return R.storyboard.teamMenuViewController.instantiate(self) { vc in
             vc.team = team
         }
@@ -71,6 +71,11 @@ class TeamMenuViewController: UIViewController {
         super.viewDidLoad()
         prepare()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+    }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -92,16 +97,23 @@ extension TeamMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-// MARK: - Private -
+// MARK: - Private
 private extension TeamMenuViewController {
     
     func prepare() {
         prepareNavigationBar()
+        prepareBackgroundView()
         title = team.name
+    }
+    
+    func prepareBackgroundView() {
+        let image = team.loadTeamImage().teamImage?.retina
+        BackgroundView.notifyChangeImage(image)
     }
 }
 
-class TeamMenuTableViewCell: UITableViewCell {
+// MARK: - Cell -
+class TeamMenuTableViewCell: UnhighlightableTableViewCell {
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var summeryLabel: UILabel!
