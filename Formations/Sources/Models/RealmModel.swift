@@ -25,6 +25,13 @@ class RealmModel<T: RealmSwift.Object> {
         return Entity()
     }
     
+    func write(_ entity: Entity, updating: (Entity) -> Void) {
+        let realm = loadRealm()
+        try! realm.write {
+            updating(entity)
+        }
+    }
+    
     func select(_ condition: NSPredicate? = nil) -> RealmSwift.Results<Entity> {
         if let conditionPredicate = condition {
             return loadRealm().objects(Entity.self).filter(conditionPredicate)
