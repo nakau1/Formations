@@ -129,11 +129,17 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     }
     
     func didTapMainColor() {
-        
+        ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
+            self.team.mainColor = color
+            self.tableView.reloadData()
+        }
     }
     
     func didTapSubColor() {
-        
+        ColorPicker.show(from: self, defaultColor: team.subColor) { [unowned self] color in
+            self.team.subColor = color
+            self.tableView.reloadData()
+        }
     }
     
     func didTapOption1Color() {
