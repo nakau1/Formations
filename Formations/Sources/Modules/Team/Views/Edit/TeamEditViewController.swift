@@ -9,9 +9,15 @@ import Rswift
 class TeamEditViewController: UIViewController {
     
     // MARK: ファクトリメソッド
-    class func create(for team: Team) -> UIViewController {
+    class func create(for team: Team?) -> UIViewController {
         return R.storyboard.teamEditViewController.instantiate(self) { vc in
-            vc.team = team
+            if let team = team {
+                vc.team = team
+            } else {
+                let newTeam = Realm.Team.create()
+                vc.team = newTeam
+                vc.isAdd = true
+            }
         }
     }
     
@@ -55,6 +61,7 @@ class TeamEditViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
     
+    private var isAdd = false
     private var team: Team!
     
     // MARK: ライフサイクル
@@ -71,6 +78,13 @@ class TeamEditViewController: UIViewController {
         prepareTeam()
     }
     
+    private func prepareUserInterface() {
+        self.title = isAdd ? "新しいチームの作成" : "チーム設定"
+        if !isAdd {
+            navigationItem.rightBarButtonItem = nil
+        }
+    }
+    
     private func prepareBackgroundView() {
         let image = team.loadTeamImage().teamImage?.retina
         BackgroundView.notifyChangeImage(image)
@@ -84,6 +98,21 @@ class TeamEditViewController: UIViewController {
     
     private func prepareTeam() {
         Realm.Team.clearValidateResults(team)
+    }
+    
+    @IBAction func didTapCompleteButton() {
+        AlertDialog.showConfirmNewSave(
+            from: self,
+            targetName: "チーム",
+            save: { [unowned self] in
+                Realm.Team.save(self.team)
+                
+            },
+            dispose: { [unowned self] in
+                Image.delete(category: .teams, id: self.team.id)
+                self.dismiss()
+            }
+        )
     }
 }
 
