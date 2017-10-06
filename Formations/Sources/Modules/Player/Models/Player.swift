@@ -7,6 +7,8 @@ import RealmSwift
 
 class Player: RealmSwift.Object {
     
+    var info = [String : Any?]()
+    
     // MARK: - Properties
     
     /// ID
@@ -26,13 +28,20 @@ class Player: RealmSwift.Object {
     /// ポジション
     @objc dynamic var positionText = "MF"
     
+    // MARK: -
+    
+    /// ポジション
+    var position: Position {
+        return Position(rawValue: positionText)!
+    }
+    
     // MARK: - Images
     
     /// 顔画像
     var faceImage: UIImage?
     
-    func loadFaceImage() -> Self {
-        if faceImage == nil {
+    func loadFaceImage(force: Bool = false) -> Self {
+        if faceImage == nil || force {
             faceImage = Image.playerFace(id: id).load()
         }
         return self
@@ -41,8 +50,8 @@ class Player: RealmSwift.Object {
     /// サムネイル画像
     var thumbImage: UIImage?
     
-    func loadThumbImage() -> Self {
-        if thumbImage == nil {
+    func loadThumbImage(force: Bool = false) -> Self {
+        if thumbImage == nil || force {
             thumbImage = Image.playerThumb(id: id).load()
         }
         return self
@@ -50,8 +59,8 @@ class Player: RealmSwift.Object {
     /// 全身画像
     var fullImage: UIImage?
     
-    func loadFullImage() -> Self {
-        if fullImage == nil {
+    func loadFullImage(force: Bool = false) -> Self {
+        if fullImage == nil || force {
             fullImage = Image.playerThumb(id: id).load()
         }
         return self
@@ -62,7 +71,7 @@ class Player: RealmSwift.Object {
     override class func primaryKey() -> String? { return "id" }
     
     override class func ignoredProperties() -> [String] {
-        return ["faceImage", "thumbImage", "fullImage"]
+        return ["faceImage", "thumbImage", "fullImage", "position", "info"]
     }
     
     override var description: String {
