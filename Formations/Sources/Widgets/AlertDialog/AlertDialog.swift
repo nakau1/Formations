@@ -90,12 +90,13 @@ class AlertDialog: UIViewController {
         super.viewDidLoad()
         prepareView()
         prepareMessage()
-        prepareButton()
+        prepareButton(rightButton, style: mode.rightStyle, title: mode.rightTitle)
+        prepareButton(leftButton, style: mode.leftStyle, title: mode.leftTitle)
     }
     
     private func prepareView() {
         view.layer.cornerRadius = 5
-        view.layer.borderColor = UIColor.gray.cgColor
+        view.layer.borderColor = UIColor.lightGray.cgColor
         view.layer.borderWidth = 1
         view.clipsToBounds = true
     }
@@ -104,25 +105,16 @@ class AlertDialog: UIViewController {
         messageLabel.text = message
     }
     
-    private func prepareButton() {
+    private func prepareButton(_ button: UIButton, style: ButtonStyle?, title: String?) {
         let buttonSize = CGSize(100, 44)
         
-        if let rightTitle = mode.rightTitle, let rightStyle = mode.rightStyle {
-            rightButton.setBackgroundImage(UIImage.filled(color: rightStyle.color, size: buttonSize), for: .normal)
-            rightButton.setTitle(rightTitle, for: .normal)
-            rightButton.layer.cornerRadius = 5
-            rightButton.clipsToBounds = true
+        if let title = title, let style = style {
+            button.setBackgroundImage(UIImage.filled(color: style.color, size: buttonSize), for: .normal)
+            button.setTitle(title, for: .normal)
+            button.layer.cornerRadius = 5
+            button.clipsToBounds = true
         } else {
-            rightButton.isHidden = true
-        }
-
-        if let leftTitle = mode.leftTitle, let leftStyle = mode.leftStyle {
-            leftButton.setBackgroundImage(UIImage.filled(color: leftStyle.color, size: buttonSize), for: .normal)
-            leftButton.setTitle(leftTitle, for: .normal)
-            leftButton.layer.cornerRadius = 5
-            leftButton.clipsToBounds = true
-        } else {
-            leftButton.isHidden = true
+            button.isHidden = true
         }
     }
     
