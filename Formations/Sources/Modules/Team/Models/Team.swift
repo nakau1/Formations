@@ -7,6 +7,8 @@ import RealmSwift
 
 class Team: RealmSwift.Object {
     
+    var info = [String : Any?]()
+    
     // MARK: - Properties
     
     /// ID
@@ -122,7 +124,7 @@ class Team: RealmSwift.Object {
     override class func primaryKey() -> String? { return "id" }
     
     override class func ignoredProperties() -> [String] {
-        return ["emblemImage", "smallEmblemImage", "teamImage"]
+        return ["emblemImage", "smallEmblemImage", "teamImage", "info"]
     }
     
     override var description: String {

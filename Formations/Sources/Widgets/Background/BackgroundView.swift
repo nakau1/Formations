@@ -29,7 +29,7 @@ class BackgroundView: UIImageView {
     @objc func didReceiveDidChangeImage(notification: Notification) {
         if let image = notification.userInfo?[BackgroundView.NotificationImageKey] as? UIImage, isObserveChangeImage {
             let filter = UIImage.filled(
-                color: UIColor(white: 0, alpha: 0.5),
+                color: UIColor(white: 0, alpha: 0.8),
                 size: image.size
             )
             self.image = image.synthesized(image: filter)

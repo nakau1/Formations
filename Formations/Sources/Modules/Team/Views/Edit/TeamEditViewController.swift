@@ -45,9 +45,9 @@ class TeamEditViewController: UIViewController {
         
         var hintText: String {
             switch self {
-            case .name:              return "チーム名を入力します\n(30文字以内)"
-            case .internationalName: return "チームのの国際上の名称を英字で入力します\n(30文字以内)"
-            case .shortenedName:     return "チームを表す3文字のアルファベットを入力します\n(例 : 日本代表 = JPN)"
+            case .name:              return "チーム名を入力します\n(\(TeamModel.maxlenOfName)文字以内)"
+            case .internationalName: return "チームのの国際上の名称を英字で入力します\n(\(TeamModel.maxlenOfInternationalName)文字以内)"
+            case .shortenedName:     return "チームを表す\(TeamModel.fixlenOfShortenedName)文字のアルファベットを入力します\n(例 : 日本代表 = JPN)"
             default: return ""
             }
         }
@@ -68,6 +68,7 @@ class TeamEditViewController: UIViewController {
         prepareNavigationBar()
         prepareBackgroundView()
         prepareTableView()
+        prepareTeam()
     }
     
     private func prepareBackgroundView() {
@@ -79,6 +80,10 @@ class TeamEditViewController: UIViewController {
         tableView.estimatedRowHeight = 64
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.registerEditHeaderCell()
+    }
+    
+    private func prepareTeam() {
+        Realm.Team.clearValidateResults(team)
     }
 }
 
@@ -117,15 +122,30 @@ extension TeamEditViewController: UITableViewDataSource, UITableViewDelegate {
 extension TeamEditViewController: TeamEditTableViewDelegate {
     
     func didEditName(value: String) {
-        
+        if Realm.Team.validateName(value, of: team) {
+            Realm.Team.write(team) {
+                $0.name = value
+            }
+        }
+        tableView.reloadData()
     }
     
     func didEditInternationalName(value: String) {
-        
+        if Realm.Team.validateInternationalName(value, of: team) {
+            Realm.Team.write(team) {
+                $0.internationalName = value
+            }
+        }
+        tableView.reloadData()
     }
     
     func didEditShortenedName(value: String) {
-        
+        if Realm.Team.validateShortenedName(value, of: team) {
+            Realm.Team.write(team) {
+                $0.shortenedName = value.uppercased()
+            }
+        }
+        tableView.reloadData()
     }
     
     func didTapMainColor() {
@@ -190,11 +210,13 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var hintLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override var row: TeamEditViewController.Row! {
         didSet {
             textField.placeholder = row.placeholderText
             hintLabel.text = row.hintText
+            errorLabel.text = ""
         }
     }
     
@@ -207,6 +229,12 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
             case .shortenedName:     textField.text = team.shortenedName
             default: break
             }
+            switch row {
+            case .name:              errorLabel.text = Realm.Team.validateResultOfName(team)
+            case .internationalName: errorLabel.text = Realm.Team.validateResultOfInternationalName(team)
+            case .shortenedName:     errorLabel.text = Realm.Team.validateResultOfShortenedName(team)
+            default: break
+            }
         }
     }
     
@@ -215,6 +243,17 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+    
+    @IBAction private func didChangeTextField() {
+        let value = textField.text ?? ""
+        let row: TeamEditViewController.Row = self.row
+        switch row {
+        case .name:              delegate?.didEditName(value: value)
+        case .internationalName: delegate?.didEditInternationalName(value: value)
+        case .shortenedName:     delegate?.didEditShortenedName(value: value)
+        default: break
+        }
     }
 }
 
