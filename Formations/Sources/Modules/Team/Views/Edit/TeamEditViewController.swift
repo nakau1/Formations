@@ -130,14 +130,14 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     
     func didTapMainColor() {
         ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
-            self.team.mainColor = color
+            Realm.Team.write(self.team) { $0.mainColor = color }
             self.tableView.reloadData()
         }
     }
     
     func didTapSubColor() {
         ColorPicker.show(from: self, defaultColor: team.subColor) { [unowned self] color in
-            self.team.subColor = color
+            Realm.Team.write(self.team) { $0.subColor = color }
             self.tableView.reloadData()
         }
     }
