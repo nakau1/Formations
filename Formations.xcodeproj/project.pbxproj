@@ -104,6 +104,9 @@
 		DBF79B5B1F83C9A600FCB2BE /* team-sample-image.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF79B2D1F83C9A600FCB2BE /* team-sample-image.png */; };
 		DBF79B5E1F83D26400FCB2BE /* PositionBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF79B5D1F83D26400FCB2BE /* PositionBoardView.swift */; };
 		E4069CB51F86280C002996F5 /* Rswift+CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */; };
+		E4069CB81F871F13002996F5 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CB71F871F13002996F5 /* AlertDialog.swift */; };
+		E4069CBA1F871F43002996F5 /* AlertDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4069CB91F871F43002996F5 /* AlertDialog.storyboard */; };
+		E4069CBC1F873286002996F5 /* AlertDialog+Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CBB1F873286002996F5 /* AlertDialog+Messages.swift */; };
 		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
 		E420B6041F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */; };
 		E420B6061F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */; };
@@ -226,6 +229,9 @@
 		DBF79B2D1F83C9A600FCB2BE /* team-sample-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team-sample-image.png"; sourceTree = "<group>"; };
 		DBF79B5D1F83D26400FCB2BE /* PositionBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionBoardView.swift; sourceTree = "<group>"; };
 		E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+CellIdentifier.swift"; sourceTree = "<group>"; };
+		E4069CB71F871F13002996F5 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
+		E4069CB91F871F43002996F5 /* AlertDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertDialog.storyboard; sourceTree = "<group>"; };
+		E4069CBB1F873286002996F5 /* AlertDialog+Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertDialog+Messages.swift"; sourceTree = "<group>"; };
 		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightableTableViewCell.swift; sourceTree = "<group>"; };
 		E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -541,6 +547,7 @@
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				E4069CB61F871EFA002996F5 /* AlertDialog */,
 				E420B6021F84B721007C2EB5 /* TableView */,
 				DBF79B5C1F83D24900FCB2BE /* PositionBoard */,
 				E43849181F83600C004F9248 /* Background */,
@@ -643,6 +650,16 @@
 				DBF79B5D1F83D26400FCB2BE /* PositionBoardView.swift */,
 			);
 			path = PositionBoard;
+			sourceTree = "<group>";
+		};
+		E4069CB61F871EFA002996F5 /* AlertDialog */ = {
+			isa = PBXGroup;
+			children = (
+				E4069CBB1F873286002996F5 /* AlertDialog+Messages.swift */,
+				E4069CB71F871F13002996F5 /* AlertDialog.swift */,
+				E4069CB91F871F43002996F5 /* AlertDialog.storyboard */,
+			);
+			path = AlertDialog;
 			sourceTree = "<group>";
 		};
 		E411E4631F832016003B397D /* Models */ = {
@@ -792,6 +809,7 @@
 				DBF79B381F83C9A600FCB2BE /* player-sample18-1.jpg in Resources */,
 				DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */,
 				CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */,
+				E4069CBA1F871F43002996F5 /* AlertDialog.storyboard in Resources */,
 				DBF79B491F83C9A600FCB2BE /* player-sample3-2.jpg in Resources */,
 				DBF79B341F83C9A600FCB2BE /* player-sample14-1.jpg in Resources */,
 				DBF79B3A1F83C9A600FCB2BE /* player-sample19-1.jpg in Resources */,
@@ -905,6 +923,7 @@
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
 				E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */,
+				E4069CB81F871F13002996F5 /* AlertDialog.swift in Sources */,
 				CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */,
 				CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */,
 				DB5EC99B1F7FFF660000B8E0 /* PopupFadeAnimation.swift in Sources */,
@@ -916,6 +935,7 @@
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 				E420B60E1F84BCA0007C2EB5 /* ColorPicker.swift in Sources */,
 				CEF99B5E1F8106020079CDC9 /* Player.swift in Sources */,
+				E4069CBC1F873286002996F5 /* AlertDialog+Messages.swift in Sources */,
 				CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */,
 				CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */,
 				CEF99B611F8106020079CDC9 /* PlayerListViewController.swift in Sources */,

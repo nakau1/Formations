@@ -804,8 +804,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 13 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 14 storyboards.
   struct storyboard {
+    /// Storyboard `AlertDialog`.
+    static let alertDialog = _R.storyboard.alertDialog()
     /// Storyboard `ColorPicker`.
     static let colorPicker = _R.storyboard.colorPicker()
     /// Storyboard `FormationListViewController`.
@@ -832,6 +834,11 @@ struct R: Rswift.Validatable {
     static let testViewController = _R.storyboard.testViewController()
     /// Storyboard `TextPicker`.
     static let textPicker = _R.storyboard.textPicker()
+    
+    /// `UIStoryboard(name: "AlertDialog", bundle: ...)`
+    static func alertDialog(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.alertDialog)
+    }
     
     /// `UIStoryboard(name: "ColorPicker", bundle: ...)`
     static func colorPicker(_: Void = ()) -> UIKit.UIStoryboard {
@@ -947,6 +954,15 @@ struct _R: Rswift.Validatable {
       try teamListViewController.validate()
       try teamEditViewController.validate()
       try teamMenuViewController.validate()
+    }
+    
+    struct alertDialog: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = AlertDialog
+      
+      let bundle = R.hostingBundle
+      let name = "AlertDialog"
+      
+      fileprivate init() {}
     }
     
     struct colorPicker: Rswift.StoryboardResourceWithInitialControllerType {

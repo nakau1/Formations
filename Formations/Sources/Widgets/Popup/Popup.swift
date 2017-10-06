@@ -45,6 +45,12 @@ struct PopupOptions {
     
     var overlayColor = UIColor.black.withAlphaComponent(0.5)
     
+    var overlayIsBlur = false
+    
+    var overlayBlurEffectStyle = UIBlurEffectStyle.regular
+    
+    var overlayBlurAlpha: CGFloat = 1.0
+    
     var overlayTapDismissalEnabled = true
     
     var fixedSize: CGSize?
@@ -143,8 +149,16 @@ private class PopupPresentationController: UIPresentationController {
     override func presentationTransitionWillBegin() {
         guard let containerView = self.containerView else { return }
         
-        overlay = UIView(frame: containerView.bounds)
-        overlay.backgroundColor = popupOptions.overlayColor
+        if popupOptions.overlayIsBlur {
+            let effect = UIBlurEffect(style: popupOptions.overlayBlurEffectStyle)
+            overlay = UIVisualEffectView(effect: effect)
+            overlay.frame = containerView.bounds
+            overlay.backgroundColor = .clear
+        } else {
+            overlay = UIView(frame: containerView.bounds)
+            overlay.backgroundColor = popupOptions.overlayColor
+        }
+        
         overlay.alpha = 0
         if popupOptions.overlayTapDismissalEnabled {
             overlay.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapOverlay)))
@@ -154,10 +168,10 @@ private class PopupPresentationController: UIPresentationController {
         
         if let coordinator = presentedViewController.transitionCoordinator {
             coordinator.animate(alongsideTransition: { [unowned self] context in
-                self.overlay.alpha = 1
+                self.overlay.alpha = self.popupOptions.overlayIsBlur ? self.popupOptions.overlayBlurAlpha : 1
             }, completion: nil)
         } else {
-            overlay.alpha = 1
+            overlay.alpha = popupOptions.overlayIsBlur ? self.popupOptions.overlayBlurAlpha : 1
         }
     }
     
