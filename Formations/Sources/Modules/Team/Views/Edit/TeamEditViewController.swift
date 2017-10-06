@@ -103,7 +103,8 @@ class TeamEditViewController: UIViewController {
             targetName: "チーム",
             save: { [unowned self] in
                 Realm.Team.save(self.team)
-                
+                Realm.Team.notifyChange()
+                self.dismiss()
             },
             dispose: { [unowned self] in
                 Image.delete(category: .teams, id: self.team.id)
@@ -151,6 +152,7 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
         if Realm.Team.validateName(value, of: team) {
             Realm.Team.write(team) {
                 $0.name = value
+                Realm.Team.notifyChange()
             }
         }
         tableView.reloadData()
@@ -177,7 +179,7 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     func didTapMainColor() {
         ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
             Realm.Team.write(self.team) { $0.mainColor = color }
-            Realm.Team.notifyChangeColor()
+            Realm.Team.notifyChange()
             self.tableView.reloadData()
         }
     }
@@ -231,7 +233,7 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
             smallEmblem.save(image)
             self.team.smallEmblemImage = smallEmblem.load()
             
-            Realm.Team.notifyChangeEmblemImage()
+            Realm.Team.notifyChange()
             self.tableView.reloadData()
         }
     }

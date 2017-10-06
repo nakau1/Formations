@@ -29,20 +29,15 @@ class TeamListViewController: UIViewController {
     }
     
     private func prepareObservingNotifications() {
-        Realm.Team.observe(self, changeEmblemImage: #selector(didReceiveTeamDidChangeEmblemImage(_:)))
-        Realm.Team.observe(self, changeColor: #selector(didReceiveTeamDidChangeColor(_:)))
+        Realm.Team.observe(self, change: #selector(didReceiveTeamChange(notification:)))
     }
     
     private func isAddRow(at indexPath: IndexPath) -> Bool {
         return indexPath.row == teams.count
     }
     
-    @objc private func didReceiveTeamDidChangeEmblemImage(_ notification: Notification) {
-        teams.forEach { _ = $0.loadEmblemImage(force: true) }
-        collectionView.reloadData()
-    }
-    
-    @objc private func didReceiveTeamDidChangeColor(_ notification: Notification) {
+    @objc private func didReceiveTeamChange(notification: Notification) {
+        teams.forEach { _ = $0.loadSmallEmblemImage(force: true) }
         collectionView.reloadData()
     }
 }

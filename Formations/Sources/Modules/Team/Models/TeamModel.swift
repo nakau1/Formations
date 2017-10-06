@@ -126,26 +126,17 @@ extension TeamModel {
 // MARK: - Notification
 extension TeamModel {
     
-    func observe(_ observer: Any, changeEmblemImage selector: Selector) {
-        NotificationCenter.default.addObserver(observer, selector: selector, name: .TeamDidChangeEmblemImage, object: nil)
+    func observe(_ observer: Any, change selector: Selector) {
+        NotificationCenter.default.addObserver(observer, selector: selector, name: .TeamDidChange, object: nil)
     }
     
-    func notifyChangeEmblemImage() {
-        NotificationCenter.default.post(name: .TeamDidChangeEmblemImage, object: nil)
-    }
-    
-    func observe(_ observer: Any, changeColor selector: Selector) {
-        NotificationCenter.default.addObserver(observer, selector: selector, name: .TeamDidChangeColor, object: nil)
-    }
-    
-    func notifyChangeColor() {
-        NotificationCenter.default.post(name: .TeamDidChangeColor, object: nil)
+    func notifyChange() {
+        NotificationCenter.default.post(name: .TeamDidChange, object: nil)
     }
 }
 
 extension Notification.Name {
-    static let TeamDidChangeEmblemImage = Notification.Name("TeamDidChangeEmblemImage")
-    static let TeamDidChangeColor = Notification.Name("TeamDidChangeColor")
+    static let TeamDidChange = Notification.Name("TeamDidChange")
 }
 
 // MARK: - Shared Instance
