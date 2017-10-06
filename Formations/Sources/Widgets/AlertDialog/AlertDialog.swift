@@ -80,7 +80,8 @@ class AlertDialog: UIViewController {
         
         var options = PopupOptions(.rise(offset: nil))
         options.overlayTapDismissalEnabled = false
-        options.overlayColor = .clear
+        options.overlayIsBlur = true
+        options.overlayBlurAlpha = 0.95
         
         Popup.show(alertDialog, from: viewController, options: options)
     }
