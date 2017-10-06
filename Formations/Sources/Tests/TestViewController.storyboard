@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,12 +36,10 @@
                         <color key="backgroundColor" red="0.72156864399999998" green="0.88627451660000001" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iuX-5w-7u3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3AM-59-l9Q"/>
-                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8yI-bU-aCq"/>
-                            <constraint firstAttribute="bottom" secondItem="aTE-wv-Nmu" secondAttribute="bottom" id="UEM-Mp-AeA"/>
-                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UsH-OJ-OSl"/>
-                            <constraint firstAttribute="trailing" secondItem="aTE-wv-Nmu" secondAttribute="trailing" id="fot-Zg-xMz"/>
-                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="goh-qe-gpf"/>
-                            <constraint firstItem="aTE-wv-Nmu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="inr-6m-HJT"/>
+                            <constraint firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8yI-bU-aCq"/>
+                            <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UsH-OJ-OSl"/>
+                            <constraint firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="goh-qe-gpf"/>
+                            <constraint firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="inr-6m-HJT"/>
                             <constraint firstItem="iuX-5w-7u3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwd-bJ-c0q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

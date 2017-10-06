@@ -1048,11 +1048,23 @@ struct _R: Rswift.Validatable {
       typealias InitialController = TeamEditViewController
       
       let bundle = R.hostingBundle
+      let emblemImage = StoryboardViewControllerResource<TeamEditHelpViewController>(identifier: "emblemImage")
       let name = "TeamEditViewController"
+      let teamImage = StoryboardViewControllerResource<TeamEditHelpViewController>(identifier: "teamImage")
+      
+      func emblemImage(_: Void = ()) -> TeamEditHelpViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: emblemImage)
+      }
+      
+      func teamImage(_: Void = ()) -> TeamEditHelpViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: teamImage)
+      }
       
       static func validate() throws {
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'TeamEditViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "btn-help") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-help' is used in storyboard 'TeamEditViewController', but couldn't be loaded.") }
+        if _R.storyboard.teamEditViewController().emblemImage() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'emblemImage' could not be loaded from storyboard 'TeamEditViewController' as 'TeamEditHelpViewController'.") }
+        if _R.storyboard.teamEditViewController().teamImage() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'teamImage' could not be loaded from storyboard 'TeamEditViewController' as 'TeamEditHelpViewController'.") }
       }
       
       fileprivate init() {}

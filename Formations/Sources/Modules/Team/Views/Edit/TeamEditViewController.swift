@@ -225,36 +225,53 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     
     func didTapEmblemImage() {
         ImagePicker.show(from: self) { [unowned self] image in
-            let emblem = Image.teamEmblem(id: self.team.id)
-            emblem.save(image)
-            self.team.emblemImage = emblem.load()
-
-            let smallEmblem = Image.teamSmallEmblem(id: self.team.id)
-            smallEmblem.save(image)
-            self.team.smallEmblemImage = smallEmblem.load()
-            
-            Realm.Team.notifyChange()
-            self.tableView.reloadData()
+            self.updateEmblemImage(image)
         }
     }
     
     func didTapTeamImage() {
         ImagePicker.show(from: self) { [unowned self] image in
-            let teamImage = Image.teamImage(id: self.team.id)
-            teamImage.save(image)
-            self.team.teamImage = teamImage.load()
-            
-            BackgroundView.notifyChangeImage(image)
-            self.tableView.reloadData()
+            self.updateTeamImage(image)
         }
     }
     
     func didTapEmblemImageHelp() {
-        
+        let vc = TeamEditHelpViewController.create(mode: .emblemImage, delete: {
+            self.updateEmblemImage(nil)
+        })
+        Popup.show(vc, from: self, options: PopupOptions(.bottomDraw(height: 380)))
     }
     
     func didTapTeamImageHelp() {
+        let vc = TeamEditHelpViewController.create(mode: .teamImage, delete: {
+            self.updateTeamImage(nil)
+        })
+        Popup.show(vc, from: self, options: PopupOptions(.bottomDraw(height: 380)))
+    }
+}
+
+extension TeamEditViewController {
+    
+    private func updateEmblemImage(_ image: UIImage?) {
+        let emblem = Image.teamEmblem(id: self.team.id)
+        emblem.save(image)
+        self.team.emblemImage = image
         
+        let smallEmblem = Image.teamSmallEmblem(id: self.team.id)
+        smallEmblem.save(image)
+        self.team.smallEmblemImage = image
+        
+        Realm.Team.notifyChange()
+        self.tableView.reloadData()
+    }
+    
+    private func updateTeamImage(_ image: UIImage?) {
+        let teamImage = Image.teamImage(id: self.team.id)
+        teamImage.save(image)
+        self.team.teamImage = image
+        
+        BackgroundView.notifyChangeImage(image)
+        self.tableView.reloadData()
     }
 }
 

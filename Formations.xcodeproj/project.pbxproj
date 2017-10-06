@@ -52,6 +52,7 @@
 		DB5EC9A81F8126860000B8E0 /* CircleColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */; };
 		DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
+		DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */; };
 		DBC666811F86989000B99447 /* UIColor+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC666801F86989000B99447 /* UIColor+Common.swift */; };
 		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
@@ -178,6 +179,7 @@
 		DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleColorButton.swift; sourceTree = "<group>"; };
 		DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageButton.swift; sourceTree = "<group>"; };
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
+		DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditHelpViewController.swift; sourceTree = "<group>"; };
 		DBC666801F86989000B99447 /* UIColor+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Common.swift"; sourceTree = "<group>"; };
 		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				DB16272F1F7EA02800A3D709 /* TeamEditViewController.swift */,
+				DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */,
 				DB16272E1F7EA02800A3D709 /* TeamEditViewController.storyboard */,
 			);
 			path = Edit;
@@ -949,6 +952,7 @@
 				CEF99B661F8106020079CDC9 /* Formation.swift in Sources */,
 				CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */,
 				CEF99B681F8106020079CDC9 /* FormationListViewController.swift in Sources */,
+				DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */,
 				E438491A1F836046004F9248 /* BackgroundView.swift in Sources */,
 				E44DA28B1F85E5D70022460B /* UIImage+CircleButton.swift in Sources */,
 			);

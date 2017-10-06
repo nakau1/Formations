@@ -163,19 +163,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csh-8Z-O6m">
-                                                    <rect key="frame" x="87" y="16" width="25" height="63"/>
+                                                    <rect key="frame" x="86" y="16" width="26" height="62"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyC-ov-J1U">
-                                                    <rect key="frame" x="175" y="16" width="24.5" height="63"/>
+                                                    <rect key="frame" x="174" y="16" width="26.5" height="62"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Hf-ScH">
-                                                    <rect key="frame" x="262.5" y="16" width="25" height="63"/>
+                                                    <rect key="frame" x="262.5" y="16" width="26" height="62"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P5-qD-hgg" customClass="CircleColorButton" customModule="Formations" customModuleProvider="target">
-                                                    <rect key="frame" x="24" y="16" width="63" height="63"/>
+                                                    <rect key="frame" x="24" y="16" width="62" height="62"/>
                                                     <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="6P5-qD-hgg" secondAttribute="height" multiplier="1:1" id="Nj5-IK-fA0"/>
@@ -191,7 +191,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsL-by-zQu" customClass="CircleColorButton" customModule="Formations" customModuleProvider="target">
-                                                    <rect key="frame" x="112" y="16" width="63" height="63"/>
+                                                    <rect key="frame" x="112" y="16" width="62" height="62"/>
                                                     <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                                     <userDefinedRuntimeAttributes>
@@ -204,7 +204,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki2-cX-T2o" customClass="CircleColorButton" customModule="Formations" customModuleProvider="target">
-                                                    <rect key="frame" x="199.5" y="16" width="63" height="63"/>
+                                                    <rect key="frame" x="200.5" y="16" width="62" height="62"/>
                                                     <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                                     <connections>
@@ -212,7 +212,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-8H-pP4" customClass="CircleColorButton" customModule="Formations" customModuleProvider="target">
-                                                    <rect key="frame" x="288" y="16" width="63" height="63"/>
+                                                    <rect key="frame" x="289" y="16" width="62" height="62"/>
                                                     <color key="backgroundColor" red="1" green="0.9999405146" blue="0.99998050930000004" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                                     <connections>
@@ -220,25 +220,25 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メイン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goZ-Ib-oFF">
-                                                    <rect key="frame" x="40.5" y="87" width="30" height="10"/>
+                                                    <rect key="frame" x="40" y="86" width="30" height="10"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
                                                     <color key="textColor" red="0.74751811430000004" green="0.74751811430000004" blue="0.75052019510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サブ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzW-0g-azE">
-                                                    <rect key="frame" x="133.5" y="87" width="20" height="10"/>
+                                                    <rect key="frame" x="133" y="86" width="20" height="10"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
                                                     <color key="textColor" red="0.74751811430000004" green="0.74751811430000004" blue="0.75052019510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オプション" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpk-WH-LtT">
-                                                    <rect key="frame" x="206.5" y="87" width="50" height="10"/>
+                                                    <rect key="frame" x="207" y="86" width="50" height="10"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
                                                     <color key="textColor" red="0.74751811430000004" green="0.74751811430000004" blue="0.75052019510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オプション2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6s-Bb-MUi">
-                                                    <rect key="frame" x="291.5" y="87" width="57" height="10"/>
+                                                    <rect key="frame" x="292" y="86" width="57" height="10"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
                                                     <color key="textColor" red="0.74751811430000004" green="0.74751811430000004" blue="0.75052019510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -315,8 +315,11 @@
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" image="btn-help"/>
+                                                            <connections>
+                                                                <action selector="didTapEmblemImageHelpButton" destination="U0r-uN-zET" eventType="touchUpInside" id="CHR-Xb-Omb"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-At-W7E">
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-At-W7E">
                                                             <rect key="frame" x="16" y="48" width="131.5" height="131.5"/>
                                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
@@ -324,7 +327,6 @@
                                                             </constraints>
                                                             <connections>
                                                                 <action selector="didTapEmblemImageButton" destination="U0r-uN-zET" eventType="touchUpInside" id="Igi-XE-Svn"/>
-                                                                <action selector="didTapEmblemImageHelpButton" destination="U0r-uN-zET" eventType="touchUpInside" id="FMl-bJ-rjB"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -349,7 +351,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBJ-zZ-JuC">
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBJ-zZ-JuC">
                                                             <rect key="frame" x="16" y="48" width="107" height="197.5"/>
                                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
@@ -358,7 +360,6 @@
                                                             <state key="normal" image="default-background"/>
                                                             <connections>
                                                                 <action selector="didTapTeamImageButton" destination="U0r-uN-zET" eventType="touchUpInside" id="b3f-f9-gfc"/>
-                                                                <action selector="didTapTeamImageHelpButton" destination="U0r-uN-zET" eventType="touchUpInside" id="6nH-1U-mZY"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7P-y4-Meb">
@@ -369,6 +370,9 @@
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" image="btn-help"/>
+                                                            <connections>
+                                                                <action selector="didTapTeamImageHelpButton" destination="U0r-uN-zET" eventType="touchUpInside" id="pHG-Bf-fEA"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -435,6 +439,135 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="23.188405797101453" y="26.90217391304348"/>
+        </scene>
+        <!--Team Edit Help View Controller-->
+        <scene sceneID="bkc-wT-jpJ">
+            <objects>
+                <viewController storyboardIdentifier="emblemImage" id="FnD-Ju-riy" customClass="TeamEditHelpViewController" customModule="Formations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1G-QN-G6V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oa1-eQ-Vlm">
+                                <rect key="frame" x="16" y="330" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7rz-yt-heR"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="現在の画像を削除する"/>
+                                <connections>
+                                    <action selector="didTapDeleteButton" destination="FnD-Ju-riy" eventType="touchUpInside" id="mWg-X2-KLk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-ii-dXG">
+                                <rect key="frame" x="16" y="122" width="343" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9Kc-RY-Afc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エンブレム画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdy-Dc-5w7">
+                                <rect key="frame" x="16" y="16" width="128.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFe-9V-APE">
+                                <rect key="frame" x="24" y="45" width="335" height="67"/>
+                                <string key="text">クラブのエンブレムです。
+エンブレム画像は背景が透過しているPNG画像を指定してください。
+サイズは正方形で600px程度が推奨サイズです。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LvH-ii-dXG" firstAttribute="leading" secondItem="yTg-p7-SGI" secondAttribute="leading" constant="16" id="2lS-V7-XD9"/>
+                            <constraint firstItem="yTg-p7-SGI" firstAttribute="bottom" secondItem="oa1-eQ-Vlm" secondAttribute="bottom" constant="16" id="Hdo-Yf-8rK"/>
+                            <constraint firstItem="MFe-9V-APE" firstAttribute="leading" secondItem="yTg-p7-SGI" secondAttribute="leading" constant="24" id="Pow-x2-TFZ"/>
+                            <constraint firstItem="oa1-eQ-Vlm" firstAttribute="top" secondItem="LvH-ii-dXG" secondAttribute="bottom" constant="8" id="Sbe-8i-Cpg"/>
+                            <constraint firstItem="MFe-9V-APE" firstAttribute="top" secondItem="vdy-Dc-5w7" secondAttribute="bottom" constant="8" id="X5Y-vD-t3V"/>
+                            <constraint firstItem="vdy-Dc-5w7" firstAttribute="leading" secondItem="yTg-p7-SGI" secondAttribute="leading" constant="16" id="i9t-QT-HWM"/>
+                            <constraint firstItem="oa1-eQ-Vlm" firstAttribute="leading" secondItem="yTg-p7-SGI" secondAttribute="leading" constant="16" id="kN8-tj-RZU"/>
+                            <constraint firstItem="yTg-p7-SGI" firstAttribute="trailing" secondItem="oa1-eQ-Vlm" secondAttribute="trailing" constant="16" id="kOj-cW-VqD"/>
+                            <constraint firstItem="vdy-Dc-5w7" firstAttribute="top" secondItem="yTg-p7-SGI" secondAttribute="top" constant="16" id="lhn-n7-HvA"/>
+                            <constraint firstItem="yTg-p7-SGI" firstAttribute="trailing" secondItem="LvH-ii-dXG" secondAttribute="trailing" constant="16" id="oWs-fi-oPZ"/>
+                            <constraint firstItem="yTg-p7-SGI" firstAttribute="trailing" secondItem="MFe-9V-APE" secondAttribute="trailing" constant="16" id="rbA-ZB-Bde"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yTg-p7-SGI"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="390"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCL-XF-f3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754.39999999999998" y="-89.955022488755631"/>
+        </scene>
+        <!--Team Edit Help View Controller-->
+        <scene sceneID="SIb-kJ-wde">
+            <objects>
+                <viewController storyboardIdentifier="teamImage" id="dIn-38-Wfn" customClass="TeamEditHelpViewController" customModule="Formations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kmt-q4-N9K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-CN-VHD">
+                                <rect key="frame" x="16" y="330" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mhq-V5-SrI"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="現在の画像を削除する"/>
+                                <connections>
+                                    <action selector="didTapDeleteButton" destination="dIn-38-Wfn" eventType="touchUpInside" id="V1A-zW-99R"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eKN-fR-Af2">
+                                <rect key="frame" x="16" y="122" width="343" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6T4-gN-ah3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チームイメージ画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoT-Bf-nQR">
+                                <rect key="frame" x="16" y="16" width="166" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-ml-wib">
+                                <rect key="frame" x="24" y="46" width="335" height="67"/>
+                                <string key="text">背景壁紙などに使われるチームをイメージする画像です。
+1242px x 2289px が推奨サイズです。大きなサイズの場合は切り取られます。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="amc-kc-qN0" firstAttribute="trailing" secondItem="eKN-fR-Af2" secondAttribute="trailing" constant="16" id="0Jr-jY-T5r"/>
+                            <constraint firstItem="qsw-ml-wib" firstAttribute="top" secondItem="qoT-Bf-nQR" secondAttribute="bottom" constant="8" id="AYo-EP-RAM"/>
+                            <constraint firstItem="qoT-Bf-nQR" firstAttribute="top" secondItem="amc-kc-qN0" secondAttribute="top" constant="16" id="INq-mX-fS7"/>
+                            <constraint firstItem="amc-kc-qN0" firstAttribute="trailing" secondItem="DTB-CN-VHD" secondAttribute="trailing" constant="16" id="JBF-U4-dsm"/>
+                            <constraint firstItem="qsw-ml-wib" firstAttribute="leading" secondItem="amc-kc-qN0" secondAttribute="leading" constant="24" id="NQr-BU-JEq"/>
+                            <constraint firstItem="DTB-CN-VHD" firstAttribute="leading" secondItem="amc-kc-qN0" secondAttribute="leading" constant="16" id="UgL-Hy-lth"/>
+                            <constraint firstItem="amc-kc-qN0" firstAttribute="trailing" secondItem="qsw-ml-wib" secondAttribute="trailing" constant="16" id="XpA-Ie-poH"/>
+                            <constraint firstItem="amc-kc-qN0" firstAttribute="bottom" secondItem="DTB-CN-VHD" secondAttribute="bottom" constant="16" id="iHm-rb-5Ck"/>
+                            <constraint firstItem="DTB-CN-VHD" firstAttribute="top" secondItem="eKN-fR-Af2" secondAttribute="bottom" constant="8" id="mZf-xQ-Bcx"/>
+                            <constraint firstItem="eKN-fR-Af2" firstAttribute="leading" secondItem="amc-kc-qN0" secondAttribute="leading" constant="16" id="nrh-Kt-UlX"/>
+                            <constraint firstItem="qoT-Bf-nQR" firstAttribute="leading" secondItem="amc-kc-qN0" secondAttribute="leading" constant="16" id="szq-16-81h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="amc-kc-qN0"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="390"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7IS-Fe-4Lo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754.39999999999998" y="318.44077961019491"/>
         </scene>
     </scenes>
     <resources>
