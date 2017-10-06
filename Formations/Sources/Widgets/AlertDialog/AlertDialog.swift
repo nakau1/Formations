@@ -67,8 +67,8 @@ class AlertDialog: UIViewController {
     }
     
     @IBOutlet private weak var messageLabel: UILabel!
-    @IBOutlet private weak var leftButton: UIButton!
-    @IBOutlet private weak var rightButton: UIButton!
+    @IBOutlet private weak var leftButton: Button!
+    @IBOutlet private weak var rightButton: Button!
     
     private var mode: Mode!
     private var message: String!
@@ -116,11 +116,9 @@ class AlertDialog: UIViewController {
         messageLabel.text = message
     }
     
-    private func prepareButton(_ button: UIButton, style: ButtonStyle?, title: String?) {
-        let buttonSize = CGSize(100, 44)
-        
+    private func prepareButton(_ button: Button, style: ButtonStyle?, title: String?) {
         if let title = title, let style = style {
-            button.setBackgroundImage(UIImage.filled(color: style.color, size: buttonSize), for: .normal)
+            button.buttonColor = style.color
             button.setTitle(title, for: .normal)
             button.layer.cornerRadius = 5
             button.clipsToBounds = true

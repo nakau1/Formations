@@ -53,6 +53,7 @@
 		DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
 		DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */; };
+		DBA456F71F87E3F600663948 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA456F61F87E3F600663948 /* Button.swift */; };
 		DBC666811F86989000B99447 /* UIColor+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC666801F86989000B99447 /* UIColor+Common.swift */; };
 		DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1627341F7EA08400A3D709 /* LandingViewController.swift */; };
 		DBF7588C1F7EC7E100065475 /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */; };
@@ -180,6 +181,7 @@
 		DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageButton.swift; sourceTree = "<group>"; };
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
 		DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditHelpViewController.swift; sourceTree = "<group>"; };
+		DBA456F61F87E3F600663948 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DBC666801F86989000B99447 /* UIColor+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Common.swift"; sourceTree = "<group>"; };
 		DBF7588A1F7EC7C700065475 /* TestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
 		DBF7588B1F7EC7C700065475 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -554,7 +556,7 @@
 				E420B6021F84B721007C2EB5 /* TableView */,
 				DBF79B5C1F83D24900FCB2BE /* PositionBoard */,
 				E43849181F83600C004F9248 /* Background */,
-				DB5EC9A61F8125C80000B8E0 /* CircleButton */,
+				DB5EC9A61F8125C80000B8E0 /* Button */,
 				CEF99B241F80F1E20079CDC9 /* Picker */,
 				DB36AAD51F7ECC6600EEADD5 /* Popup */,
 			);
@@ -576,13 +578,14 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
-		DB5EC9A61F8125C80000B8E0 /* CircleButton */ = {
+		DB5EC9A61F8125C80000B8E0 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				DBA456F61F87E3F600663948 /* Button.swift */,
 				DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */,
 				DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */,
 			);
-			path = CircleButton;
+			path = Button;
 			sourceTree = "<group>";
 		};
 		DBF758891F7EC7C700065475 /* Tests */ = {
@@ -945,6 +948,7 @@
 				E4EE6B451F83A26100472F12 /* Fixture.swift in Sources */,
 				E4069CB51F86280C002996F5 /* Rswift+CellIdentifier.swift in Sources */,
 				CEF99B621F8106020079CDC9 /* FormationTemplate.swift in Sources */,
+				DBA456F71F87E3F600663948 /* Button.swift in Sources */,
 				CEF99B631F8106020079CDC9 /* FormationTemplateModel.swift in Sources */,
 				CEF99B641F8106020079CDC9 /* FormationTemplateEditViewController.swift in Sources */,
 				E411E4651F83203A003B397D /* Image.swift in Sources */,
