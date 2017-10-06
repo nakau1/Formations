@@ -34,7 +34,7 @@ extension TeamListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.teamList, for: indexPath)!
+        let cell = R.reuseIdentifier.teamList.reuse(collectionView, indexPath)
         cell.delegate = self
         cell.mode = isAddRow(at: indexPath) ? .add : .team(team: teams[indexPath.row])
         return cell
