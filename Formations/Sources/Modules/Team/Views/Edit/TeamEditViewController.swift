@@ -163,11 +163,35 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     }
     
     func didTapOption1Color() {
-        
+        AlertDialog.showOptionColorMenu(
+            from: self,
+            delete: {
+                Realm.Team.write(self.team) { $0.option1Color = nil }
+                self.tableView.reloadData()
+            },
+            change: {
+                ColorPicker.show(from: self, defaultColor: self.team.option1Color) { [unowned self] color in
+                    Realm.Team.write(self.team) { $0.option1Color = color }
+                    self.tableView.reloadData()
+                }
+            }
+        )
     }
     
     func didTapOption2Color() {
-        
+        AlertDialog.showOptionColorMenu(
+            from: self,
+            delete: {
+                Realm.Team.write(self.team) { $0.option2Color = nil }
+                self.tableView.reloadData()
+            },
+            change: {
+                ColorPicker.show(from: self, defaultColor: self.team.option2Color) { [unowned self] color in
+                    Realm.Team.write(self.team) { $0.option2Color = color }
+                    self.tableView.reloadData()
+                }
+            }
+        )
     }
     
     func didTapEmblemImage() {

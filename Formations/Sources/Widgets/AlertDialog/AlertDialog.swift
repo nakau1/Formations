@@ -13,36 +13,41 @@ class AlertDialog: UIViewController {
         case ok
         case okCancel
         case saveDispose
+        case deleteChange
         
         var leftTitle: String? {
             switch self {
-            case .ok:          return nil
-            case .okCancel:    return "キャンセル"
-            case .saveDispose: return "破棄する"
+            case .ok:           return nil
+            case .okCancel:     return "キャンセル"
+            case .saveDispose:  return "破棄する"
+            case .deleteChange: return "削除する"
             }
         }
         
         var rightTitle: String? {
             switch self {
-            case .ok:          return "OK"
-            case .okCancel:    return "OK"
-            case .saveDispose: return "保存する"
+            case .ok:           return "OK"
+            case .okCancel:     return "OK"
+            case .saveDispose:  return "保存する"
+            case .deleteChange: return "変更する"
             }
         }
         
         var leftStyle: ButtonStyle? {
             switch self {
-            case .ok:          return nil
-            case .okCancel:    return .default
-            case .saveDispose: return .negative
+            case .ok:           return nil
+            case .okCancel:     return .default
+            case .saveDispose:  return .negative
+            case .deleteChange: return .negative
             }
         }
         
         var rightStyle: ButtonStyle? {
             switch self {
-            case .ok:          return .default
-            case .okCancel:    return .positive
-            case .saveDispose: return .positive
+            case .ok:           return .default
+            case .okCancel:     return .positive
+            case .saveDispose:  return .positive
+            case .deleteChange: return .default
             }
         }
     }
@@ -69,14 +74,20 @@ class AlertDialog: UIViewController {
     private var message: String!
     private var leftTapped: TappedHandler!
     private var rightTapped: TappedHandler!
+    private var leftDismissed: TappedHandler!
+    private var rightDismissed: TappedHandler!
     
-    class func show(from viewController: UIViewController, message: String, mode: Mode, rightTapped: @escaping TappedHandler, leftTapped: @escaping TappedHandler) {
+    class func show(from viewController: UIViewController, message: String, mode: Mode,
+                    rightTapped: @escaping TappedHandler = {}, leftTapped: @escaping TappedHandler = {},
+                    rightDismissed: @escaping TappedHandler = {}, leftDismissed: @escaping TappedHandler = {}) {
         let alertDialog = R.storyboard.alertDialog.instantiate(self)
         
         alertDialog.message = message
         alertDialog.mode = mode
         alertDialog.leftTapped = leftTapped
         alertDialog.rightTapped = rightTapped
+        alertDialog.leftDismissed = leftDismissed
+        alertDialog.rightDismissed = rightDismissed
         
         var options = PopupOptions(.rise(offset: nil))
         options.overlayTapDismissalEnabled = false
@@ -120,11 +131,15 @@ class AlertDialog: UIViewController {
     
     @IBAction private func didTapLeftButton() {
         leftTapped()
-        dismiss(animated: true) {}
+        dismiss(animated: true) {
+            self.leftDismissed()
+        }
     }
     
     @IBAction private func didTapRightButton() {
         rightTapped()
-        dismiss(animated: true) {}
+        dismiss(animated: true) {
+            self.rightDismissed()
+        }
     }
 }
