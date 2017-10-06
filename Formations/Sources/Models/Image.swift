@@ -50,6 +50,27 @@ enum Image {
     var extensionName: String {
         return "png"
     }
+    
+    func process(_ image: UIImage) -> UIImage {
+        switch self {
+        case .playerFace:
+            return image
+        case .playerThumb:
+            return image
+        case .playerFull:
+            return image
+        case .teamEmblem:
+            return image.adjusted(to: CGSize(400, 400), shouldExpand: true)
+        case .teamSmallEmblem:
+            return image.adjusted(to: CGSize(273, 273), shouldExpand: true)
+        case .teamImage:
+            return image.adjusted(to: CGSize(828, 1472), shouldExpand: true)
+        case .test:
+            return image
+        case .testOrigin:
+            return image
+        }
+    }
 }
 
 extension Image {
@@ -61,7 +82,7 @@ extension Image {
     func save(_ image: UIImage?) {
         makeDirectoryIfNeeded()
         if let image = image {
-            let data = UIImagePNGRepresentation(image)
+            let data = UIImagePNGRepresentation(process(image))
             try? data?.write(to: URL(fileURLWithPath: path), options: [.atomic])
         } else {
             delete()

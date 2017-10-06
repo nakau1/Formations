@@ -9,9 +9,15 @@ import Rswift
 class TeamEditViewController: UIViewController {
     
     // MARK: ファクトリメソッド
-    class func create(for team: Team) -> UIViewController {
+    class func create(for team: Team?) -> UIViewController {
         return R.storyboard.teamEditViewController.instantiate(self) { vc in
-            vc.team = team
+            if let team = team {
+                vc.team = team
+            } else {
+                let newTeam = Realm.Team.create()
+                vc.team = newTeam
+                vc.isAdd = true
+            }
         }
     }
     
@@ -45,9 +51,9 @@ class TeamEditViewController: UIViewController {
         
         var hintText: String {
             switch self {
-            case .name:              return "チーム名を入力します\n(30文字以内)"
-            case .internationalName: return "チームのの国際上の名称を英字で入力します\n(30文字以内)"
-            case .shortenedName:     return "チームを表す3文字のアルファベットを入力します\n(例 : 日本代表 = JPN)"
+            case .name:              return "チーム名を入力します\n(\(TeamModel.maxlenOfName)文字以内)"
+            case .internationalName: return "チームのの国際上の名称を英字で入力します\n(\(TeamModel.maxlenOfInternationalName)文字以内)"
+            case .shortenedName:     return "チームを表す\(TeamModel.fixlenOfShortenedName)文字のアルファベットを入力します\n(例 : 日本代表 = JPN)"
             default: return ""
             }
         }
@@ -55,19 +61,25 @@ class TeamEditViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
     
+    private var isAdd = false
     private var team: Team!
     
     // MARK: ライフサイクル
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepare()
-    }
-    
-    private func prepare() {
         prepareNavigationBar()
+        prepareUserInterface()
         prepareBackgroundView()
         prepareTableView()
+        prepareTeam()
+    }
+    
+    private func prepareUserInterface() {
+        self.title = isAdd ? "新しいチームの作成" : "チーム設定"
+        if !isAdd {
+            navigationItem.rightBarButtonItem = nil
+        }
     }
     
     private func prepareBackgroundView() {
@@ -79,6 +91,26 @@ class TeamEditViewController: UIViewController {
         tableView.estimatedRowHeight = 64
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.registerEditHeaderCell()
+    }
+    
+    private func prepareTeam() {
+        Realm.Team.clearValidateResults(team)
+    }
+    
+    @IBAction func didTapCompleteButton() {
+        AlertDialog.showConfirmNewSave(
+            from: self,
+            targetName: "チーム",
+            save: { [unowned self] in
+                Realm.Team.save(self.team)
+                Realm.Team.notifyChange()
+                self.dismiss()
+            },
+            dispose: { [unowned self] in
+                Image.delete(category: .teams, id: self.team.id)
+                self.dismiss()
+            }
+        )
     }
 }
 
@@ -117,20 +149,37 @@ extension TeamEditViewController: UITableViewDataSource, UITableViewDelegate {
 extension TeamEditViewController: TeamEditTableViewDelegate {
     
     func didEditName(value: String) {
-        
+        if Realm.Team.validateName(value, of: team) {
+            Realm.Team.write(team) {
+                $0.name = value
+                Realm.Team.notifyChange()
+            }
+        }
+        tableView.reloadData()
     }
     
     func didEditInternationalName(value: String) {
-        
+        if Realm.Team.validateInternationalName(value, of: team) {
+            Realm.Team.write(team) {
+                $0.internationalName = value
+            }
+        }
+        tableView.reloadData()
     }
     
     func didEditShortenedName(value: String) {
-        
+        if Realm.Team.validateShortenedName(value, of: team) {
+            Realm.Team.write(team) {
+                $0.shortenedName = value.uppercased()
+            }
+        }
+        tableView.reloadData()
     }
     
     func didTapMainColor() {
         ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
             Realm.Team.write(self.team) { $0.mainColor = color }
+            Realm.Team.notifyChange()
             self.tableView.reloadData()
         }
     }
@@ -143,19 +192,86 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     }
     
     func didTapOption1Color() {
-        
+        AlertDialog.showOptionColorMenu(
+            from: self,
+            delete: {
+                Realm.Team.write(self.team) { $0.option1Color = nil }
+                self.tableView.reloadData()
+            },
+            change: {
+                ColorPicker.show(from: self, defaultColor: self.team.option1Color) { [unowned self] color in
+                    Realm.Team.write(self.team) { $0.option1Color = color }
+                    self.tableView.reloadData()
+                }
+            }
+        )
     }
     
     func didTapOption2Color() {
-        
+        AlertDialog.showOptionColorMenu(
+            from: self,
+            delete: {
+                Realm.Team.write(self.team) { $0.option2Color = nil }
+                self.tableView.reloadData()
+            },
+            change: {
+                ColorPicker.show(from: self, defaultColor: self.team.option2Color) { [unowned self] color in
+                    Realm.Team.write(self.team) { $0.option2Color = color }
+                    self.tableView.reloadData()
+                }
+            }
+        )
     }
     
     func didTapEmblemImage() {
-        
+        ImagePicker.show(from: self) { [unowned self] image in
+            self.updateEmblemImage(image)
+        }
     }
     
     func didTapTeamImage() {
+        ImagePicker.show(from: self) { [unowned self] image in
+            self.updateTeamImage(image)
+        }
+    }
+    
+    func didTapEmblemImageHelp() {
+        let vc = TeamEditHelpViewController.create(mode: .emblemImage, delete: {
+            self.updateEmblemImage(nil)
+        })
+        Popup.show(vc, from: self, options: PopupOptions(.bottomDraw(height: 380)))
+    }
+    
+    func didTapTeamImageHelp() {
+        let vc = TeamEditHelpViewController.create(mode: .teamImage, delete: {
+            self.updateTeamImage(nil)
+        })
+        Popup.show(vc, from: self, options: PopupOptions(.bottomDraw(height: 380)))
+    }
+}
+
+extension TeamEditViewController {
+    
+    private func updateEmblemImage(_ image: UIImage?) {
+        let emblem = Image.teamEmblem(id: self.team.id)
+        emblem.save(image)
+        self.team.emblemImage = image
         
+        let smallEmblem = Image.teamSmallEmblem(id: self.team.id)
+        smallEmblem.save(image)
+        self.team.smallEmblemImage = image
+        
+        Realm.Team.notifyChange()
+        self.tableView.reloadData()
+    }
+    
+    private func updateTeamImage(_ image: UIImage?) {
+        let teamImage = Image.teamImage(id: self.team.id)
+        teamImage.save(image)
+        self.team.teamImage = image
+        
+        BackgroundView.notifyChangeImage(image)
+        self.tableView.reloadData()
     }
 }
 
@@ -171,6 +287,8 @@ protocol TeamEditTableViewDelegate: class {
     func didTapOption2Color()
     func didTapEmblemImage()
     func didTapTeamImage()
+    func didTapEmblemImageHelp()
+    func didTapTeamImageHelp()
 }
 
 // MARK: - Cells -
@@ -190,11 +308,13 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var hintLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override var row: TeamEditViewController.Row! {
         didSet {
             textField.placeholder = row.placeholderText
             hintLabel.text = row.hintText
+            errorLabel.text = ""
         }
     }
     
@@ -207,6 +327,12 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
             case .shortenedName:     textField.text = team.shortenedName
             default: break
             }
+            switch row {
+            case .name:              errorLabel.text = Realm.Team.validateResultOfName(team)
+            case .internationalName: errorLabel.text = Realm.Team.validateResultOfInternationalName(team)
+            case .shortenedName:     errorLabel.text = Realm.Team.validateResultOfShortenedName(team)
+            default: break
+            }
         }
     }
     
@@ -215,6 +341,17 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+    
+    @IBAction private func didChangeTextField() {
+        let value = textField.text ?? ""
+        let row: TeamEditViewController.Row = self.row
+        switch row {
+        case .name:              delegate?.didEditName(value: value)
+        case .internationalName: delegate?.didEditInternationalName(value: value)
+        case .shortenedName:     delegate?.didEditShortenedName(value: value)
+        default: break
+        }
     }
 }
 
@@ -265,10 +402,18 @@ class TeamEditImageTableViewCell: TeamEditTableViewCell {
     }
     
     @IBAction private func didTapEmblemImageButton() {
-        
+        delegate?.didTapEmblemImage()
     }
     
     @IBAction private func didTapTeamImageButton() {
-        
+        delegate?.didTapTeamImage()
+    }
+    
+    @IBAction private func didTapEmblemImageHelpButton() {
+        delegate?.didTapEmblemImageHelp()
+    }
+    
+    @IBAction private func didTapTeamImageHelpButton() {
+        delegate?.didTapTeamImageHelp()
     }
 }

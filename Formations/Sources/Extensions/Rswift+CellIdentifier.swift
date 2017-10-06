@@ -11,3 +11,10 @@ extension ReuseIdentifierType where ReusableType: UITableViewCell {
         return tableView.dequeueReusableCell(withIdentifier: self)!
     }
 }
+
+extension ReuseIdentifierType where ReusableType: UICollectionViewCell {
+    
+    func reuse(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> ReusableType {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: self, for: indexPath)!
+    }
+}

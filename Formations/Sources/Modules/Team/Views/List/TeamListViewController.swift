@@ -9,20 +9,36 @@ import RealmSwift
 // MARK: - Controller Definition -
 class TeamListViewController: UIViewController {
     
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     var teams: RealmSwift.Results<Team>!
     
-    // MARK: ファクトリメソッド
     class func create() -> UIViewController {
-        return R.storyboard.teamListViewController.instantiate(self) { vc in
-            
-        }
+        return R.storyboard.teamListViewController.instantiate(self)
     }
-    
-    // MARK: ライフサイクル
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepare()
+        prepareNavigationBar()
+        prepareObservingNotifications()
+        prepareTeams()
+    }
+    
+    private func prepareTeams() {
+        teams = Realm.Team.select()
+    }
+    
+    private func prepareObservingNotifications() {
+        Realm.Team.observe(self, change: #selector(didReceiveTeamChange(notification:)))
+    }
+    
+    private func isAddRow(at indexPath: IndexPath) -> Bool {
+        return indexPath.row == teams.count
+    }
+    
+    @objc private func didReceiveTeamChange(notification: Notification) {
+        teams.forEach { _ = $0.loadSmallEmblemImage(force: true) }
+        collectionView.reloadData()
     }
 }
 
@@ -34,7 +50,7 @@ extension TeamListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.teamList, for: indexPath)!
+        let cell = R.reuseIdentifier.teamList.reuse(collectionView, indexPath)
         cell.delegate = self
         cell.mode = isAddRow(at: indexPath) ? .add : .team(team: teams[indexPath.row])
         return cell
@@ -49,21 +65,7 @@ extension TeamListViewController: TeamListCollectionViewCellDelegate {
     }
     
     func didTapAddButton() {
-        //: TODO
-    }
-}
-
-// MARK: - Private
-private extension TeamListViewController {
-    
-    /// ビューの初期処理
-    func prepare() {
-        prepareNavigationBar()
-        teams = Realm.Team.select()
-    }
-    
-    func isAddRow(at indexPath: IndexPath) -> Bool {
-        return indexPath.row == teams.count
+        present(TeamEditViewController.create(for: nil).withinNavigation)
     }
 }
 
@@ -109,4 +111,3 @@ class TeamListCollectionViewCell: UICollectionViewCell {
         }
     }
 }
-

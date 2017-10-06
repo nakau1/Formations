@@ -49,6 +49,9 @@ private extension Fixture {
         team.emblemImage      = UIImage(named: "team-sample-emblem")
         team.smallEmblemImage = UIImage(named: "team-sample-emblem")
         team.teamImage        = UIImage(named: "team-sample-image")
+        team.mainColorRGB     = "1241d0"
+        team.subColorRGB      = "040504"
+        team.option1ColorRGB  = "23c2ec"
         
         return team
     }

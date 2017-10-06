@@ -7,17 +7,19 @@ import RealmSwift
 
 class Team: RealmSwift.Object {
     
+    var info = [String : Any?]()
+    
     // MARK: - Properties
     
     /// ID
     @objc dynamic var id = ""
     
     /// チーム名
-    @objc dynamic var name = ""
+    @objc dynamic var name = "新しいクラブ"
     /// チーム名(国際名)
-    @objc dynamic var internationalName = ""
+    @objc dynamic var internationalName = "Formation FC"
     /// チーム名(短縮系)
-    @objc dynamic var shortenedName = ""
+    @objc dynamic var shortenedName = "FFC"
     
     /// チームカラー(メイン)RGB値
     @objc dynamic var mainColorRGB = ""
@@ -40,8 +42,8 @@ class Team: RealmSwift.Object {
     /// エンブレム(オリジナル)画像
     var emblemImage: UIImage?
     
-    func loadEmblemImage() -> Self {
-        if emblemImage == nil {
+    func loadEmblemImage(force: Bool = false) -> Self {
+        if emblemImage == nil || force {
             emblemImage = Image.teamEmblem(id: id).load()
         }
         return self
@@ -50,8 +52,8 @@ class Team: RealmSwift.Object {
     /// エンブレム(小)画像
     var smallEmblemImage: UIImage?
     
-    func loadSmallEmblemImage() -> Self {
-        if smallEmblemImage == nil {
+    func loadSmallEmblemImage(force: Bool = false) -> Self {
+        if smallEmblemImage == nil || force {
             smallEmblemImage = Image.teamSmallEmblem(id: id).load()?.retina
         }
         return self
@@ -60,8 +62,8 @@ class Team: RealmSwift.Object {
     /// チーム画像(背景用)
     var teamImage: UIImage?
     
-    func loadTeamImage() -> Self {
-        if teamImage == nil {
+    func loadTeamImage(force: Bool = false) -> Self {
+        if teamImage == nil || force {
             teamImage = Image.teamImage(id: id).load()
         }
         return self
@@ -122,7 +124,7 @@ class Team: RealmSwift.Object {
     override class func primaryKey() -> String? { return "id" }
     
     override class func ignoredProperties() -> [String] {
-        return ["emblemImage", "smallEmblemImage", "teamImage"]
+        return ["emblemImage", "smallEmblemImage", "teamImage", "info"]
     }
     
     override var description: String {
