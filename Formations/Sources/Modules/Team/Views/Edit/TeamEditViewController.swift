@@ -68,11 +68,8 @@ class TeamEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepare()
-    }
-    
-    private func prepare() {
         prepareNavigationBar()
+        prepareUserInterface()
         prepareBackgroundView()
         prepareTableView()
         prepareTeam()
@@ -180,6 +177,7 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     func didTapMainColor() {
         ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
             Realm.Team.write(self.team) { $0.mainColor = color }
+            Realm.Team.notifyChangeColor()
             self.tableView.reloadData()
         }
     }
@@ -233,6 +231,7 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
             smallEmblem.save(image)
             self.team.smallEmblemImage = smallEmblem.load()
             
+            Realm.Team.notifyChangeEmblemImage()
             self.tableView.reloadData()
         }
     }
