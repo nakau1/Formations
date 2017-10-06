@@ -7,6 +7,8 @@ import Rswift
 
 class AlertDialog: UIViewController {
     
+    typealias TappedHandler = () -> Void
+    
     enum Mode {
         case ok
         case okCancel
@@ -65,10 +67,10 @@ class AlertDialog: UIViewController {
     
     private var mode: Mode!
     private var message: String!
-    private var leftTapped: (()->Void)!
-    private var rightTapped: (()->Void)!
+    private var leftTapped: TappedHandler!
+    private var rightTapped: TappedHandler!
     
-    class func show(from viewController: UIViewController, message: String, mode: Mode, rightTapped: @escaping ()->Void, leftTapped: @escaping  ()->Void) {
+    class func show(from viewController: UIViewController, message: String, mode: Mode, rightTapped: @escaping TappedHandler, leftTapped: @escaping TappedHandler) {
         let alertDialog = R.storyboard.alertDialog.instantiate(self)
         
         alertDialog.message = message

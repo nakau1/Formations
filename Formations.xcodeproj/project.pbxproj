@@ -106,6 +106,7 @@
 		E4069CB51F86280C002996F5 /* Rswift+CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */; };
 		E4069CB81F871F13002996F5 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CB71F871F13002996F5 /* AlertDialog.swift */; };
 		E4069CBA1F871F43002996F5 /* AlertDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4069CB91F871F43002996F5 /* AlertDialog.storyboard */; };
+		E4069CBC1F873286002996F5 /* AlertDialog+Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4069CBB1F873286002996F5 /* AlertDialog+Messages.swift */; };
 		E411E4651F83203A003B397D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E4641F83203A003B397D /* Image.swift */; };
 		E420B6041F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */; };
 		E420B6061F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */; };
@@ -230,6 +231,7 @@
 		E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+CellIdentifier.swift"; sourceTree = "<group>"; };
 		E4069CB71F871F13002996F5 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		E4069CB91F871F43002996F5 /* AlertDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertDialog.storyboard; sourceTree = "<group>"; };
+		E4069CBB1F873286002996F5 /* AlertDialog+Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertDialog+Messages.swift"; sourceTree = "<group>"; };
 		E411E4641F83203A003B397D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E420B6031F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightableTableViewCell.swift; sourceTree = "<group>"; };
 		E420B6051F84B7D0007C2EB5 /* EditHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 		E4069CB61F871EFA002996F5 /* AlertDialog */ = {
 			isa = PBXGroup;
 			children = (
+				E4069CBB1F873286002996F5 /* AlertDialog+Messages.swift */,
 				E4069CB71F871F13002996F5 /* AlertDialog.swift */,
 				E4069CB91F871F43002996F5 /* AlertDialog.storyboard */,
 			);
@@ -932,6 +935,7 @@
 				DB1627381F7EA4E300A3D709 /* TeamEditViewController.swift in Sources */,
 				E420B60E1F84BCA0007C2EB5 /* ColorPicker.swift in Sources */,
 				CEF99B5E1F8106020079CDC9 /* Player.swift in Sources */,
+				E4069CBC1F873286002996F5 /* AlertDialog+Messages.swift in Sources */,
 				CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */,
 				CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */,
 				CEF99B611F8106020079CDC9 /* PlayerListViewController.swift in Sources */,
