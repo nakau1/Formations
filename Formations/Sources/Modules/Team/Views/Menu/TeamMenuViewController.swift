@@ -65,11 +65,29 @@ class TeamMenuViewController: UIViewController {
     
     private var team: Team!
     
-    // MARK: ライフサイクル
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepare()
+    }
+    
+    func prepare() {
+        prepareNavigationBar()
+        prepareBackgroundView()
+        prepareObservingNotifications()
+        title = team.name
+    }
+    
+    func prepareBackgroundView() {
+        let image = team.loadTeamImage().teamImage?.retina
+        BackgroundView.notifyChangeImage(image)
+    }
+    
+    private func prepareObservingNotifications() {
+        Realm.Team.observe(self, change: #selector(didReceiveTeamChange(notification:)))
+    }
+    
+    @objc private func didReceiveTeamChange(notification: Notification) {
+        title = team.name
     }
 }
 
@@ -89,21 +107,6 @@ extension TeamMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         Row.rows[indexPath.row].process(self, team: team)
-    }
-}
-
-// MARK: - Private
-private extension TeamMenuViewController {
-    
-    func prepare() {
-        prepareNavigationBar()
-        prepareBackgroundView()
-        title = team.name
-    }
-    
-    func prepareBackgroundView() {
-        let image = team.loadTeamImage().teamImage?.retina
-        BackgroundView.notifyChangeImage(image)
     }
 }
 
