@@ -8,7 +8,7 @@ extension AlertDialog {
     
     class func showConfirmNewSave(from viewController: UIViewController, targetName: String, save: @escaping TappedHandler, dispose: @escaping TappedHandler) {
         let message = "この\(targetName)を新しく保存しますか?"
-        AlertDialog.show(from: viewController, message: message, mode: .saveDispose, rightTapped: save, leftTapped: dispose)
+        AlertDialog.show(from: viewController, message: message, mode: .saveDispose, rightTapped: save, leftDismissed: dispose)
     }
     
     class func showOptionColorMenu(from viewController: UIViewController, delete: @escaping TappedHandler, change: @escaping TappedHandler) {
