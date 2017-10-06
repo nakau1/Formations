@@ -408,8 +408,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 50 images.
+  /// This `R.image` struct is generated, and contains static references to 51 images.
   struct image {
+    /// Image `btn-help`.
+    static let btnHelp = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-help")
     /// Image `default-background`.
     static let defaultBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "default-background")
     /// Image `player-sample1-1.jpg`.
@@ -510,6 +512,11 @@ struct R: Rswift.Validatable {
     static let teamSampleEmblem = Rswift.ImageResource(bundle: R.hostingBundle, name: "team-sample-emblem")
     /// Image `team-sample-image`.
     static let teamSampleImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "team-sample-image")
+    
+    /// `UIImage(named: "btn-help", bundle: ..., traitCollection: ...)`
+    static func btnHelp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnHelp, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "default-background", bundle: ..., traitCollection: ...)`
     static func defaultBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -1045,6 +1052,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'TeamEditViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-help") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-help' is used in storyboard 'TeamEditViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

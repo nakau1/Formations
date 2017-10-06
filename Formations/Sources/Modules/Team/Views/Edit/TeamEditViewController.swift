@@ -334,4 +334,12 @@ class TeamEditImageTableViewCell: TeamEditTableViewCell {
     @IBAction private func didTapTeamImageButton() {
         
     }
+    
+    @IBAction private func didTapEmblemImageHelpButton() {
+        
+    }
+    
+    @IBAction private func didTapTeamImageHelpButton() {
+        
+    }
 }
