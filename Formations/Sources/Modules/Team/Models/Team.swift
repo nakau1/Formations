@@ -15,11 +15,11 @@ class Team: RealmSwift.Object {
     @objc dynamic var id = ""
     
     /// チーム名
-    @objc dynamic var name = ""
+    @objc dynamic var name = "新しいクラブ"
     /// チーム名(国際名)
-    @objc dynamic var internationalName = ""
+    @objc dynamic var internationalName = "Formation FC"
     /// チーム名(短縮系)
-    @objc dynamic var shortenedName = ""
+    @objc dynamic var shortenedName = "FFC"
     
     /// チームカラー(メイン)RGB値
     @objc dynamic var mainColorRGB = ""
