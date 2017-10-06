@@ -129,11 +129,17 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     }
     
     func didTapMainColor() {
-        
+        ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
+            Realm.Team.write(self.team) { $0.mainColor = color }
+            self.tableView.reloadData()
+        }
     }
     
     func didTapSubColor() {
-        
+        ColorPicker.show(from: self, defaultColor: team.subColor) { [unowned self] color in
+            Realm.Team.write(self.team) { $0.subColor = color }
+            self.tableView.reloadData()
+        }
     }
     
     func didTapOption1Color() {
@@ -216,11 +222,20 @@ class TeamEditNameTableViewCell: TeamEditTableViewCell, UITextFieldDelegate {
 
 class TeamEditColorTableViewCell: TeamEditTableViewCell {
     
-    @IBOutlet var colorButtons: [UIButton]!
+    @IBOutlet var colorButtons: [CircleColorButton]!
     
     override var team: Team! {
         didSet {
-            
+            colorButtons.enumerated().forEach { i, button in
+                let button = colorButtons[i]
+                switch i {
+                case 0: button.buttonColor = team.mainColor
+                case 1: button.buttonColor = team.subColor
+                case 2: button.buttonColor = team.option1Color
+                case 3: button.buttonColor = team.option2Color
+                default: break
+                }
+            }
         }
     }
     
