@@ -195,10 +195,35 @@ extension TeamEditViewController: TeamEditTableViewDelegate {
     }
     
     func didTapEmblemImage() {
-        
+        ImagePicker.show(from: self) { [unowned self] image in
+            let emblem = Image.teamEmblem(id: self.team.id)
+            emblem.save(image)
+            self.team.emblemImage = emblem.load()
+
+            let smallEmblem = Image.teamSmallEmblem(id: self.team.id)
+            smallEmblem.save(image)
+            self.team.smallEmblemImage = smallEmblem.load()
+            
+            self.tableView.reloadData()
+        }
     }
     
     func didTapTeamImage() {
+        ImagePicker.show(from: self) { [unowned self] image in
+            let teamImage = Image.teamImage(id: self.team.id)
+            teamImage.save(image)
+            self.team.teamImage = teamImage.load()
+            
+            BackgroundView.notifyChangeImage(image)
+            self.tableView.reloadData()
+        }
+    }
+    
+    func didTapEmblemImageHelp() {
+        
+    }
+    
+    func didTapTeamImageHelp() {
         
     }
 }
@@ -215,6 +240,8 @@ protocol TeamEditTableViewDelegate: class {
     func didTapOption2Color()
     func didTapEmblemImage()
     func didTapTeamImage()
+    func didTapEmblemImageHelp()
+    func didTapTeamImageHelp()
 }
 
 // MARK: - Cells -
@@ -328,18 +355,18 @@ class TeamEditImageTableViewCell: TeamEditTableViewCell {
     }
     
     @IBAction private func didTapEmblemImageButton() {
-        
+        delegate?.didTapEmblemImage()
     }
     
     @IBAction private func didTapTeamImageButton() {
-        
+        delegate?.didTapTeamImage()
     }
     
     @IBAction private func didTapEmblemImageHelpButton() {
-        
+        delegate?.didTapEmblemImageHelp()
     }
     
     @IBAction private func didTapTeamImageHelpButton() {
-        
+        delegate?.didTapTeamImageHelp()
     }
 }
