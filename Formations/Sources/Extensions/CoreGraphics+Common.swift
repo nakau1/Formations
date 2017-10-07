@@ -71,9 +71,13 @@ struct CGPercentage: Comparable {
     
     init() {}
     
-    init(_ x: CGFloat, _ y: CGFloat) {
+    init(x: CGFloat, y: CGFloat) {
         self.x = (0 <= x) ? ((x < 1.f) ? x : 1.f) : 0.f
         self.y = (0 <= y) ? ((y < 1.f) ? y : 1.f) : 0.f
+    }
+    
+    init(_ x: CGFloat, _ y: CGFloat) {
+        self.init(x: x, y: y)
     }
     
     static func *(lhs: CGPoint, rhs: CGPercentage) -> CGPoint {
