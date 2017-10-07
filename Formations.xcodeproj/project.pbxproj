@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */; };
 		CE5E59241F88DC450065E4A0 /* PlayerEditHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E59231F88DC450065E4A0 /* PlayerEditHelpViewController.swift */; };
+		CE5E59261F88E6CB0065E4A0 /* Array+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E59251F88E6CB0065E4A0 /* Array+Common.swift */; };
 		CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */; };
 		CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B271F80F2890079CDC9 /* TextPicker.swift */; };
 		CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */; };
@@ -134,6 +135,7 @@
 		BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Common.swift"; sourceTree = "<group>"; };
 		CE5E59231F88DC450065E4A0 /* PlayerEditHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEditHelpViewController.swift; sourceTree = "<group>"; };
+		CE5E59251F88E6CB0065E4A0 /* Array+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Common.swift"; sourceTree = "<group>"; };
 		CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEF99B271F80F2890079CDC9 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
 		CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 				DB16273F1F7EB1F300A3D709 /* Rswift+Storyboard.swift */,
 				E4069CB41F86280C002996F5 /* Rswift+CellIdentifier.swift */,
 				E44DA2861F85126B0022460B /* String+Common.swift */,
+				CE5E59251F88E6CB0065E4A0 /* Array+Common.swift */,
 				CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */,
 				E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */,
 				E44DA28A1F85E5D70022460B /* UIImage+CircleButton.swift */,
@@ -916,6 +919,7 @@
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */,
 				DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */,
+				CE5E59261F88E6CB0065E4A0 /* Array+Common.swift in Sources */,
 				CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
 				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
