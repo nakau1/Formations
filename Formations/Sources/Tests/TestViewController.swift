@@ -18,8 +18,6 @@ class TestViewController: UIViewController {
     }
     
 	@IBAction private func didTapTest(button: CircleColorButton) {
-        ColorPicker.show(from: self, defaultColor: #colorLiteral(red: 0.9093225598, green: 0.7241044641, blue: 0.9386705756, alpha: 1)) { color in
-            button.buttonColor = color
-        }
+        
     }
 }
