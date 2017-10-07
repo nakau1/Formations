@@ -48,6 +48,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="didChangeTextField" destination="Dvy-bn-hkL" eventType="editingDidEnd" id="97W-zv-a5E"/>
+                                                        <outlet property="delegate" destination="Dvy-bn-hkL" id="6gA-7X-eg2"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYg-H3-ERk">
@@ -100,7 +101,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WWW" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RBK-UJ-vDf">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WWW" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RBK-UJ-vDf">
                                                     <rect key="frame" x="16" y="4" width="100" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="FuN-F8-fnu"/>
@@ -110,7 +111,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                                     <connections>
-                                                        <action selector="didTapTextField" destination="j9E-54-aSf" eventType="touchUpInside" id="aYU-18-A2I"/>
+                                                        <outlet property="delegate" destination="j9E-54-aSf" id="gyl-sp-gRE"/>
                                                     </connections>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXa-Qa-4du">

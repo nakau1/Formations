@@ -190,18 +190,29 @@ extension PlayerEditViewController: PlayerEditTableViewDelegate {
 	}
 	
 	func didTapUniformNumber() {
-//		ColorPicker.show(from: self, defaultColor: team.mainColor) { [unowned self] color in
-//			Realm.Team.write(self.team) { $0.mainColor = color }
-//			Realm.Team.notifyChange()
-//			self.tableView.reloadData()
-//		}
+		let uniformNumberTexts = UniformNumber.texts
+		let index = uniformNumberTexts.index(of: player.uniformNumber) as Int?
+		let uniformNumbers = UniformNumber.texts.map { text -> TextPicker.Item in
+			return TextPicker.item(text)
+		}
+		TextPicker.show(from: self, items: uniformNumbers, defaultIndex: index) { selected in
+			Realm.Player.write(self.player) { $0.uniformNumber = selected.text }
+			Realm.Player.notifyChange()
+			self.tableView.reloadData()
+		}
 	}
 
 	func didTapPosition() {
-//		ColorPicker.show(from: self, defaultColor: team.subColor) { [unowned self] color in
-//			Realm.Team.write(self.team) { $0.subColor = color }
-//			self.tableView.reloadData()
-//		}
+		let positions = Position.items
+		let index = positions.index(of: player.position) as Int?
+		let positionItems = positions.map { position -> TextPicker.Item in
+			return TextPicker.item(position.rawValue, position)
+		}
+		TextPicker.show(from: self, items: positionItems, defaultIndex: index) { selected in
+			Realm.Player.write(self.player) { $0.positionText = selected.text }
+			Realm.Player.notifyChange()
+			self.tableView.reloadData()
+		}
 	}
 	
 	func didTapFaceImage() {
@@ -339,7 +350,7 @@ class PlayerEditNameTableViewCell: PlayerEditTableViewCell, UITextFieldDelegate 
 
 // MARK: - Input
 
-class PlayerEditInputTableViewCell: PlayerEditTableViewCell {
+class PlayerEditInputTableViewCell: PlayerEditTableViewCell, UITextFieldDelegate {
 	
 	@IBOutlet weak var textField: UITextField!
 	
@@ -354,13 +365,14 @@ class PlayerEditInputTableViewCell: PlayerEditTableViewCell {
 		}
 	}
 	
-	@IBAction private func didTapTextField() {
+	func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
 		let row: PlayerEditViewController.Row = self.row
 		switch row {
 		case .uniformNumber: delegate?.didTapUniformNumber()
 		case .position:      delegate?.didTapPosition()
 		default: break
 		}
+		return false
 	}
 }
 

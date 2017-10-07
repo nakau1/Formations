@@ -13,6 +13,12 @@ class TextPicker: UIViewController {
 	private var selected: TextPicker.SelectedHandler!
 	private var items = [Item]()
 	
+	private var defaultIndex: Int? {
+		didSet {
+			defaultIndex = items.properIndex(defaultIndex)
+		}
+	}
+	
 	/// テキストピッカー用のアイテムを作成する
 	///
 	/// - Parameters:
@@ -28,15 +34,23 @@ class TextPicker: UIViewController {
 	/// - Parameters:
 	///   - viewController: 表示元のビューコントローラ
 	///   - selected: 選択時の処理
-	class func show(from viewController: UIViewController, items: [Item], selected: @escaping SelectedHandler) {
+	class func show(from viewController: UIViewController, items: [Item], defaultIndex: Int?, selected: @escaping SelectedHandler) {
 		let textPicker = R.storyboard.textPicker.instantiate(self)
 		textPicker.items = items
 		textPicker.selected = selected
+		textPicker.defaultIndex = defaultIndex
 		
 		Popup.show(textPicker, from: viewController, options: PopupOptions(.rise(offset: nil)))
 	}
 	
 	@IBOutlet private weak var pickerView: UIPickerView!
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		if let index = defaultIndex {
+			pickerView.selectRow(index, inComponent: 0, animated: false)
+		}
+	}
 	
 	@IBAction private func didTapCommitButton() {
 		let index = pickerView.selectedRow(inComponent: 0)
