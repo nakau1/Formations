@@ -12,6 +12,7 @@ enum Image {
     case teamEmblem(id: String)
     case teamSmallEmblem(id: String)
     case teamImage(id: String)
+    case formationTemplate(id: String)
     case test(id: String)
     case testOrigin(id: String)
     
@@ -29,6 +30,8 @@ enum Image {
             return "\(Category.players.rawValue)/\(id)"
         case let .teamEmblem(id), let .teamSmallEmblem(id), let .teamImage(id):
             return "\(Category.teams.rawValue)/\(id)"
+        case .formationTemplate:
+            return "\(Category.formationTemplates.rawValue)"
         case .test, .testOrigin:
             return Category.test.rawValue
         }
@@ -36,14 +39,15 @@ enum Image {
     
     var name: String {
         switch self {
-        case .playerFace:         return "face"
-        case .playerThumb:        return "thumb"
-        case .playerFull:         return "full"
-        case .teamEmblem:         return "emblem"
-        case .teamSmallEmblem:    return "small_emblem"
-        case .teamImage:          return "image"
-        case let .test(id):       return id
-        case let .testOrigin(id): return id + "_org"
+        case .playerFace:                return "face"
+        case .playerThumb:               return "thumb"
+        case .playerFull:                return "full"
+        case .teamEmblem:                return "emblem"
+        case .teamSmallEmblem:           return "small_emblem"
+        case .teamImage:                 return "image"
+        case let .formationTemplate(id): return id
+        case let .test(id):              return id
+        case let .testOrigin(id):        return id + "_org"
         }
     }
     
@@ -65,6 +69,8 @@ enum Image {
             return image.adjusted(to: CGSize(273, 273), shouldExpand: true)
         case .teamImage:
             return image.adjusted(to: CGSize(828, 1472), shouldExpand: true)
+        case .formationTemplate:
+            return image
         case .test:
             return image
         case .testOrigin:
