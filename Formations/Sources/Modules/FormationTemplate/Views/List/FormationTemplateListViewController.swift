@@ -47,7 +47,7 @@ class FormationTemplateListViewController: UIViewController {
     }
     
     @IBAction private func didTapAddButton() {
-//        present(PlayerEditViewController.create(for: nil, ofTeam: team).withinNavigation)
+        present(FormationTemplateEditViewController.create().withinNavigation)
     }
 }
 
