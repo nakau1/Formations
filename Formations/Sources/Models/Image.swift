@@ -54,11 +54,11 @@ enum Image {
     func process(_ image: UIImage) -> UIImage {
         switch self {
         case .playerFace:
-            return image
+            return image.adjusted(to: CGSize(400, 400), shouldExpand: true)
         case .playerThumb:
-            return image
+            return image.adjusted(to: CGSize(240, 240), shouldExpand: true)
         case .playerFull:
-            return image
+            return image.adjusted(to: CGSize(1200, 1600), shouldExpand: true)
         case .teamEmblem:
             return image.adjusted(to: CGSize(400, 400), shouldExpand: true)
         case .teamSmallEmblem:

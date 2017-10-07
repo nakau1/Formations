@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */; };
+		CE5E59241F88DC450065E4A0 /* PlayerEditHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E59231F88DC450065E4A0 /* PlayerEditHelpViewController.swift */; };
 		CEF99B261F80F2620079CDC9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */; };
 		CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B271F80F2890079CDC9 /* TextPicker.swift */; };
 		CEF99B2A1F80F2B00079CDC9 /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */; };
@@ -132,6 +133,7 @@
 		787E086D03DDD25B0F2C562C /* Pods-Formations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Formations/Pods-Formations.release.xcconfig"; sourceTree = "<group>"; };
 		BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5142941F810E4A0071E0B6 /* CoreGraphics+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Common.swift"; sourceTree = "<group>"; };
+		CE5E59231F88DC450065E4A0 /* PlayerEditHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEditHelpViewController.swift; sourceTree = "<group>"; };
 		CEF99B251F80F1E20079CDC9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEF99B271F80F2890079CDC9 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
 		CEF99B291F80F2B00079CDC9 /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF99B4D1F8105730079CDC9 /* PlayerEditViewController.swift */,
+				CE5E59231F88DC450065E4A0 /* PlayerEditHelpViewController.swift */,
 				CEF99B4C1F8105730079CDC9 /* PlayerEditViewController.storyboard */,
 			);
 			path = Edit;
@@ -925,6 +928,7 @@
 				DBF758881F7EBF9100065475 /* LandingViewController.swift in Sources */,
 				DB5EC9A81F8126860000B8E0 /* CircleColorButton.swift in Sources */,
 				DB5EC9A31F80A6D40000B8E0 /* PopupRightDrawAnimation.swift in Sources */,
+				CE5E59241F88DC450065E4A0 /* PlayerEditHelpViewController.swift in Sources */,
 				DBF7588D1F7EC7E700065475 /* TestViewController.swift in Sources */,
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
