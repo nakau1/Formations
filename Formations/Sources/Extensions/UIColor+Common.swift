@@ -29,4 +29,10 @@ extension UIColor {
             return res + (NSString(format: "%02X", intval) as String)
         }
     }
+    
+    func withBrightnessComponent(_ brightness: CGFloat) -> UIColor {
+        var h: CGFloat = -1, s: CGFloat = -1, v: CGFloat = -1
+        getHue(&h, saturation: &s, brightness: &v, alpha: nil)
+        return UIColor(hue: h, saturation: s, brightness: v * brightness, alpha: 1)
+    }
 }

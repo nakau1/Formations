@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KWK-Vq-0lv" customClass="FormationTemplatePin" customModule="Formations" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="34" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3W4-zV-93N">
+                    <rect key="frame" x="2" y="0.0" width="30" height="30"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3W4-zV-93N" firstAttribute="top" secondItem="KWK-Vq-0lv" secondAttribute="top" id="9Ic-0o-cxZ"/>
+                <constraint firstAttribute="trailing" secondItem="3W4-zV-93N" secondAttribute="trailing" constant="2" id="Cog-8x-EaU"/>
+                <constraint firstItem="3W4-zV-93N" firstAttribute="leading" secondItem="KWK-Vq-0lv" secondAttribute="leading" constant="2" id="EOe-go-7Og"/>
+                <constraint firstAttribute="bottom" secondItem="3W4-zV-93N" secondAttribute="bottom" constant="2" id="bvU-Y8-ae4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="0jA-Id-w9i"/>
+            <connections>
+                <outlet property="imageView" destination="3W4-zV-93N" id="7OJ-as-EHt"/>
+            </connections>
+            <point key="canvasLocation" x="-96.5" y="-94.5"/>
+        </view>
+    </objects>
+</document>

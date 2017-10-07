@@ -778,14 +778,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `EditHeaderTableViewCell`.
     static let editHeaderTableViewCell = _R.nib._EditHeaderTableViewCell()
+    /// Nib `FormationTemplatePin`.
+    static let formationTemplatePin = _R.nib._FormationTemplatePin()
     
     /// `UINib(name: "EditHeaderTableViewCell", in: bundle)`
     static func editHeaderTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.editHeaderTableViewCell)
+    }
+    
+    /// `UINib(name: "FormationTemplatePin", in: bundle)`
+    static func formationTemplatePin(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.formationTemplatePin)
     }
     
     fileprivate init() {}
@@ -965,6 +972,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> EditHeaderTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EditHeaderTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _FormationTemplatePin: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "FormationTemplatePin"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> FormationTemplatePin? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? FormationTemplatePin
       }
       
       fileprivate init() {}
