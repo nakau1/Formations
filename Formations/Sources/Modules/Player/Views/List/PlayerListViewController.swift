@@ -45,6 +45,10 @@ class PlayerListViewController: UIViewController {
         players.forEach { _ = $0.loadThumbImage(force: true) }
         tableView.reloadData()
     }
+    
+    @IBAction private func didTapAddButton() {
+        present(PlayerEditViewController.create(for: nil, ofTeam: team).withinNavigation)
+    }
 }
 
 extension PlayerListViewController: UITableViewDataSource, UITableViewDelegate {

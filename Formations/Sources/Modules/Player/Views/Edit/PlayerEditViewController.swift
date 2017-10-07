@@ -103,7 +103,7 @@ class PlayerEditViewController: UIViewController {
 		Realm.Player.clearValidateResults(player)
 	}
 	
-	@IBAction func didTapCompleteButton() {
+	@IBAction private func didTapCompleteButton() {
 		AlertDialog.showConfirmNewSave(
 			from: self,
 			targetName: "選手",

@@ -128,7 +128,11 @@
                         <viewLayoutGuide key="safeArea" id="Rz7-4S-fiA"/>
                     </view>
                     <navigationItem key="navigationItem" title="選手一覧" id="YEe-y8-JdJ">
-                        <barButtonItem key="rightBarButtonItem" title="追加" id="O9t-kn-uAd"/>
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="O9t-kn-uAd">
+                            <connections>
+                                <action selector="didTapAddButton" destination="kaf-M8-SVu" id="fRV-SR-ecC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
