@@ -44,11 +44,33 @@ class FormationTemplateEditViewController: UIViewController {
         }.sorted { a, b in
             return a.percentage < b.percentage
         }
-//        positionBoard.moved = { pin, i in
-//            print(pin.percentage.x, pin.percentage.y, i)
-//        }
-        positionBoard.tapped = { pin, i in
-            print(pin.percentage.x, pin.percentage.y, i)
+        positionBoard.moved = { [unowned self] pin, i in
+            self.didMovedFormationItem(self.template.items[i], percentage: pin.percentage)
         }
     }
+    
+    @IBAction private func didTapCompleteButton() {
+        AlertDialog.showConfirmNewSave(
+            from: self,
+            targetName: "フォーメーション",
+            save: { [unowned self] in
+                Realm.FormationTemplate.save(self.template)
+                //Realm.FormationTemplate.notifyChange()
+                self.dismiss()
+            },
+            dispose: { [unowned self] in
+                Image.delete(category: .formationTemplates, id: self.template.id)
+                self.dismiss()
+            }
+        )
+    }
+    
+    private func didMovedFormationItem(_ item: FormationTemplateItem, percentage: CGPercentage) {
+        Realm.FormationTemplate.write(template) { _ in
+            item.percentage = percentage
+        }
+//        Realm.FormationTemplate.write(template) {
+//            item.percentage = percentage
+//        }
+     }
 }
