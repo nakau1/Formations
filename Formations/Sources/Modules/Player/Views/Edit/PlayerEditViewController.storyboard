@@ -314,17 +314,16 @@
                                     <constraint firstAttribute="height" constant="200" id="5qH-Ol-Mw2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エンブレム画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVh-nz-kqg">
-                                <rect key="frame" x="16" y="16" width="128.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選手の顔写真画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVh-nz-kqg">
+                                <rect key="frame" x="16" y="16" width="147" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R5-S3-VkU">
-                                <rect key="frame" x="24" y="45" width="335" height="67"/>
-                                <string key="text">クラブのエンブレムです。
-エンブレム画像は背景が透過しているPNG画像を指定してください。
-サイズは正方形で600px程度が推奨サイズです。</string>
+                                <rect key="frame" x="24" y="46" width="335" height="67"/>
+                                <string key="text">選手の顔画像は一覧やフォーメーション作成時に使用します。
+正方形のJPEG画像が推奨です。正方形でない画像を指定した場合は、中央で切り取られます。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -351,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw6-OT-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754.39999999999998" y="-89.955022488755631"/>
+            <point key="canvasLocation" x="752.8125" y="-90"/>
         </scene>
         <!--Player Edit Help View Controller-->
         <scene sceneID="ZM3-GW-JUe">
@@ -383,16 +382,16 @@
                                     <constraint firstAttribute="height" constant="200" id="e8j-KD-nrK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チームイメージ画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj6-lR-CBG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選手の全身写真画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj6-lR-CBG">
                                 <rect key="frame" x="16" y="16" width="166" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-6p-xq4">
-                                <rect key="frame" x="24" y="46" width="335" height="67"/>
-                                <string key="text">背景壁紙などに使われるチームをイメージする画像です。
-1242px x 2289px が推奨サイズです。大きなサイズの場合は切り取られます。</string>
+                                <rect key="frame" x="24" y="46" width="335" height="50.5"/>
+                                <string key="text">動画などに使われる選手をイメージする画像です。
+縦横 3 : 4 が推奨サイズです。この縦横比以外の画像を指定した場合は、中央で切り取られます。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -419,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ag-zc-MU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754.39999999999998" y="318.44077961019491"/>
+            <point key="canvasLocation" x="752.8125" y="500"/>
         </scene>
     </scenes>
     <resources>
