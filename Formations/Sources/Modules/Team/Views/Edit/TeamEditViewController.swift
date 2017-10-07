@@ -63,9 +63,7 @@ class TeamEditViewController: UIViewController {
     
     private var isAdd = false
     private var team: Team!
-    
-    // MARK: ライフサイクル
-    
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareNavigationBar()

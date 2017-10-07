@@ -784,10 +784,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 9 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 12 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `Landing`.
     static let landing: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "Landing")
+    /// Reuse identifier `PlayerEditImage`.
+    static let playerEditImage: Rswift.ReuseIdentifier<PlayerEditImageTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerEditImage")
+    /// Reuse identifier `PlayerEditInput`.
+    static let playerEditInput: Rswift.ReuseIdentifier<PlayerEditInputTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerEditInput")
+    /// Reuse identifier `PlayerEditName`.
+    static let playerEditName: Rswift.ReuseIdentifier<PlayerEditNameTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerEditName")
     /// Reuse identifier `TeamEditColor`.
     static let teamEditColor: Rswift.ReuseIdentifier<TeamEditColorTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditColor")
     /// Reuse identifier `TeamEditImage`.
@@ -962,6 +968,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try playerListViewController.validate()
       try teamListViewController.validate()
+      try playerEditViewController.validate()
       try teamEditViewController.validate()
       try teamMenuViewController.validate()
     }
@@ -1029,11 +1036,28 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct playerEditViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct playerEditViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = PlayerEditViewController
       
       let bundle = R.hostingBundle
+      let faceImage = StoryboardViewControllerResource<PlayerEditHelpViewController>(identifier: "faceImage")
+      let fullImage = StoryboardViewControllerResource<PlayerEditHelpViewController>(identifier: "fullImage")
       let name = "PlayerEditViewController"
+      
+      func faceImage(_: Void = ()) -> PlayerEditHelpViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: faceImage)
+      }
+      
+      func fullImage(_: Void = ()) -> PlayerEditHelpViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: fullImage)
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'PlayerEditViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-help") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-help' is used in storyboard 'PlayerEditViewController', but couldn't be loaded.") }
+        if _R.storyboard.playerEditViewController().faceImage() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'faceImage' could not be loaded from storyboard 'PlayerEditViewController' as 'PlayerEditHelpViewController'.") }
+        if _R.storyboard.playerEditViewController().fullImage() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'fullImage' could not be loaded from storyboard 'PlayerEditViewController' as 'PlayerEditHelpViewController'.") }
+      }
       
       fileprivate init() {}
     }

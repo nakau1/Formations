@@ -38,12 +38,16 @@ class PlayerListViewController: UIViewController {
     }
     
     private func prepareObservingNotifications() {
-        //Realm.Team.observe(self, change: #selector(didReceiveTeamChange(notification:)))
+        Realm.Player.observe(self, change: #selector(didReceivePlayerChange(notification:)))
     }
     
     @objc private func didReceivePlayerChange(notification: Notification) {
-        //players.forEach { _ = $0.loadSmallEmblemImage(force: true) }
+        players.forEach { _ = $0.loadThumbImage(force: true) }
         tableView.reloadData()
+    }
+    
+    @IBAction private func didTapAddButton() {
+        present(PlayerEditViewController.create(for: nil, ofTeam: team).withinNavigation)
     }
 }
 
@@ -61,8 +65,7 @@ extension PlayerListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        //push(PlayerEditViewController.create(players[indexPath.row]))
+		push(PlayerEditViewController.create(for: players[indexPath.row], ofTeam: team))
     }
 }
 

@@ -15,16 +15,16 @@ class Player: RealmSwift.Object {
     @objc dynamic var id = ""
     
     /// 選手名(フルネーム)
-    @objc dynamic var name = ""
+    @objc dynamic var name = "新しい選手"
     /// 選手名(名字)
-    @objc dynamic var familyName = ""
+    @objc dynamic var familyName = "新選手"
     /// 選手名(国際名)
-    @objc dynamic var internationalName = ""
+    @objc dynamic var internationalName = "New Player"
     /// 選手名(国際短縮名)
-    @objc dynamic var shortenedName = ""
+    @objc dynamic var shortenedName = "Player"
     
     /// 背番号(基本的には数字だがイレギュラーを見越して文字列型)
-    @objc dynamic var uniformNumber = ""
+    @objc dynamic var uniformNumber = "10"
     /// ポジション
     @objc dynamic var positionText = "MF"
     
@@ -61,7 +61,7 @@ class Player: RealmSwift.Object {
     
     func loadFullImage(force: Bool = false) -> Self {
         if fullImage == nil || force {
-            fullImage = Image.playerThumb(id: id).load()
+            fullImage = Image.playerFull(id: id).load()
         }
         return self
     }
