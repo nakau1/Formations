@@ -80,6 +80,10 @@ struct CGPercentage: Comparable {
         self.init(x: x, y: y)
     }
     
+    static var zero: CGPercentage {
+        return CGPercentage(0, 0)
+    }
+    
     static func *(lhs: CGPoint, rhs: CGPercentage) -> CGPoint {
         return CGPoint(lhs.x * rhs.x, lhs.y * rhs.y)
     }
