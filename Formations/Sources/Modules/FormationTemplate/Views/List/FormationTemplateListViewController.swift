@@ -47,7 +47,7 @@ class FormationTemplateListViewController: UIViewController {
     }
     
     @IBAction private func didTapAddButton() {
-        present(FormationTemplateEditViewController.create().withinNavigation)
+        present(FormationTemplateEditViewController.create(for: nil).withinNavigation)
     }
 }
 
