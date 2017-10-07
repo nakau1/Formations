@@ -52,7 +52,7 @@ class TeamMenuViewController: UIViewController {
             case .formation:
                 break
             case .formationTemplate:
-                viewController.push(FormationTemplateListViewController.create())
+                viewController.push(FormationTemplateListViewController.create(for: team))
             case .players:
                 viewController.push(PlayerListViewController.create(for: team))
             case .team:
