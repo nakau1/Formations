@@ -43,15 +43,6 @@ class PlayerModel: RealmModel<Player>, IdentifierGeneratable {
 			
 			let fullImage = entity.loadFullImage().fullImage
 			Image.playerFull(id: entity.id).save(fullImage)
-			
-//            let faceImage = entity.loadFaceImage().faceImage?.adjusted(to: CGSize(280, 280), shouldExpand: true)
-//            Image.playerFace(id: entity.id).save(faceImage)
-//
-//            let thumbImage = entity.loadThumbImage().thumbImage?.adjusted(to: CGSize(150, 150), shouldExpand: true)
-//            Image.playerThumb(id: entity.id).save(thumbImage)
-//
-//            let fullImage = entity.loadFullImage().fullImage?.adjusted(to: CGSize(310, 414), shouldExpand: true)
-//            Image.playerFull(id: entity.id).save(fullImage)
         }
     }
     
