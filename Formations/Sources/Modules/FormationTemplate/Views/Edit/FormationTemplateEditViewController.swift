@@ -28,31 +28,61 @@ class FormationTemplateEditViewController: UIViewController {
     }
     
     @IBOutlet private weak var positionBoard: PositionBoardView!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var positionNumberArea: UIView!
+    @IBOutlet private weak var dfNumberLabel: UILabel!
+    @IBOutlet private weak var mfNumberLabel: UILabel!
+    @IBOutlet private weak var fwNumberLabel: UILabel!
     
     private var isAdd = false
+    private var isDidFirstLayout = false
     private var template: FormationTemplate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareNavigationBar()
+        prepareNameTextField()
+        preparePositionNumber()
+        preparePositionBoardView()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        preparePositionBoardView()
-        positionBoard.reloadData()
+        if !isDidFirstLayout {
+            reloadPositionBoardView()
+            isDidFirstLayout = true
+        }
     }
     
-    func preparePositionBoardView() {
-        positionBoard.pins = template.items.map { item -> PositionBoardPin in
-            let view = FormationTemplatePin.create(position: item.position)
-            return PositionBoardPin(view: view, percentage: item.percentage)
-        }.sorted { a, b in
-            return a.percentage < b.percentage
-        }
+    private func prepareNameTextField() {
+        nameTextField.text = template.name
+    }
+    
+    private func preparePositionNumber() {
+        updatePositionNumber(template.structure)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapPositionNumberArea))
+        positionNumberArea.addGestureRecognizer(gesture)
+    }
+    
+    private func preparePositionBoardView() {
         positionBoard.moved = { [unowned self] pin, i in
             self.didMovedFormationItem(self.template.items[i], percentage: pin.percentage)
         }
+    }
+    
+    private func updatePositionNumber(_ structure: [Position : Int]) {
+        dfNumberLabel.text = "\(structure[.defender]   ?? 0)"
+        mfNumberLabel.text = "\(structure[.midfielder] ?? 0)"
+        fwNumberLabel.text = "\(structure[.forward]    ?? 0)"
+    }
+    
+    private func reloadPositionBoardView() {
+        positionBoard.pins = template.items.map { item -> PositionBoardPin in
+            let view = FormationTemplatePin.create(position: item.position)
+            return PositionBoardPin(view: view, percentage: item.percentage)
+        }
+        positionBoard.reloadData()
     }
     
     @IBAction private func didTapCompleteButton() {
@@ -60,8 +90,11 @@ class FormationTemplateEditViewController: UIViewController {
             from: self,
             targetName: "フォーメーション",
             save: { [unowned self] in
+                Realm.FormationTemplate.write(self.template) {
+                    $0.name = self.nameTextField.textValue
+                }
                 Realm.FormationTemplate.save(self.template)
-                //Realm.FormationTemplate.notifyChange()
+                Realm.FormationTemplate.notifyChange()
                 self.dismiss()
             },
             dispose: { [unowned self] in
@@ -71,12 +104,35 @@ class FormationTemplateEditViewController: UIViewController {
         )
     }
     
+    @objc private func didTapPositionNumberArea() {
+        PositionNumberPicker.show(from: self, defaultValues: template.structure) { [unowned self] newStructure in
+            self.updatePositionNumber(newStructure)
+            Realm.FormationTemplate.write(self.template) {
+                $0.structure = newStructure
+            }
+            self.reloadPositionBoardView()
+        }
+    }
+    
     private func didMovedFormationItem(_ item: FormationTemplateItem, percentage: CGPercentage) {
         Realm.FormationTemplate.write(template) { _ in
             item.percentage = percentage
         }
-//        Realm.FormationTemplate.write(template) {
-//            item.percentage = percentage
-//        }
      }
+}
+
+extension FormationTemplateEditViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    @IBAction private func didChangeNameTextField(_ textField: UITextField) {
+        if !Realm.FormationTemplate.validateName(textField.textValue, of: template) {
+            textField.textValue = textField.textValue[0, FormationTemplateModel.maxlenOfName]
+        }
+    }
 }

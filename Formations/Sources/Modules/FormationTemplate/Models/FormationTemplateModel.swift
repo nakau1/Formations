@@ -6,11 +6,35 @@ import Foundation
 
 class FormationTemplateModel: RealmModel<FormationTemplate>, IdentifierGeneratable {
     
+    static let maxlenOfName = 15
+    
     override func create() -> Entity {
         let ret = super.create()
         ret.id = generateIdentifier()
         ret.items.append(objectsIn: createDefaultItems())
         return ret
+    }
+    
+    override func save(entities: [Entity]) {
+        super.save(entities: entities)
+        saveImages(entities: entities)
+    }
+    
+    override func delete(_ condition: NSPredicate? = nil) {
+        super.delete(condition)
+        deleteImages(entities: select(condition).toArray())
+    }
+    
+    private func saveImages(entities: [Entity]) {
+        entities.forEach { entity in
+            // TODO
+        }
+    }
+    
+    private func deleteImages(entities: [Entity]) {
+        entities.forEach { entity in
+            Image.delete(category: .formationTemplates, id: entity.id)
+        }
     }
 }
 
@@ -39,6 +63,55 @@ extension FormationTemplateModel {
             return item
         }
     }
+}
+
+// MARK: - Validation
+extension FormationTemplateModel {
+    
+    enum ValidateTarget: String {
+        case name
+        
+        var key: String {
+            return "validation.result." + self.rawValue
+        }
+    }
+    
+    func clearValidateResults(_ entity: Entity) {
+        let targets: [ValidateTarget] = [.name]
+        targets.forEach {
+            entity.info[$0.key] = nil
+        }
+    }
+    
+    func validateName(_ name: String, of entity: Entity) -> Bool {
+        let key = ValidateTarget.name.key
+        entity.info[key] = nil
+        
+        if name.count > FormationTemplateModel.maxlenOfName {
+            entity.info[key] = "\(FormationTemplateModel.maxlenOfName)字以内で入力してください"
+        }
+        return entity.info[key] == nil
+    }
+    
+    func validateResultOfName(_ entity: Entity) -> String {
+        return entity.info[ValidateTarget.name.key] as? String ?? ""
+    }
+}
+
+// MARK: - Notification
+extension FormationTemplateModel {
+    
+    func observe(_ observer: Any, change selector: Selector) {
+        NotificationCenter.default.addObserver(observer, selector: selector, name: .FormationTemplateDidChange, object: nil)
+    }
+    
+    func notifyChange() {
+        NotificationCenter.default.post(name: .FormationTemplateDidChange, object: nil)
+    }
+}
+
+extension Notification.Name {
+    static let FormationTemplateDidChange = Notification.Name("FormationTemplateDidChange")
 }
 
 extension Realm {
