@@ -8,7 +8,6 @@ import Rswift
 // MARK: - Controller Definition -
 class FormationTemplateEditViewController: UIViewController {
     
-    // MARK: ファクトリメソッド
     class func create(for template: FormationTemplate?) -> UIViewController {
         return R.storyboard.formationTemplateEditViewController.instantiate(self) { vc in
             if let template = template {
@@ -19,6 +18,13 @@ class FormationTemplateEditViewController: UIViewController {
                 vc.isAdd = true
             }
         }
+    }
+    
+    class var properHeight: CGFloat {
+        let controllerViewSize = CGSize(320, 480) // size < iphone5s
+        let screenRatio = UIScreen.main.bounds.height / UIScreen.main.bounds.width
+        let controllerRatio = controllerViewSize.height / controllerViewSize.width
+        return controllerViewSize.height * (screenRatio / controllerRatio)
     }
     
     @IBOutlet private weak var positionBoard: PositionBoardView!
