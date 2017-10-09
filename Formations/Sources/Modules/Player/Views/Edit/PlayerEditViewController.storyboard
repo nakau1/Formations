@@ -152,14 +152,16 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uk-Pv-YyM">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uk-Pv-YyM" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
                                                             <rect key="frame" x="68" y="0.0" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="32" id="2D1-7B-Em4"/>
                                                                 <constraint firstAttribute="height" constant="32" id="SGY-Gg-7WB"/>
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <state key="normal" image="btn-help"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn-help"/>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="didTapFaceImageHelpButton" destination="XXU-1Y-QdM" eventType="touchUpInside" id="nSB-a6-iq8"/>
                                                             </connections>
@@ -207,14 +209,16 @@
                                                                 <action selector="didTapFullImageButton" destination="XXU-1Y-QdM" eventType="touchUpInside" id="QkW-3M-Ref"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGg-IK-wW8">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGg-IK-wW8" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
                                                             <rect key="frame" x="80" y="0.0" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="Zop-Nx-Z1j"/>
                                                                 <constraint firstAttribute="width" constant="32" id="d1F-8Z-Y25"/>
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <state key="normal" image="btn-help"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn-help"/>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="didTapFullImageHelpButton" destination="XXU-1Y-QdM" eventType="touchUpInside" id="iR1-SB-6d3"/>
                                                             </connections>
@@ -423,7 +427,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn-help" width="44" height="44"/>
+        <image name="btn-help" width="500" height="500"/>
         <image name="default-background" width="414" height="736"/>
     </resources>
 </document>

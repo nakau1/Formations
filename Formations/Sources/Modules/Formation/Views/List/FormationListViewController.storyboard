@@ -64,13 +64,13 @@
                                                         <constraint firstAttribute="width" constant="64" id="wT3-Ih-NRG"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn-help"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn-movie"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-SM-z77" customClass="CircleImageButton" customModule="Formations" customModuleProvider="target">
                                                     <rect key="frame" x="287" y="198" width="64" height="64"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn-help"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn-copy"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                             </subviews>
@@ -135,7 +135,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn-help" width="44" height="44"/>
+        <image name="btn-copy" width="500" height="500"/>
+        <image name="btn-movie" width="500" height="500"/>
         <image name="default-background" width="414" height="736"/>
     </resources>
 </document>
