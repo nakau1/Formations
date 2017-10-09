@@ -10,6 +10,17 @@ extension String {
     subscript(i: Int) -> String {
         return String(self[index(startIndex, offsetBy: i)])
     }
+    
+    subscript(start: Int, end: Int) -> String {
+        let si = start < startIndex.encodedOffset ? startIndex.encodedOffset : start
+        let ei = end   > endIndex.encodedOffset   ? endIndex.encodedOffset   : end
+        if si > ei { return "" }
+        
+        let s = index(startIndex, offsetBy: si)
+        let e = index(startIndex, offsetBy: ei)
+        
+        return String(self[s..<e])
+    }
 }
 
 // MARK: - String拡張: 構成チェック -
