@@ -177,7 +177,7 @@ extension Array where Element == UIImage {
     }
 }
 
-private extension UIImage {
+extension UIImage {
     
     class func imageFromContext(_ size: CGSize, _ block: (CGContext)->Void) -> UIImage {
         UIGraphicsBeginImageContext(size)
