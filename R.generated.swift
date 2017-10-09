@@ -408,14 +408,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 52 images.
+  /// This `R.image` struct is generated, and contains static references to 56 images.
   struct image {
+    /// Image `btn-add`.
+    static let btnAdd = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-add")
+    /// Image `btn-copy`.
+    static let btnCopy = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-copy")
     /// Image `btn-help`.
     static let btnHelp = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-help")
+    /// Image `btn-movie`.
+    static let btnMovie = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-movie")
     /// Image `default-background`.
     static let defaultBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "default-background")
-    /// Image `formation-templage-bg`.
-    static let formationTemplageBg = Rswift.ImageResource(bundle: R.hostingBundle, name: "formation-templage-bg")
+    /// Image `formation-bg`.
+    static let formationBg = Rswift.ImageResource(bundle: R.hostingBundle, name: "formation-bg")
+    /// Image `formation-template-bg`.
+    static let formationTemplateBg = Rswift.ImageResource(bundle: R.hostingBundle, name: "formation-template-bg")
     /// Image `player-sample1-1.jpg`.
     static let playerSample11Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "player-sample1-1.jpg")
     /// Image `player-sample1-2.jpg`.
@@ -515,9 +523,24 @@ struct R: Rswift.Validatable {
     /// Image `team-sample-image`.
     static let teamSampleImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "team-sample-image")
     
+    /// `UIImage(named: "btn-add", bundle: ..., traitCollection: ...)`
+    static func btnAdd(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnAdd, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "btn-copy", bundle: ..., traitCollection: ...)`
+    static func btnCopy(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnCopy, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "btn-help", bundle: ..., traitCollection: ...)`
     static func btnHelp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.btnHelp, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "btn-movie", bundle: ..., traitCollection: ...)`
+    static func btnMovie(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnMovie, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "default-background", bundle: ..., traitCollection: ...)`
@@ -525,9 +548,14 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.defaultBackground, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "formation-templage-bg", bundle: ..., traitCollection: ...)`
-    static func formationTemplageBg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.formationTemplageBg, compatibleWith: traitCollection)
+    /// `UIImage(named: "formation-bg", bundle: ..., traitCollection: ...)`
+    static func formationBg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.formationBg, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "formation-template-bg", bundle: ..., traitCollection: ...)`
+    static func formationTemplateBg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.formationTemplateBg, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "player-sample1-1.jpg", bundle: ..., traitCollection: ...)`
@@ -1037,8 +1065,9 @@ struct _R: Rswift.Validatable {
       let name = "FormationListViewController"
       
       static func validate() throws {
+        if UIKit.UIImage(named: "btn-movie") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-movie' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "btn-help") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-help' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-copy") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-copy' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
@@ -1051,7 +1080,7 @@ struct _R: Rswift.Validatable {
       let name = "FormationTemplateEditViewController"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "formation-templage-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-templage-bg' is used in storyboard 'FormationTemplateEditViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "formation-template-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-template-bg' is used in storyboard 'FormationTemplateEditViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
