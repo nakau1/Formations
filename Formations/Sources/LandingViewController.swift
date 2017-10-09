@@ -20,12 +20,6 @@ class LandingViewController: UITableViewController {
                 }),
                 ]
             ),
-            Section("ダイアログ", [
-                Row("テスト画面", handler: { vc in
-                    AlertDialog.showConfirmNewSave(from: self, targetName: "チーム", save: {}, dispose: {})
-                }),
-                ]
-            ),
             Section("DB", [
                 Row("パス", handler: { vc in
                     print("open " + RealmModel.realmPath)
