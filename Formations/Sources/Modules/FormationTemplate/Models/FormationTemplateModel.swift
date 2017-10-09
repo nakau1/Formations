@@ -27,7 +27,9 @@ class FormationTemplateModel: RealmModel<FormationTemplate>, IdentifierGeneratab
     
     private func saveImages(entities: [Entity]) {
         entities.forEach { entity in
-            // TODO
+            let imageCreator = FormationTemplateImageCreator()
+            let image = imageCreator.create(template: entity)
+            Image.formationTemplate(id: entity.id).save(image)
         }
     }
     
