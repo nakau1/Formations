@@ -59,6 +59,7 @@
 		DB7157081F8B15F400714512 /* PositionNumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7157071F8B15F400714512 /* PositionNumberPicker.swift */; };
 		DB7157091F8B164D00714512 /* PositionNumberPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7157061F8B15F300714512 /* PositionNumberPicker.storyboard */; };
 		DB71570B1F8B913800714512 /* UITextField+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71570A1F8B913800714512 /* UITextField+Common.swift */; };
+		DB71570D1F8BA98400714512 /* FormationTemplateImageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71570C1F8BA98400714512 /* FormationTemplateImageCreator.swift */; };
 		DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */; };
 		DBA456F71F87E3F600663948 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA456F61F87E3F600663948 /* Button.swift */; };
 		DBA456FB1F891F3C00663948 /* FormationTemplateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA456FA1F891F3C00663948 /* FormationTemplateItem.swift */; };
@@ -195,6 +196,7 @@
 		DB7157061F8B15F300714512 /* PositionNumberPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PositionNumberPicker.storyboard; sourceTree = "<group>"; };
 		DB7157071F8B15F400714512 /* PositionNumberPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionNumberPicker.swift; sourceTree = "<group>"; };
 		DB71570A1F8B913800714512 /* UITextField+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Common.swift"; sourceTree = "<group>"; };
+		DB71570C1F8BA98400714512 /* FormationTemplateImageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateImageCreator.swift; sourceTree = "<group>"; };
 		DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditHelpViewController.swift; sourceTree = "<group>"; };
 		DBA456F61F87E3F600663948 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DBA456FA1F891F3C00663948 /* FormationTemplateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateItem.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				CEF99B3D1F8105730079CDC9 /* FormationTemplate.swift */,
 				DBA456FA1F891F3C00663948 /* FormationTemplateItem.swift */,
 				CEF99B3E1F8105730079CDC9 /* FormationTemplateModel.swift */,
+				DB71570C1F8BA98400714512 /* FormationTemplateImageCreator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				CE5E59261F88E6CB0065E4A0 /* Array+Common.swift in Sources */,
 				CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
+				DB71570D1F8BA98400714512 /* FormationTemplateImageCreator.swift in Sources */,
 				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
 				DB5EC99F1F8089630000B8E0 /* PopupRiseAnimation.swift in Sources */,
 				DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */,

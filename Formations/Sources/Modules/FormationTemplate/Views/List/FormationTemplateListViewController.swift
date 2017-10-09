@@ -68,9 +68,7 @@ extension FormationTemplateListViewController: UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let w = UIScreen.main.bounds.width / 2
-        let h = w
-        return CGSize(w, h)
+        return CGSize(square: UIScreen.main.bounds.width / 2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
