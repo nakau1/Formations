@@ -84,6 +84,14 @@ extension FormationTemplateListViewController: UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Popup.show(
+            FormationTemplateEditViewController.create(for: templates[indexPath.row]).withinNavigation,
+            from: self,
+            options: PopupOptions(.bottomDraw(height: FormationTemplateEditViewController.properHeight))
+        )
+    }
 }
 
 class FormationTemplateListCell: UICollectionViewCell {
