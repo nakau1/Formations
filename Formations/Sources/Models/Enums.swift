@@ -29,6 +29,32 @@ enum Position: String {
     }
 }
 
+// for Formation-Template-Edit
+extension Position {
+    
+    init?(at index: Int) {
+        switch index {
+        case 0:  self.init(rawValue: Position.defender.rawValue)
+        case 1:  self.init(rawValue: Position.midfielder.rawValue)
+        case 2:  self.init(rawValue: Position.forward.rawValue)
+        default: return nil
+        }
+    }
+    
+    var positionIndex: Int {
+        switch self {
+        case .goalKeeper: return -1 // not-use
+        case .defender:   return 0
+        case .midfielder: return 1
+        case .forward:    return 2
+        }
+    }
+    
+    static var formationComponents: [Position] {
+        return [.defender, .midfielder, .forward]
+    }
+}
+
 /// 背番号
 class UniformNumber {
     
