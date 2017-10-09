@@ -835,7 +835,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 14 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 15 storyboards.
   struct storyboard {
     /// Storyboard `AlertDialog`.
     static let alertDialog = _R.storyboard.alertDialog()
@@ -855,6 +855,8 @@ struct R: Rswift.Validatable {
     static let playerEditViewController = _R.storyboard.playerEditViewController()
     /// Storyboard `PlayerListViewController`.
     static let playerListViewController = _R.storyboard.playerListViewController()
+    /// Storyboard `PositionNumberPicker`.
+    static let positionNumberPicker = _R.storyboard.positionNumberPicker()
     /// Storyboard `TeamEditViewController`.
     static let teamEditViewController = _R.storyboard.teamEditViewController()
     /// Storyboard `TeamListViewController`.
@@ -909,6 +911,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "PlayerListViewController", bundle: ...)`
     static func playerListViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.playerListViewController)
+    }
+    
+    /// `UIStoryboard(name: "PositionNumberPicker", bundle: ...)`
+    static func positionNumberPicker(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.positionNumberPicker)
     }
     
     /// `UIStoryboard(name: "TeamEditViewController", bundle: ...)`
@@ -997,8 +1004,8 @@ struct _R: Rswift.Validatable {
       try formationTemplateEditViewController.validate()
       try teamListViewController.validate()
       try playerEditViewController.validate()
-      try teamEditViewController.validate()
       try formationTemplateListViewController.validate()
+      try teamEditViewController.validate()
       try teamMenuViewController.validate()
     }
     
@@ -1109,6 +1116,15 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'PlayerListViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "player-sample39-1.jpg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'player-sample39-1.jpg' is used in storyboard 'PlayerListViewController', but couldn't be loaded.") }
       }
+      
+      fileprivate init() {}
+    }
+    
+    struct positionNumberPicker: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = Formations.PositionNumberPicker
+      
+      let bundle = R.hostingBundle
+      let name = "PositionNumberPicker"
       
       fileprivate init() {}
     }
