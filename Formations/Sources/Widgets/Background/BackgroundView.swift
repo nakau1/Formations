@@ -17,6 +17,7 @@ class BackgroundView: UIImageView {
             image = R.image.defaultBackground()
         }
         contentMode = .scaleAspectFill
+        clipsToBounds = true
         
         NotificationCenter.default.addObserver(
             self,
@@ -29,7 +30,7 @@ class BackgroundView: UIImageView {
     @objc func didReceiveDidChangeImage(notification: Notification) {
         if let image = notification.userInfo?[BackgroundView.NotificationImageKey] as? UIImage, isObserveChangeImage {
             let filter = UIImage.filled(
-                color: UIColor(white: 0, alpha: 0.8),
+                color: UIColor(white: 0, alpha: 0.64),
                 size: image.size
             )
             self.image = image.synthesized(image: filter)
