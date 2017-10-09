@@ -22,7 +22,11 @@
                                 <rect key="frame" x="16" y="88" width="382" height="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="didChangeNameTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lTH-UL-u9H"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rpJ-bP-5wd"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zB-sY-Vsn">
                                 <rect key="frame" x="16" y="113" width="382" height="1"/>
@@ -60,7 +64,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-WQ-Qo2">
                                         <rect key="frame" x="0.0" y="4" width="16" height="16"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.19215686274509802" green="0.40000000000000002" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="J9d-aR-sJ9"/>
                                             <constraint firstAttribute="width" constant="16" id="oXK-oL-w6Y"/>
@@ -86,7 +90,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7V-yx-z3b">
                                         <rect key="frame" x="71" y="4" width="16" height="16"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.38039215686274508" green="0.64313725490196072" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="kTa-W2-tPn"/>
                                             <constraint firstAttribute="width" constant="16" id="yVT-4X-izv"/>
@@ -112,7 +116,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcH-y4-VAU">
                                         <rect key="frame" x="144" y="4" width="16" height="16"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.68235294117647061" green="0.086274509803921567" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Sxc-YK-VMH"/>
                                             <constraint firstAttribute="width" constant="16" id="zw0-EF-YvH"/>
@@ -161,7 +165,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.11346973018881715" green="0.36052890131656823" blue="0.51801215277777779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12811656057098764" green="0.27465033777720199" blue="0.36805555555555558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sOh-4f-sjX" firstAttribute="bottom" secondItem="PUs-Bi-CRg" secondAttribute="bottom" id="0xo-Jc-6Nz"/>
                             <constraint firstItem="1zB-sY-Vsn" firstAttribute="trailing" secondItem="XWB-Hm-Ywh" secondAttribute="trailing" id="14p-UX-V2d"/>
@@ -199,7 +203,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="621"/>
                     <connections>
+                        <outlet property="dfNumberLabel" destination="fsR-ss-AGL" id="6Sg-i9-v4N"/>
+                        <outlet property="fwNumberLabel" destination="8T9-rb-4pd" id="ONb-5p-sSH"/>
+                        <outlet property="mfNumberLabel" destination="sWf-Ig-twR" id="bLv-FJ-VB7"/>
+                        <outlet property="nameTextField" destination="gni-IX-nrF" id="rcj-9K-nvO"/>
                         <outlet property="positionBoard" destination="PUs-Bi-CRg" id="gNL-po-kJM"/>
+                        <outlet property="positionNumberArea" destination="MRe-0x-rBb" id="1k5-VM-P6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

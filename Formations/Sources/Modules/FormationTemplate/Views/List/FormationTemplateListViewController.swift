@@ -38,12 +38,12 @@ class FormationTemplateListViewController: UIViewController {
     }
     
     private func prepareObservingNotifications() {
-        //Realm.FormationTemplate.observe(self, change: #selector(didReceivePlayerChange(notification:)))
+        Realm.FormationTemplate.observe(self, change: #selector(didReceiveFormationTemplateChange(notification:)))
     }
     
-    @objc private func didReceivePlayerChange(notification: Notification) {
-//        players.forEach { _ = $0.loadThumbImage(force: true) }
-//        tableView.reloadData()
+    @objc private func didReceiveFormationTemplateChange(notification: Notification) {
+        templates.forEach { _ = $0.loadImage(force: true) }
+        collectionView.reloadData()
     }
     
     @IBAction private func didTapAddButton() {
@@ -93,7 +93,8 @@ class FormationTemplateListCell: UICollectionViewCell {
     
     var template: FormationTemplate! {
         didSet {
-            
+            formationImageView.image = template.loadImage().image
+            titleLabel.text = template.name
         }
     }
 }
