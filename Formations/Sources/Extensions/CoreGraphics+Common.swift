@@ -44,6 +44,10 @@ extension CGSize {
 		self.init(width: width, height: height)
 	}
     
+    init(square: CGFloat) {
+        self.init(width: square, height: square)
+    }
+    
     func center(of size: CGSize) -> CGPoint {
         return CGPoint(
             x: (size.width  - self.width)  / 2,
