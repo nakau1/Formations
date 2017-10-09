@@ -1062,7 +1062,7 @@ struct _R: Rswift.Validatable {
       let name = "FormationTemplateEditViewController"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "formation-templage-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-templage-bg' is used in storyboard 'FormationTemplateEditViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "formation-template-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-template-bg' is used in storyboard 'FormationTemplateEditViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

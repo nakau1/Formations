@@ -3,6 +3,7 @@
 //  Copyright 2017 yuichi.nakayasu All rights reserved.
 // =============================================================================
 import UIKit
+import Rswift
 
 class FormationTemplateImageCreator {
     
@@ -10,11 +11,9 @@ class FormationTemplateImageCreator {
     let pinWidth = 32.f
     
     func create(template: FormationTemplate) -> UIImage {
-        return UIImage.imageFromContext(imageSize) { context in
-            context.saveGState()
-            context.setFillColor(#colorLiteral(red: 0.1653756027, green: 0.3886132046, blue: 0.5423990885, alpha: 1).cgColor)
-            context.fill(CGRect(size: imageSize))
-            context.restoreGState()
+        let baseImage = R.image.formationTemplateBg()!.scaled(to: imageSize)
+        let pinsImage = UIImage.imageFromContext(imageSize) { context in
+            //context.drawImage(R.image.formationTemplateBg(), in: CGRect(size: imageSize))
             
             let maxPoint = CGPoint(imageSize.width - pinWidth, imageSize.height - pinWidth)
             template.items.forEach { item in
@@ -28,5 +27,6 @@ class FormationTemplateImageCreator {
                 context.restoreGState()
             }
         }
+        return baseImage.synthesized(image: pinsImage)
     }
 }
