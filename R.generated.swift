@@ -798,7 +798,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 13 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 14 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `FormationTemplateList`.
     static let formationTemplateList: Rswift.ReuseIdentifier<FormationTemplateListCell> = Rswift.ReuseIdentifier(identifier: "FormationTemplateList")
@@ -818,6 +818,8 @@ struct R: Rswift.Validatable {
     static let teamEditName: Rswift.ReuseIdentifier<TeamEditNameTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditName")
     /// Reuse identifier `TeamEditShortName`.
     static let teamEditShortName: Rswift.ReuseIdentifier<TeamEditNameTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditShortName")
+    /// Reuse identifier `formationList`.
+    static let formationList: Rswift.ReuseIdentifier<FormationListTableViewCell> = Rswift.ReuseIdentifier(identifier: "formationList")
     /// Reuse identifier `header`.
     static let header: Rswift.ReuseIdentifier<EditHeaderTableViewCell> = Rswift.ReuseIdentifier(identifier: "header")
     /// Reuse identifier `playerList`.
@@ -1005,6 +1007,7 @@ struct _R: Rswift.Validatable {
       try teamListViewController.validate()
       try playerEditViewController.validate()
       try formationTemplateListViewController.validate()
+      try formationListViewController.validate()
       try teamEditViewController.validate()
       try teamMenuViewController.validate()
     }
@@ -1027,11 +1030,16 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = FormationListViewController
       
       let bundle = R.hostingBundle
       let name = "FormationListViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-help") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-help' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
