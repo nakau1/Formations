@@ -58,6 +58,7 @@
 		DB7157051F89385700714512 /* FormationTemplatePin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7157041F89385700714512 /* FormationTemplatePin.xib */; };
 		DB7157081F8B15F400714512 /* PositionNumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7157071F8B15F400714512 /* PositionNumberPicker.swift */; };
 		DB7157091F8B164D00714512 /* PositionNumberPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7157061F8B15F300714512 /* PositionNumberPicker.storyboard */; };
+		DB71570B1F8B913800714512 /* UITextField+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71570A1F8B913800714512 /* UITextField+Common.swift */; };
 		DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */; };
 		DBA456F71F87E3F600663948 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA456F61F87E3F600663948 /* Button.swift */; };
 		DBA456FB1F891F3C00663948 /* FormationTemplateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA456FA1F891F3C00663948 /* FormationTemplateItem.swift */; };
@@ -193,6 +194,7 @@
 		DB7157041F89385700714512 /* FormationTemplatePin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormationTemplatePin.xib; sourceTree = "<group>"; };
 		DB7157061F8B15F300714512 /* PositionNumberPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PositionNumberPicker.storyboard; sourceTree = "<group>"; };
 		DB7157071F8B15F400714512 /* PositionNumberPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionNumberPicker.swift; sourceTree = "<group>"; };
+		DB71570A1F8B913800714512 /* UITextField+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Common.swift"; sourceTree = "<group>"; };
 		DB89BD1F1F87D48D00782D2B /* TeamEditHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditHelpViewController.swift; sourceTree = "<group>"; };
 		DBA456F61F87E3F600663948 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DBA456FA1F891F3C00663948 /* FormationTemplateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateItem.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */,
 				E44DA28A1F85E5D70022460B /* UIImage+CircleButton.swift */,
 				DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */,
+				DB71570A1F8B913800714512 /* UITextField+Common.swift */,
 				DBC666801F86989000B99447 /* UIColor+Common.swift */,
 			);
 			path = Extensions;
@@ -934,6 +937,7 @@
 				E420B6041F84B74E007C2EB5 /* UnhighlightableTableViewCell.swift in Sources */,
 				DBC666811F86989000B99447 /* UIColor+Common.swift in Sources */,
 				DB7157031F89384B00714512 /* FormationTemplatePin.swift in Sources */,
+				DB71570B1F8B913800714512 /* UITextField+Common.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */,
 				DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */,
