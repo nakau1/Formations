@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="339.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-i9-sBW">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="formation-template-bg" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-i9-sBW">
                                                     <rect key="frame" x="24" y="118" width="247" height="198"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="bQV-i9-sBW" secondAttribute="height" multiplier="5:4" id="8qg-gy-XLv"/>
@@ -138,5 +138,6 @@
         <image name="btn-copy" width="500" height="500"/>
         <image name="btn-movie" width="500" height="500"/>
         <image name="default-background" width="414" height="736"/>
+        <image name="formation-template-bg" width="500" height="400"/>
     </resources>
 </document>

@@ -1066,8 +1066,9 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "btn-movie") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-movie' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "btn-copy") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-copy' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "formation-template-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-template-bg' is used in storyboard 'FormationListViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
