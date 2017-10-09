@@ -47,7 +47,11 @@ class FormationTemplateListViewController: UIViewController {
     }
     
     @IBAction private func didTapAddButton() {
-        present(FormationTemplateEditViewController.create(for: nil).withinNavigation)
+        Popup.show(
+            FormationTemplateEditViewController.create(for: nil).withinNavigation,
+            from: self,
+            options: PopupOptions(.bottomDraw(height: FormationTemplateEditViewController.properHeight))
+        )
     }
 }
 
