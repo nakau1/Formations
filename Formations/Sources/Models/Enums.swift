@@ -27,8 +27,10 @@ enum Position: String {
     static var texts: [String] {
         return items.map { $0.rawValue }
     }
-    
-    // for Formation-Template-Edit
+}
+
+// for Formation-Template-Edit
+extension Position {
     
     init?(at index: Int) {
         switch index {
