@@ -43,4 +43,8 @@ class FormationTemplateItem: RealmSwift.Object {
     override class func ignoredProperties() -> [String] {
         return ["percentage", "position", "info"]
     }
+    
+    override var description: String {
+        return "\"\(position.rawValue)\" (\(xPercentage), \(yPercentage))"
+    }
 }
