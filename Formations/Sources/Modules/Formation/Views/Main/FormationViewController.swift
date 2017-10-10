@@ -53,11 +53,11 @@ class FormationViewController: UIViewController {
     }
     
     @IBAction private func didTapFormationTemplateButton() {
-        let selector = FormationTemplateSelectViewController.create(for: team)
-        let width = UIScreen.main.bounds.width * 0.6
-        var options = PopupOptions(.leftDraw(width: width))
-        options.overlayIsBlur = true
-        Popup.show(selector.withinNavigation, from: self, options: options)
+        let selector = FormationTemplateSelectViewController.create(for: team) { [unowned self] selectedTemplate in
+            self.template = selectedTemplate
+            self.reloadPositionBoardView()
+        }
+        show(controller: selector)
     }
     
     @IBAction private func didTapPlayerButton() {
@@ -70,6 +70,13 @@ class FormationViewController: UIViewController {
     
     @IBAction private func didTapSaveButton() {
         self.dismiss()
+    }
+    
+    private func show(controller: UIViewController) {
+        let width = UIScreen.main.bounds.width * 0.6
+        var options = PopupOptions(.leftDraw(width: width))
+        options.overlayIsBlur = true
+        Popup.show(controller.withinNavigation, from: self, options: options)
     }
     
     override var prefersStatusBarHidden: Bool {

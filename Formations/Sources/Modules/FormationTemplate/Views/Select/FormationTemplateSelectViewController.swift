@@ -9,14 +9,18 @@ import RealmSwift
 // MARK: - Controller Definition -
 class FormationTemplateSelectViewController: UIViewController {
     
+    typealias SelectedHandler = (FormationTemplate) -> Void
+    
     @IBOutlet private weak var tableView: UITableView!
     
     private var team: Team!
     private var templates: RealmSwift.Results<FormationTemplate>!
+    private var selected: SelectedHandler!
     
-    class func create(for team: Team) -> UIViewController {
+    class func create(for team: Team, selected: @escaping SelectedHandler) -> UIViewController {
         return R.storyboard.formationTemplateSelectViewController.instantiate(self) { vc in
             vc.team = team
+            vc.selected = selected
         }
     }
     
@@ -45,6 +49,8 @@ extension FormationTemplateSelectViewController: UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selected(templates[indexPath.row])
+        dismiss()
     }
 }
 
