@@ -57,9 +57,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jR-R6-mBF">
                                         <rect key="frame" x="73" y="0.0" width="44" height="44"/>
                                         <state key="normal" image="btn-formation"/>
-                                        <connections>
-                                            <action selector="didTapPlayerButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWt-Yz-ZwH"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-o4-jKs">
                                         <rect key="frame" x="203" y="0.0" width="44" height="44"/>

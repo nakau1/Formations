@@ -36,6 +36,9 @@ class FormationViewController: UIViewController {
     
     private func preparePositionBoardView() {
         positionBoard.isMovable = false
+        positionBoard.tapped = { [unowned self] pin, index in
+            self.didTapPlayer(at: index)
+        }
     }
     
     private func reloadPositionBoardView() {
@@ -60,12 +63,11 @@ class FormationViewController: UIViewController {
         show(controller: selector)
     }
     
-    @IBAction private func didTapPlayerButton() {
+    private func didTapPlayer(at index: Int) {
+        //positionBoard.pins[index]
+        
         let selector = PlayerSelectViewController.create(for: team)
-        let width = UIScreen.main.bounds.width * 0.6
-        var options = PopupOptions(.leftDraw(width: width))
-        options.overlayIsBlur = true
-        Popup.show(selector.withinNavigation, from: self, options: options)
+        show(controller: selector)
     }
     
     @IBAction private func didTapSaveButton() {
