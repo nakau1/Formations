@@ -61,7 +61,11 @@ class FormationViewController: UIViewController {
     }
     
     @IBAction private func didTapPlayerButton() {
-        self.dismiss()
+        let selector = PlayerSelectViewController.create(for: team)
+        let width = UIScreen.main.bounds.width * 0.6
+        var options = PopupOptions(.leftDraw(width: width))
+        options.overlayIsBlur = true
+        Popup.show(selector.withinNavigation, from: self, options: options)
     }
     
     @IBAction private func didTapSaveButton() {

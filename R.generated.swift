@@ -861,7 +861,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 14 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 15 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `FormationTemplateList`.
     static let formationTemplateList: Rswift.ReuseIdentifier<FormationTemplateListCell> = Rswift.ReuseIdentifier(identifier: "FormationTemplateList")
@@ -875,6 +875,8 @@ struct R: Rswift.Validatable {
     static let playerEditInput: Rswift.ReuseIdentifier<PlayerEditInputTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerEditInput")
     /// Reuse identifier `PlayerEditName`.
     static let playerEditName: Rswift.ReuseIdentifier<PlayerEditNameTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerEditName")
+    /// Reuse identifier `PlayerSelect`.
+    static let playerSelect: Rswift.ReuseIdentifier<PlayerSelectTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerSelect")
     /// Reuse identifier `TeamEditColor`.
     static let teamEditColor: Rswift.ReuseIdentifier<TeamEditColorTableViewCell> = Rswift.ReuseIdentifier(identifier: "TeamEditColor")
     /// Reuse identifier `TeamEditImage`.
@@ -900,7 +902,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 16 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 17 storyboards.
   struct storyboard {
     /// Storyboard `AlertDialog`.
     static let alertDialog = _R.storyboard.alertDialog()
@@ -922,6 +924,8 @@ struct R: Rswift.Validatable {
     static let playerEditViewController = _R.storyboard.playerEditViewController()
     /// Storyboard `PlayerListViewController`.
     static let playerListViewController = _R.storyboard.playerListViewController()
+    /// Storyboard `PlayerSelectViewController`.
+    static let playerSelectViewController = _R.storyboard.playerSelectViewController()
     /// Storyboard `PositionNumberPicker`.
     static let positionNumberPicker = _R.storyboard.positionNumberPicker()
     /// Storyboard `TeamEditViewController`.
@@ -983,6 +987,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "PlayerListViewController", bundle: ...)`
     static func playerListViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.playerListViewController)
+    }
+    
+    /// `UIStoryboard(name: "PlayerSelectViewController", bundle: ...)`
+    static func playerSelectViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.playerSelectViewController)
     }
     
     /// `UIStoryboard(name: "PositionNumberPicker", bundle: ...)`
@@ -1090,6 +1099,7 @@ struct _R: Rswift.Validatable {
       try playerEditViewController.validate()
       try formationTemplateListViewController.validate()
       try teamEditViewController.validate()
+      try playerSelectViewController.validate()
       try teamMenuViewController.validate()
       try formationViewController.validate()
     }
@@ -1221,6 +1231,19 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'PlayerListViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "player-sample39-1.jpg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'player-sample39-1.jpg' is used in storyboard 'PlayerListViewController', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct playerSelectViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = PlayerSelectViewController
+      
+      let bundle = R.hostingBundle
+      let name = "PlayerSelectViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "player-sample39-1.jpg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'player-sample39-1.jpg' is used in storyboard 'PlayerSelectViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
