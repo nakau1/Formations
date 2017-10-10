@@ -16,7 +16,7 @@ class FormationViewController: UIViewController {
     
     class func create(for team: Team) -> UIViewController {
         return R.storyboard.formationViewController.instantiate(self) { vc in
-            
+            vc.team = team
         }
     }
     
@@ -49,6 +49,22 @@ class FormationViewController: UIViewController {
     }
     
     @IBAction private func didTapCloseButton() {
+        self.dismiss()
+    }
+    
+    @IBAction private func didTapFormationTemplateButton() {
+        let selector = FormationTemplateSelectViewController.create(for: team)
+        let width = UIScreen.main.bounds.width * 0.6
+        var options = PopupOptions(.leftDraw(width: width))
+        options.overlayIsBlur = true
+        Popup.show(selector.withinNavigation, from: self, options: options)
+    }
+    
+    @IBAction private func didTapPlayerButton() {
+        self.dismiss()
+    }
+    
+    @IBAction private func didTapSaveButton() {
         self.dismiss()
     }
     

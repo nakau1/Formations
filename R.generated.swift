@@ -408,7 +408,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 57 images.
+  /// This `R.image` struct is generated, and contains static references to 60 images.
   struct image {
     /// Image `btn-add`.
     static let btnAdd = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-add")
@@ -416,10 +416,16 @@ struct R: Rswift.Validatable {
     static let btnClose = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-close")
     /// Image `btn-copy`.
     static let btnCopy = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-copy")
+    /// Image `btn-formation`.
+    static let btnFormation = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-formation")
     /// Image `btn-help`.
     static let btnHelp = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-help")
     /// Image `btn-movie`.
     static let btnMovie = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-movie")
+    /// Image `btn-player`.
+    static let btnPlayer = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-player")
+    /// Image `btn-share`.
+    static let btnShare = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn-share")
     /// Image `default-background`.
     static let defaultBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "default-background")
     /// Image `formation-bg`.
@@ -540,6 +546,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.btnCopy, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "btn-formation", bundle: ..., traitCollection: ...)`
+    static func btnFormation(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnFormation, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "btn-help", bundle: ..., traitCollection: ...)`
     static func btnHelp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.btnHelp, compatibleWith: traitCollection)
@@ -548,6 +559,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "btn-movie", bundle: ..., traitCollection: ...)`
     static func btnMovie(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.btnMovie, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "btn-player", bundle: ..., traitCollection: ...)`
+    static func btnPlayer(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnPlayer, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "btn-share", bundle: ..., traitCollection: ...)`
+    static func btnShare(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btnShare, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "default-background", bundle: ..., traitCollection: ...)`
@@ -840,10 +861,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 13 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 14 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `FormationTemplateList`.
     static let formationTemplateList: Rswift.ReuseIdentifier<FormationTemplateListCell> = Rswift.ReuseIdentifier(identifier: "FormationTemplateList")
+    /// Reuse identifier `FormationTemplateSelect`.
+    static let formationTemplateSelect: Rswift.ReuseIdentifier<FormationTemplateSelectTableViewCell> = Rswift.ReuseIdentifier(identifier: "FormationTemplateSelect")
     /// Reuse identifier `Landing`.
     static let landing: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "Landing")
     /// Reuse identifier `PlayerEditImage`.
@@ -877,7 +900,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 15 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 16 storyboards.
   struct storyboard {
     /// Storyboard `AlertDialog`.
     static let alertDialog = _R.storyboard.alertDialog()
@@ -887,6 +910,8 @@ struct R: Rswift.Validatable {
     static let formationTemplateEditViewController = _R.storyboard.formationTemplateEditViewController()
     /// Storyboard `FormationTemplateListViewController`.
     static let formationTemplateListViewController = _R.storyboard.formationTemplateListViewController()
+    /// Storyboard `FormationTemplateSelectViewController`.
+    static let formationTemplateSelectViewController = _R.storyboard.formationTemplateSelectViewController()
     /// Storyboard `FormationViewController`.
     static let formationViewController = _R.storyboard.formationViewController()
     /// Storyboard `LaunchScreen`.
@@ -928,6 +953,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "FormationTemplateListViewController", bundle: ...)`
     static func formationTemplateListViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.formationTemplateListViewController)
+    }
+    
+    /// `UIStoryboard(name: "FormationTemplateSelectViewController", bundle: ...)`
+    static func formationTemplateSelectViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.formationTemplateSelectViewController)
     }
     
     /// `UIStoryboard(name: "FormationViewController", bundle: ...)`
@@ -1056,6 +1086,7 @@ struct _R: Rswift.Validatable {
       try playerListViewController.validate()
       try formationTemplateEditViewController.validate()
       try teamListViewController.validate()
+      try formationTemplateSelectViewController.validate()
       try playerEditViewController.validate()
       try formationTemplateListViewController.validate()
       try teamEditViewController.validate()
@@ -1107,6 +1138,19 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct formationTemplateSelectViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = FormationTemplateSelectViewController
+      
+      let bundle = R.hostingBundle
+      let name = "FormationTemplateSelectViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "formation-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-bg' is used in storyboard 'FormationTemplateSelectViewController', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct formationViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = FormationViewController
       
@@ -1115,6 +1159,9 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "btn-close") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-close' is used in storyboard 'FormationViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-share") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-share' is used in storyboard 'FormationViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-player") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-player' is used in storyboard 'FormationViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn-formation") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn-formation' is used in storyboard 'FormationViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "formation-template-bg") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'formation-template-bg' is used in storyboard 'FormationViewController', but couldn't be loaded.") }
       }
       

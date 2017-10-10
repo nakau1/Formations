@@ -54,6 +54,8 @@
 		DB5EC9A81F8126860000B8E0 /* CircleColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */; };
 		DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */; };
 		DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */; };
+		DB6D9E6C1F8D069400B6A141 /* FormationTemplateSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D9E6B1F8D069400B6A141 /* FormationTemplateSelectViewController.swift */; };
+		DB6D9E6E1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6D9E6D1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard */; };
 		DB7157031F89384B00714512 /* FormationTemplatePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7157021F89384B00714512 /* FormationTemplatePin.swift */; };
 		DB7157051F89385700714512 /* FormationTemplatePin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7157041F89385700714512 /* FormationTemplatePin.xib */; };
 		DB7157081F8B15F400714512 /* PositionNumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7157071F8B15F400714512 /* PositionNumberPicker.swift */; };
@@ -193,6 +195,8 @@
 		DB5EC9A71F8126860000B8E0 /* CircleColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleColorButton.swift; sourceTree = "<group>"; };
 		DB5EC9A91F81269B0000B8E0 /* CircleImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageButton.swift; sourceTree = "<group>"; };
 		DB6B758A1F7EB4E8003A3E1C /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
+		DB6D9E6B1F8D069400B6A141 /* FormationTemplateSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplateSelectViewController.swift; sourceTree = "<group>"; };
+		DB6D9E6D1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationTemplateSelectViewController.storyboard; sourceTree = "<group>"; };
 		DB7157021F89384B00714512 /* FormationTemplatePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplatePin.swift; sourceTree = "<group>"; };
 		DB7157041F89385700714512 /* FormationTemplatePin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormationTemplatePin.xib; sourceTree = "<group>"; };
 		DB7157061F8B15F300714512 /* PositionNumberPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PositionNumberPicker.storyboard; sourceTree = "<group>"; };
@@ -380,7 +384,9 @@
 			isa = PBXGroup;
 			children = (
 				CEF99B451F8105730079CDC9 /* FormationTemplateListViewController.swift */,
+				DB6D9E6B1F8D069400B6A141 /* FormationTemplateSelectViewController.swift */,
 				CEF99B441F8105730079CDC9 /* FormationTemplateListViewController.storyboard */,
+				DB6D9E6D1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -841,6 +847,7 @@
 				DBF79B481F83C9A600FCB2BE /* player-sample3-1.jpg in Resources */,
 				DBF79B471F83C9A600FCB2BE /* player-sample29-2.jpg in Resources */,
 				DBF79B571F83C9A600FCB2BE /* player-sample8-2.jpg in Resources */,
+				DB6D9E6E1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard in Resources */,
 				DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */,
 				DBF79B331F83C9A600FCB2BE /* player-sample13-2.jpg in Resources */,
 				DBF79B401F83C9A600FCB2BE /* player-sample22-1.jpg in Resources */,
@@ -957,6 +964,7 @@
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
 				DB71570D1F8BA98400714512 /* FormationTemplateImageCreator.swift in Sources */,
 				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
+				DB6D9E6C1F8D069400B6A141 /* FormationTemplateSelectViewController.swift in Sources */,
 				DB5EC99F1F8089630000B8E0 /* PopupRiseAnimation.swift in Sources */,
 				DB1627401F7EB1FC00A3D709 /* Rswift+Storyboard.swift in Sources */,
 				DB6B758B1F7EB4E8003A3E1C /* UIViewController+Common.swift in Sources */,
