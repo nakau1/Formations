@@ -50,7 +50,7 @@ class TeamMenuViewController: UIViewController {
         func process(_ viewController: UIViewController, team: Team) {
             switch self {
             case .formation:
-                break
+                viewController.present(FormationViewController.create(for: team))
             case .formationTemplate:
                 viewController.push(FormationTemplateListViewController.create(for: team))
             case .players:

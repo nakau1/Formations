@@ -23,7 +23,7 @@
 		CEF99B5A1F8105E30079CDC9 /* PlayerListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B4F1F8105730079CDC9 /* PlayerListViewController.storyboard */; };
 		CEF99B5B1F8105E30079CDC9 /* FormationTemplateEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B411F8105730079CDC9 /* FormationTemplateEditViewController.storyboard */; };
 		CEF99B5C1F8105E30079CDC9 /* FormationTemplateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B441F8105730079CDC9 /* FormationTemplateListViewController.storyboard */; };
-		CEF99B5D1F8105E30079CDC9 /* FormationListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B571F8105730079CDC9 /* FormationListViewController.storyboard */; };
+		CEF99B5D1F8105E30079CDC9 /* FormationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF99B571F8105730079CDC9 /* FormationViewController.storyboard */; };
 		CEF99B5E1F8106020079CDC9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B481F8105730079CDC9 /* Player.swift */; };
 		CEF99B5F1F8106020079CDC9 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B491F8105730079CDC9 /* PlayerModel.swift */; };
 		CEF99B601F8106020079CDC9 /* PlayerEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B4D1F8105730079CDC9 /* PlayerEditViewController.swift */; };
@@ -34,7 +34,7 @@
 		CEF99B651F8106020079CDC9 /* FormationTemplateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B451F8105730079CDC9 /* FormationTemplateListViewController.swift */; };
 		CEF99B661F8106020079CDC9 /* Formation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B531F8105730079CDC9 /* Formation.swift */; };
 		CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B541F8105730079CDC9 /* FormationModel.swift */; };
-		CEF99B681F8106020079CDC9 /* FormationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B581F8105730079CDC9 /* FormationListViewController.swift */; };
+		CEF99B681F8106020079CDC9 /* FormationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99B581F8105730079CDC9 /* FormationViewController.swift */; };
 		DB16271A1F7E9BFF00A3D709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1627181F7E9BFF00A3D709 /* Main.storyboard */; };
 		DB16271C1F7E9BFF00A3D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */; };
 		DB16271F1F7E9BFF00A3D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB16271D1F7E9BFF00A3D709 /* LaunchScreen.storyboard */; };
@@ -132,6 +132,8 @@
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
 		E4A8A1C81F838D5600A689E4 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C71F838D5600A689E4 /* RealmModel.swift */; };
 		E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */; };
+		E4AB75911F8CB7000099BE59 /* FormationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB75901F8CB7000099BE59 /* FormationPin.swift */; };
+		E4AB75931F8CB7130099BE59 /* FormationPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4AB75921F8CB7130099BE59 /* FormationPin.xib */; };
 		E4EE6B451F83A26100472F12 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EE6B441F83A26100472F12 /* Fixture.swift */; };
 		FD2FDF130907DC9D2DD2D9EF /* Pods_Formations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00CA0B99ECE2BE3A00FFE0 /* Pods_Formations.framework */; };
 /* End PBXBuildFile section */
@@ -166,8 +168,8 @@
 		CEF99B501F8105730079CDC9 /* PlayerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 		CEF99B531F8105730079CDC9 /* Formation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formation.swift; sourceTree = "<group>"; };
 		CEF99B541F8105730079CDC9 /* FormationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationModel.swift; sourceTree = "<group>"; };
-		CEF99B571F8105730079CDC9 /* FormationListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationListViewController.storyboard; sourceTree = "<group>"; };
-		CEF99B581F8105730079CDC9 /* FormationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationListViewController.swift; sourceTree = "<group>"; };
+		CEF99B571F8105730079CDC9 /* FormationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationViewController.storyboard; sourceTree = "<group>"; };
+		CEF99B581F8105730079CDC9 /* FormationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationViewController.swift; sourceTree = "<group>"; };
 		DB1627111F7E9BFF00A3D709 /* Formations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1627191F7E9BFF00A3D709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB16271B1F7E9BFF00A3D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +270,8 @@
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
 		E4A8A1C71F838D5600A689E4 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierGeneratable.swift; sourceTree = "<group>"; };
+		E4AB75901F8CB7000099BE59 /* FormationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationPin.swift; sourceTree = "<group>"; };
+		E4AB75921F8CB7130099BE59 /* FormationPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormationPin.xib; sourceTree = "<group>"; };
 		E4EE6B441F83A26100472F12 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -448,18 +452,20 @@
 		CEF99B551F8105730079CDC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEF99B561F8105730079CDC9 /* List */,
+				CEF99B561F8105730079CDC9 /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CEF99B561F8105730079CDC9 /* List */ = {
+		CEF99B561F8105730079CDC9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CEF99B581F8105730079CDC9 /* FormationListViewController.swift */,
-				CEF99B571F8105730079CDC9 /* FormationListViewController.storyboard */,
+				CEF99B581F8105730079CDC9 /* FormationViewController.swift */,
+				E4AB75901F8CB7000099BE59 /* FormationPin.swift */,
+				CEF99B571F8105730079CDC9 /* FormationViewController.storyboard */,
+				E4AB75921F8CB7130099BE59 /* FormationPin.xib */,
 			);
-			path = List;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		D277411A4BF813A66739E474 /* Pods */ = {
@@ -828,7 +834,7 @@
 				CEF99B5C1F8105E30079CDC9 /* FormationTemplateListViewController.storyboard in Resources */,
 				DBF79B4D1F83C9A600FCB2BE /* player-sample39-2.jpg in Resources */,
 				DBF79B421F83C9A600FCB2BE /* player-sample23-1.jpg in Resources */,
-				CEF99B5D1F8105E30079CDC9 /* FormationListViewController.storyboard in Resources */,
+				CEF99B5D1F8105E30079CDC9 /* FormationViewController.storyboard in Resources */,
 				DBF79B301F83C9A600FCB2BE /* player-sample10-1.jpg in Resources */,
 				DBF79B541F83C9A600FCB2BE /* player-sample7-1.jpg in Resources */,
 				DBF79B5A1F83C9A600FCB2BE /* team-sample-emblem.png in Resources */,
@@ -857,6 +863,7 @@
 				DBF79B461F83C9A600FCB2BE /* player-sample29-1.jpg in Resources */,
 				CEF99B381F8102C40079CDC9 /* TeamListViewController.storyboard in Resources */,
 				DBF79B4C1F83C9A600FCB2BE /* player-sample39-1.jpg in Resources */,
+				E4AB75931F8CB7130099BE59 /* FormationPin.xib in Resources */,
 				DB16273D1F7EAFDE00A3D709 /* TeamEditViewController.storyboard in Resources */,
 				DBF79B431F83C9A600FCB2BE /* player-sample23-2.jpg in Resources */,
 				DBF79B3D1F83C9A600FCB2BE /* player-sample20-2.jpg in Resources */,
@@ -941,6 +948,7 @@
 				DBC666811F86989000B99447 /* UIColor+Common.swift in Sources */,
 				DB7157031F89384B00714512 /* FormationTemplatePin.swift in Sources */,
 				DB71570B1F8B913800714512 /* UITextField+Common.swift in Sources */,
+				E4AB75911F8CB7000099BE59 /* FormationPin.swift in Sources */,
 				DB5EC9A51F80A6E70000B8E0 /* PopupBottomDrawAnimation.swift in Sources */,
 				E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */,
 				DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */,
@@ -990,7 +998,7 @@
 				CEF99B651F8106020079CDC9 /* FormationTemplateListViewController.swift in Sources */,
 				CEF99B661F8106020079CDC9 /* Formation.swift in Sources */,
 				CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */,
-				CEF99B681F8106020079CDC9 /* FormationListViewController.swift in Sources */,
+				CEF99B681F8106020079CDC9 /* FormationViewController.swift in Sources */,
 				DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */,
 				E438491A1F836046004F9248 /* BackgroundView.swift in Sources */,
 				E44DA28B1F85E5D70022460B /* UIImage+CircleButton.swift in Sources */,
