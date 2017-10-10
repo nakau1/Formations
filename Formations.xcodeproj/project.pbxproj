@@ -367,6 +367,7 @@
 			children = (
 				CEF99B431F8105730079CDC9 /* List */,
 				CEF99B401F8105730079CDC9 /* Edit */,
+				DB26FAAB1F8D1E6E006068EF /* Select */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,9 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF99B451F8105730079CDC9 /* FormationTemplateListViewController.swift */,
-				DB6D9E6B1F8D069400B6A141 /* FormationTemplateSelectViewController.swift */,
 				CEF99B441F8105730079CDC9 /* FormationTemplateListViewController.storyboard */,
-				DB6D9E6D1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -418,6 +417,7 @@
 			children = (
 				CEF99B4E1F8105730079CDC9 /* List */,
 				CEF99B4B1F8105730079CDC9 /* Edit */,
+				DB26FAAC1F8D1EAC006068EF /* Select */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,9 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF99B501F8105730079CDC9 /* PlayerListViewController.swift */,
-				DB26FAA71F8D185A006068EF /* PlayerSelectViewController.swift */,
 				CEF99B4F1F8105730079CDC9 /* PlayerListViewController.storyboard */,
-				DB26FAA81F8D185A006068EF /* PlayerSelectViewController.storyboard */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -592,6 +590,24 @@
 				DB16272E1F7EA02800A3D709 /* TeamEditViewController.storyboard */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		DB26FAAB1F8D1E6E006068EF /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				DB6D9E6B1F8D069400B6A141 /* FormationTemplateSelectViewController.swift */,
+				DB6D9E6D1F8D06A100B6A141 /* FormationTemplateSelectViewController.storyboard */,
+			);
+			path = Select;
+			sourceTree = "<group>";
+		};
+		DB26FAAC1F8D1EAC006068EF /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				DB26FAA71F8D185A006068EF /* PlayerSelectViewController.swift */,
+				DB26FAA81F8D185A006068EF /* PlayerSelectViewController.storyboard */,
+			);
+			path = Select;
 			sourceTree = "<group>";
 		};
 		DB36AAD41F7ECC6600EEADD5 /* Widgets */ = {
