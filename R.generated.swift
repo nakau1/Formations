@@ -841,12 +841,12 @@ struct R: Rswift.Validatable {
     static let alertDialog = _R.storyboard.alertDialog()
     /// Storyboard `ColorPicker`.
     static let colorPicker = _R.storyboard.colorPicker()
-    /// Storyboard `FormationListViewController`.
-    static let formationListViewController = _R.storyboard.formationListViewController()
     /// Storyboard `FormationTemplateEditViewController`.
     static let formationTemplateEditViewController = _R.storyboard.formationTemplateEditViewController()
     /// Storyboard `FormationTemplateListViewController`.
     static let formationTemplateListViewController = _R.storyboard.formationTemplateListViewController()
+    /// Storyboard `FormationViewController`.
+    static let formationViewController = _R.storyboard.formationViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
@@ -878,11 +878,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIStoryboard(resource: R.storyboard.colorPicker)
     }
     
-    /// `UIStoryboard(name: "FormationListViewController", bundle: ...)`
-    static func formationListViewController(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.formationListViewController)
-    }
-    
     /// `UIStoryboard(name: "FormationTemplateEditViewController", bundle: ...)`
     static func formationTemplateEditViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.formationTemplateEditViewController)
@@ -891,6 +886,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "FormationTemplateListViewController", bundle: ...)`
     static func formationTemplateListViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.formationTemplateListViewController)
+    }
+    
+    /// `UIStoryboard(name: "FormationViewController", bundle: ...)`
+    static func formationViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.formationViewController)
     }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -1027,15 +1027,6 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct formationListViewController: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = FormationListViewController
-      
-      let bundle = R.hostingBundle
-      let name = "FormationListViewController"
-      
-      fileprivate init() {}
-    }
-    
     struct formationTemplateEditViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = FormationTemplateEditViewController
       
@@ -1058,6 +1049,15 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "default-background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default-background' is used in storyboard 'FormationTemplateListViewController', but couldn't be loaded.") }
       }
+      
+      fileprivate init() {}
+    }
+    
+    struct formationViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = FormationViewController
+      
+      let bundle = R.hostingBundle
+      let name = "FormationViewController"
       
       fileprivate init() {}
     }

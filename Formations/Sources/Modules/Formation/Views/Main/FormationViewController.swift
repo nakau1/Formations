@@ -6,28 +6,18 @@ import UIKit
 import Rswift
 
 // MARK: - Controller Definition -
-class FormationListViewController: UIViewController {
+class FormationViewController: UIViewController {
     
-    // MARK: ファクトリメソッド
-    class func create() -> UIViewController {
-        return R.storyboard.formationListViewController.instantiate(self) { vc in
+    private var team: Team!
+    
+    class func create(for team: Team) -> UIViewController {
+        return R.storyboard.formationViewController.instantiate(self) { vc in
             
         }
     }
     
-    // MARK: ライフサイクル
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepare()
-    }
-}
-
-// MARK: - Private -
-private extension FormationListViewController {
-    
-    /// ビューの初期処理
-    func prepare() {
         prepareNavigationBar()
     }
 }
