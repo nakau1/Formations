@@ -9,14 +9,18 @@ import RealmSwift
 // MARK: - Controller Definition -
 class PlayerSelectViewController: UIViewController {
     
+    typealias SelectedHandler = (Player) -> Void
+    
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     private var team: Team!
     private var players: RealmSwift.Results<Player>!
+    private var selected: SelectedHandler!
     
-    class func create(for team: Team) -> UIViewController {
+    class func create(for team: Team, selected: @escaping SelectedHandler) -> UIViewController {
         return R.storyboard.playerSelectViewController.instantiate(self) { vc in
             vc.team = team
+            vc.selected = selected
         }
     }
     
@@ -45,6 +49,8 @@ extension PlayerSelectViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selected(players[indexPath.row])
+        dismiss()
     }
 }
 

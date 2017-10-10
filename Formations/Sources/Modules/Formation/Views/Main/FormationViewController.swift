@@ -64,9 +64,9 @@ class FormationViewController: UIViewController {
     }
     
     private func didTapPlayer(at index: Int) {
-        //positionBoard.pins[index]
-        
-        let selector = PlayerSelectViewController.create(for: team)
+        let selector = PlayerSelectViewController.create(for: team) { [unowned self] selectedPlayer in
+            //self.positionBoard.pins[index]
+        }
         show(controller: selector)
     }
     
