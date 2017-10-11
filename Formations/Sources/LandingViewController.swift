@@ -14,6 +14,15 @@ class LandingViewController: UITableViewController {
                 }),
                 ]
             ),
+            Section("モデル", [
+                Row("フォーメーション", handler: { vc in
+                    let json = try! JSONEncoder().encode(Formation())
+                    
+                    
+                    print( String(data: json, encoding: .utf8)! )
+                }),
+                ]
+            ),
             Section("テスト", [
                 Row("テスト画面", handler: { vc in
                     vc.push(TestViewController.create())
