@@ -7,17 +7,32 @@ import Rswift
 
 class FormationPin: UIView {
     
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var faceImageView: UIImageView!
     
-    class func create(position: Position) -> FormationPin {
-        let ret = R.nib.formationPin.firstView(owner: nil)!
-//        ret.imageView.isUserInteractionEnabled = true
-//        ret.imageView.layer.cornerRadius = ret.bounds.width / 2
-//        ret.imageView.layer.borderColor = position.backgroundColor.withBrightnessComponent(0.64).cgColor
-//        ret.imageView.layer.borderWidth = 2
-//        ret.imageView.clipsToBounds = true
-//        ret.imageView.image = UIImage.filled(color: position.backgroundColor, size: ret.bounds.size)
-        return ret
+    class func create() -> FormationPin {
+        return R.nib.formationPin.firstView(owner: nil)!
+    }
+    
+    func set(position: Position?, player: Player?) {
+        faceImageView.isUserInteractionEnabled = true
+        faceImageView.layer.cornerRadius = faceImageView.bounds.width / 2
+        if let position = position {
+            faceImageView.layer.borderColor = position.backgroundColor.cgColor
+        }
+        faceImageView.layer.borderWidth = 2
+        faceImageView.clipsToBounds = true
+        
+        if let image = player?.loadThumbImage(force: true).thumbImage {
+            faceImageView.image = image
+        } else {
+            faceImageView.image = UIImage.filled(color: UIColor(white: 0.5, alpha: 0.5), size: CGSize(square: 80))
+        }
+        
+        if let name = player?.name, let uniformNumber = player?.uniformNumber {
+            nameLabel.text = "\(uniformNumber) \(name)"
+        } else {
+            nameLabel.text = ""
+        }
     }
 }
-

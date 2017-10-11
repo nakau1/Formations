@@ -31,62 +31,68 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="formation-template-bg" translatesAutoresizingMaskIntoConstraints="NO" id="SAO-nm-80T">
-                                <rect key="frame" x="0.0" y="104" width="320" height="256"/>
+                                <rect key="frame" x="0.0" y="96" width="320" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SAO-nm-80T" secondAttribute="height" multiplier="5:4" id="9Hw-0C-0BH"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOT-42-A3i" customClass="PositionBoardView" customModule="Formations" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="104" width="320" height="256"/>
+                                <rect key="frame" x="0.0" y="96" width="320" height="256"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgR-V1-HaU">
-                                <rect key="frame" x="0.0" y="424" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="416" width="320" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsk-LK-7o1">
-                                        <rect key="frame" x="8" y="6" width="44" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="KtT-kO-B3E"/>
                                             <constraint firstAttribute="width" secondItem="dsk-LK-7o1" secondAttribute="height" multiplier="1:1" id="k43-MR-dow"/>
                                         </constraints>
                                         <state key="normal" image="btn-formation"/>
+                                        <connections>
+                                            <action selector="didTapFormationTemplateButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2i-tJ-jhx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jR-R6-mBF">
-                                        <rect key="frame" x="73" y="6" width="44" height="44"/>
+                                        <rect key="frame" x="73" y="0.0" width="44" height="44"/>
                                         <state key="normal" image="btn-formation"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-o4-jKs">
-                                        <rect key="frame" x="203" y="6" width="44" height="44"/>
+                                        <rect key="frame" x="203" y="0.0" width="44" height="44"/>
                                         <state key="normal" image="btn-player"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fl-4w-gcU">
-                                        <rect key="frame" x="268" y="6" width="44" height="44"/>
+                                        <rect key="frame" x="268" y="0.0" width="44" height="44"/>
                                         <state key="normal" image="btn-share"/>
+                                        <connections>
+                                            <action selector="didTapSaveButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qz-Xj-7XO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQi-3L-Uvs">
-                                        <rect key="frame" x="138" y="6" width="44" height="44"/>
+                                        <rect key="frame" x="138" y="0.0" width="44" height="44"/>
                                         <state key="normal" image="btn-formation"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBH-W2-XsD">
-                                        <rect key="frame" x="52" y="6" width="21" height="44"/>
+                                        <rect key="frame" x="52" y="0.0" width="21" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-FN-4su">
-                                        <rect key="frame" x="117" y="6" width="21" height="44"/>
+                                        <rect key="frame" x="117" y="0.0" width="21" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmb-Aw-Q0n">
-                                        <rect key="frame" x="182" y="6" width="21" height="44"/>
+                                        <rect key="frame" x="182" y="0.0" width="21" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA6-GL-tsp">
-                                        <rect key="frame" x="247" y="6" width="21" height="44"/>
+                                        <rect key="frame" x="247" y="0.0" width="21" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="0gF-cf-fK3"/>
+                                    <constraint firstAttribute="height" constant="64" id="0gF-cf-fK3"/>
                                     <constraint firstItem="0jR-R6-mBF" firstAttribute="bottom" secondItem="dsk-LK-7o1" secondAttribute="bottom" id="5WC-Tg-QMq"/>
                                     <constraint firstItem="fmb-Aw-Q0n" firstAttribute="width" secondItem="eBH-W2-XsD" secondAttribute="width" id="5fe-TJ-bVn"/>
                                     <constraint firstItem="PA6-GL-tsp" firstAttribute="leading" secondItem="0Qd-o4-jKs" secondAttribute="trailing" id="5zI-Wd-QED"/>
@@ -103,6 +109,7 @@
                                     <constraint firstItem="eBH-W2-XsD" firstAttribute="bottom" secondItem="dsk-LK-7o1" secondAttribute="bottom" id="Ssq-Ch-8Bf"/>
                                     <constraint firstItem="dQi-3L-Uvs" firstAttribute="top" secondItem="dsk-LK-7o1" secondAttribute="top" id="Zf0-BY-3za"/>
                                     <constraint firstItem="dQi-3L-Uvs" firstAttribute="leading" secondItem="6WB-FN-4su" secondAttribute="trailing" id="a6u-um-01X"/>
+                                    <constraint firstItem="dsk-LK-7o1" firstAttribute="top" secondItem="pgR-V1-HaU" secondAttribute="top" id="auV-Ym-7wY"/>
                                     <constraint firstItem="6WB-FN-4su" firstAttribute="width" secondItem="eBH-W2-XsD" secondAttribute="width" id="bGR-w6-l3D"/>
                                     <constraint firstItem="6WB-FN-4su" firstAttribute="top" secondItem="dsk-LK-7o1" secondAttribute="top" id="buX-Hd-Bu7"/>
                                     <constraint firstItem="eBH-W2-XsD" firstAttribute="top" secondItem="dsk-LK-7o1" secondAttribute="top" id="fNq-qd-gBg"/>
@@ -115,7 +122,6 @@
                                     <constraint firstItem="fmb-Aw-Q0n" firstAttribute="top" secondItem="dsk-LK-7o1" secondAttribute="top" id="kIh-MN-aLb"/>
                                     <constraint firstItem="fmb-Aw-Q0n" firstAttribute="leading" secondItem="dQi-3L-Uvs" secondAttribute="trailing" id="kQH-By-ewg"/>
                                     <constraint firstItem="5Fl-4w-gcU" firstAttribute="leading" secondItem="PA6-GL-tsp" secondAttribute="trailing" id="ksf-U2-WMq"/>
-                                    <constraint firstItem="dsk-LK-7o1" firstAttribute="centerY" secondItem="pgR-V1-HaU" secondAttribute="centerY" id="n9u-ET-aax"/>
                                     <constraint firstItem="PA6-GL-tsp" firstAttribute="width" secondItem="eBH-W2-XsD" secondAttribute="width" id="rDg-Ur-IiW"/>
                                     <constraint firstItem="eBH-W2-XsD" firstAttribute="leading" secondItem="dsk-LK-7o1" secondAttribute="trailing" id="x2E-72-NEN"/>
                                     <constraint firstItem="0jR-R6-mBF" firstAttribute="leading" secondItem="eBH-W2-XsD" secondAttribute="trailing" id="x6F-Kl-GqE"/>
@@ -124,7 +130,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lG0-3T-Ivu">
-                                <rect key="frame" x="0.0" y="360" width="320" height="64"/>
+                                <rect key="frame" x="0.0" y="352" width="320" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Mdq-fF-neK"/>
@@ -138,7 +144,6 @@
                             <constraint firstItem="SAO-nm-80T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7LA-QK-Sfc"/>
                             <constraint firstItem="SAO-nm-80T" firstAttribute="top" secondItem="TOT-42-A3i" secondAttribute="top" id="9Ph-ED-mLZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lG0-3T-Ivu" secondAttribute="trailing" id="9nv-n0-Oiy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgR-V1-HaU" secondAttribute="bottom" id="Ely-tn-xhn"/>
                             <constraint firstItem="pgR-V1-HaU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OKm-yN-hWf"/>
                             <constraint firstItem="SAO-nm-80T" firstAttribute="leading" secondItem="TOT-42-A3i" secondAttribute="leading" id="Vnt-Hx-1UW"/>
                             <constraint firstItem="an5-hA-u9t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bdk-Je-Ule"/>
@@ -146,6 +151,7 @@
                             <constraint firstItem="pgR-V1-HaU" firstAttribute="top" secondItem="lG0-3T-Ivu" secondAttribute="bottom" id="e0c-1V-jpl"/>
                             <constraint firstItem="SAO-nm-80T" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g5V-yg-BUg"/>
                             <constraint firstItem="SAO-nm-80T" firstAttribute="bottom" secondItem="TOT-42-A3i" secondAttribute="bottom" id="iOz-wI-iN1"/>
+                            <constraint firstAttribute="bottom" secondItem="pgR-V1-HaU" secondAttribute="bottom" id="lwb-Fv-Vli"/>
                             <constraint firstItem="an5-hA-u9t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oHi-07-nNa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgR-V1-HaU" secondAttribute="trailing" id="zQN-RW-bwN"/>
                         </constraints>

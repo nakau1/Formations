@@ -16,7 +16,7 @@ class FormationViewController: UIViewController {
     
     class func create(for team: Team) -> UIViewController {
         return R.storyboard.formationViewController.instantiate(self) { vc in
-            
+            vc.team = team
         }
     }
     
@@ -35,13 +35,17 @@ class FormationViewController: UIViewController {
     }
     
     private func preparePositionBoardView() {
-        positionBoard.isMovable = false
+        //positionBoard.isMovable = false
+        positionBoard.tapped = { [unowned self] pin, index in
+            self.didTapPlayer(at: index)
+        }
     }
     
     private func reloadPositionBoardView() {
         if let template = template {
             positionBoard.pins = template.items.map { item -> PositionBoardPin in
-                let view = FormationPin.create(position: item.position)
+                let view = FormationPin.create()
+                view.set(position: item.position, player: nil)
                 return PositionBoardPin(view: view, percentage: item.percentage)
             }
         }
@@ -50,6 +54,34 @@ class FormationViewController: UIViewController {
     
     @IBAction private func didTapCloseButton() {
         self.dismiss()
+    }
+    
+    @IBAction private func didTapFormationTemplateButton() {
+        let selector = FormationTemplateSelectViewController.create(for: team) { [unowned self] selectedTemplate in
+            self.template = selectedTemplate
+            self.reloadPositionBoardView()
+        }
+        show(controller: selector)
+    }
+    
+    private func didTapPlayer(at index: Int) {
+        let selector = PlayerSelectViewController.create(for: team) { [unowned self] selectedPlayer in
+            if let view = self.positionBoard.pins[index].view as? FormationPin {
+                view.set(position: nil, player: selectedPlayer)
+            }
+        }
+        show(controller: selector)
+    }
+    
+    @IBAction private func didTapSaveButton() {
+        self.dismiss()
+    }
+    
+    private func show(controller: UIViewController) {
+        let width = UIScreen.main.bounds.width * 0.6
+        var options = PopupOptions(.leftDraw(width: width))
+        options.overlayIsBlur = true
+        Popup.show(controller.withinNavigation, from: self, options: options)
     }
     
     override var prefersStatusBarHidden: Bool {
