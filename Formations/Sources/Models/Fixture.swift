@@ -20,13 +20,9 @@ class Fixture {
             team.players.append($0)
         }
         
-        let formationTemplates = makeFormationTemplates()
-        formationTemplates.forEach {
-            Realm.FormationTemplate.save($0)
-            team.formationTemplates.append($0)
-        }
-        
         Realm.Team.save(team)
+        
+        Realm.FormationTemplate.save(entities: makeFormationTemplates())
     }
     
     func reset() {
@@ -77,6 +73,6 @@ private extension Fixture {
     }
     
     func makeFormationTemplates() -> [FormationTemplate] {
-        return []
+        return FormationTemplatePreInstalledData().make()
     }
 }
