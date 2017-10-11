@@ -19,7 +19,6 @@ enum Image: FileType {
     enum Category: String {
         case players
         case teams
-        case formations
         case formationTemplates = "formation_templates"
         case test
     }
