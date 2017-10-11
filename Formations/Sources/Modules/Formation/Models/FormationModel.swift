@@ -4,11 +4,11 @@
 // =============================================================================
 import Foundation
 
-class FormationModel: RealmModel<Formation>, IdentifierGeneratable {
+class FormationModel: IdentifierGeneratable {
     
-    override func create() -> Entity {
-        let ret = super.create()
-        ret.id = generateIdentifier()
+    func create() -> Formation {
+        let ret = Formation()
+        //ret.id = generateIdentifier()
         return ret
     }
 }

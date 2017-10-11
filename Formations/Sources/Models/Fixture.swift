@@ -29,7 +29,7 @@ class Fixture {
         Realm.Team.delete()
         Realm.Player.delete()
         Realm.FormationTemplate.delete()
-        Realm.Formation.delete()
+        //Realm.Formation.delete()
         Image.deleteAll()
     }
 }
