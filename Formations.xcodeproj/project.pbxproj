@@ -134,6 +134,7 @@
 		E44DA28B1F85E5D70022460B /* UIImage+CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DA28A1F85E5D70022460B /* UIImage+CircleButton.swift */; };
 		E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44FDBC41F8491DE00B502EC /* Enums.swift */; };
 		E475F12F1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E475F12E1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift */; };
+		E487D8471F8E2D36004E7FAD /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487D8461F8E2D36004E7FAD /* FileType.swift */; };
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
 		E4A8A1C81F838D5600A689E4 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C71F838D5600A689E4 /* RealmModel.swift */; };
 		E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */; };
@@ -277,6 +278,7 @@
 		E44DA28A1F85E5D70022460B /* UIImage+CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CircleButton.swift"; sourceTree = "<group>"; };
 		E44FDBC41F8491DE00B502EC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E475F12E1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplatePreInstalledData.swift; sourceTree = "<group>"; };
+		E487D8461F8E2D36004E7FAD /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
 		E4A8A1C71F838D5600A689E4 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierGeneratable.swift; sourceTree = "<group>"; };
@@ -738,6 +740,7 @@
 				E4A8A1C71F838D5600A689E4 /* RealmModel.swift */,
 				E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */,
 				E4EE6B441F83A26100472F12 /* Fixture.swift */,
+				E487D8461F8E2D36004E7FAD /* FileType.swift */,
 				E411E4641F83203A003B397D /* Image.swift */,
 				E44FDBC41F8491DE00B502EC /* Enums.swift */,
 			);
@@ -1035,6 +1038,7 @@
 				CEF99B661F8106020079CDC9 /* Formation.swift in Sources */,
 				CEF99B671F8106020079CDC9 /* FormationModel.swift in Sources */,
 				CEF99B681F8106020079CDC9 /* FormationViewController.swift in Sources */,
+				E487D8471F8E2D36004E7FAD /* FileType.swift in Sources */,
 				DB89BD201F87D48D00782D2B /* TeamEditHelpViewController.swift in Sources */,
 				E438491A1F836046004F9248 /* BackgroundView.swift in Sources */,
 				E44DA28B1F85E5D70022460B /* UIImage+CircleButton.swift in Sources */,

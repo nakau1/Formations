@@ -4,7 +4,7 @@
 // =============================================================================
 import UIKit
 
-enum Image {
+enum Image: FileType {
     
     case playerFace(id: String)
     case playerThumb(id: String)
@@ -81,10 +81,6 @@ enum Image {
 
 extension Image {
     
-    var exists: Bool {
-        return FileManager.default.fileExists(atPath: path)
-    }
-    
     func save(_ image: UIImage?) {
         makeDirectoryIfNeeded()
         if let image = image {
@@ -100,65 +96,16 @@ extension Image {
         return UIImage(data: data)
     }
     
-    func delete() {
-        if exists {
-            try! FileManager.default.removeItem(atPath: path)
-        }
-    }
-    
     static func delete(category: Category, id: String) {
         let components = [
-            Image.documentDirectory,
-            Image.resourceDirectory,
+            documentDirectory,
+            resourceDirectory,
             category.rawValue,
             id,
             ]
         let path = components.reduce("") { ($0 as NSString).appendingPathComponent($1) }
         if FileManager.default.fileExists(atPath: path) {
             try! FileManager.default.removeItem(atPath: path)
-        }
-    }
-    
-    static func deleteAll() {
-        let path = [Image.documentDirectory, Image.resourceDirectory].reduce("") {
-            ($0 as NSString).appendingPathComponent($1)
-        }
-        if FileManager.default.fileExists(atPath: path) {
-            try! FileManager.default.removeItem(atPath: path)
-        }
-    }
-    
-    var path: String {
-        let components = [
-            Image.documentDirectory,
-            Image.resourceDirectory,
-            directory,
-            "\(name).\(extensionName)"
-        ]
-        return components.reduce("") { ($0 as NSString).appendingPathComponent($1) }
-    }
-    
-    var directoryPath: String {
-        let components = [
-            Image.documentDirectory,
-            Image.resourceDirectory,
-            directory,
-        ]
-        return components.reduce("") { ($0 as NSString).appendingPathComponent($1) }
-    }
-    
-    static var resourceDirectory: String { return "resources" }
-    
-    static var documentDirectory: String {
-        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-    }
-}
-
-fileprivate extension Image {
-    
-    func makeDirectoryIfNeeded() {
-        if !FileManager.default.fileExists(atPath: directoryPath) {
-            try! FileManager.default.createDirectory(atPath: directoryPath, withIntermediateDirectories: true, attributes: nil)
         }
     }
 }
