@@ -2,7 +2,7 @@
 //  Formations
 //  Copyright 2017 yuichi.nakayasu All rights reserved.
 // =============================================================================
-import Foundation
+import UIKit
 
 class FormationTemplateModel: RealmModel<FormationTemplate>, IdentifierGeneratable {
     
@@ -28,9 +28,7 @@ class FormationTemplateModel: RealmModel<FormationTemplate>, IdentifierGeneratab
     
     private func saveImages(entities: [Entity]) {
         entities.forEach { entity in
-            let imageCreator = FormationTemplateImageCreator()
-            let image = imageCreator.create(template: entity)
-            Image.formationTemplate(id: entity.id).save(image)
+            Image.formationTemplate(id: entity.id).save(UIImage(template: entity))
         }
     }
     
@@ -92,4 +90,29 @@ extension Notification.Name {
 
 extension Realm {
     static let FormationTemplate = FormationTemplateModel()
+}
+
+// MARK: - Image
+
+extension UIImage {
+    
+    convenience init(template: FormationTemplate) {
+        let imageSize = CGSize(600, 480)
+        let pinWidth = 32.f
+        let baseImage = R.image.formationTemplateBg()!.scaled(to: imageSize)
+        let pinsImage = UIImage.imageFromContext(imageSize) { context in
+            let maxPoint = CGPoint(imageSize.width - pinWidth, imageSize.height - pinWidth)
+            template.items.forEach { item in
+                let center = (maxPoint * item.percentage) + CGPoint(pinWidth / 2, pinWidth / 2)
+                let size = CGSize(square: pinWidth)
+                let rect = CGRect(origin: center, size: size)
+                
+                context.saveGState()
+                context.setFillColor(item.position.backgroundColor.cgColor)
+                context.fillEllipse(in: rect)
+                context.restoreGState()
+            }
+        }
+        self.init(cgImage: baseImage.synthesized(image: pinsImage).cgImage!)
+    }
 }
