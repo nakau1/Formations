@@ -35,7 +35,7 @@ class FormationViewController: UIViewController {
     }
     
     private func preparePositionBoardView() {
-        positionBoard.isMovable = false
+        //positionBoard.isMovable = false
         positionBoard.tapped = { [unowned self] pin, index in
             self.didTapPlayer(at: index)
         }
@@ -44,7 +44,8 @@ class FormationViewController: UIViewController {
     private func reloadPositionBoardView() {
         if let template = template {
             positionBoard.pins = template.items.map { item -> PositionBoardPin in
-                let view = FormationPin.create(position: item.position)
+                let view = FormationPin.create()
+                view.set(position: item.position, player: nil)
                 return PositionBoardPin(view: view, percentage: item.percentage)
             }
         }
@@ -65,7 +66,9 @@ class FormationViewController: UIViewController {
     
     private func didTapPlayer(at index: Int) {
         let selector = PlayerSelectViewController.create(for: team) { [unowned self] selectedPlayer in
-            //self.positionBoard.pins[index]
+            if let view = self.positionBoard.pins[index].view as? FormationPin {
+                view.set(position: nil, player: selectedPlayer)
+            }
         }
         show(controller: selector)
     }

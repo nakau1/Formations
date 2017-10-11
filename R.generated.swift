@@ -1048,9 +1048,14 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
+    try nib.validate()
   }
   
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _FormationPin.validate()
+    }
+    
     struct _EditHeaderTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = EditHeaderTableViewCell
       
@@ -1065,12 +1070,16 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _FormationPin: Rswift.NibResourceType {
+    struct _FormationPin: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "FormationPin"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> FormationPin? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? FormationPin
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "player-sample7-1.jpg", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'player-sample7-1.jpg' is used in nib 'FormationPin', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
