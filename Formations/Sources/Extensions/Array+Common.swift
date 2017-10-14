@@ -18,4 +18,11 @@ extension Array {
 			return i
 		}
 	}
+    
+    func get(_ index: Int?) -> Element? {
+        guard let i = index, !isEmpty, (startIndex..<endIndex).contains(i) else {
+            return nil
+        }
+        return self[i]
+    }
 }
