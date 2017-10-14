@@ -4,7 +4,7 @@
 // =============================================================================
 import UIKit
 
-enum DataFile: FileType {
+enum Json: FileType {
     
     case formation(teamId: String)
     
@@ -22,24 +22,23 @@ enum DataFile: FileType {
     }
     
     var extensionName: String {
-        return "plist"
+        return "json"
     }
 }
 
-extension DataFile {
+extension Json {
     
-    func save(_ data: Any?) {
+    func save(_ jsonString: String?) {
         makeDirectoryIfNeeded()
-//        if let image = image {
-//            let data = UIImagePNGRepresentation(process(image))
-//            try? data?.write(to: URL(fileURLWithPath: path), options: [.atomic])
-//        } else {
-//            delete()
-//        }
+        if let string = jsonString {
+            try? string.write(to: URL(fileURLWithPath: path), atomically: true, encoding: .utf8)
+        } else {
+            delete()
+        }
     }
     
-    func load() -> UIImage? {
+    func load() -> String? {
         guard let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return nil }
-        return UIImage(data: data)
+        return String(data: data, encoding: .utf8)
     }
 }

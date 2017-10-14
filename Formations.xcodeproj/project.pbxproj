@@ -134,7 +134,7 @@
 		E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44FDBC41F8491DE00B502EC /* Enums.swift */; };
 		E475F12F1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E475F12E1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift */; };
 		E487D8471F8E2D36004E7FAD /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487D8461F8E2D36004E7FAD /* FileType.swift */; };
-		E487D8491F8E305C004E7FAD /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487D8481F8E305C004E7FAD /* DataFile.swift */; };
+		E487D8491F8E305C004E7FAD /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487D8481F8E305C004E7FAD /* Json.swift */; };
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
 		E4A8A1C81F838D5600A689E4 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C71F838D5600A689E4 /* RealmModel.swift */; };
 		E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */; };
@@ -278,7 +278,7 @@
 		E44FDBC41F8491DE00B502EC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E475F12E1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplatePreInstalledData.swift; sourceTree = "<group>"; };
 		E487D8461F8E2D36004E7FAD /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
-		E487D8481F8E305C004E7FAD /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		E487D8481F8E305C004E7FAD /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
 		E4A8A1C71F838D5600A689E4 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		E4A8A1C91F83948000A689E4 /* IdentifierGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierGeneratable.swift; sourceTree = "<group>"; };
@@ -741,7 +741,7 @@
 				E4EE6B441F83A26100472F12 /* Fixture.swift */,
 				E487D8461F8E2D36004E7FAD /* FileType.swift */,
 				E411E4641F83203A003B397D /* Image.swift */,
-				E487D8481F8E305C004E7FAD /* DataFile.swift */,
+				E487D8481F8E305C004E7FAD /* Json.swift */,
 				E44FDBC41F8491DE00B502EC /* Enums.swift */,
 			);
 			path = Models;
@@ -989,7 +989,7 @@
 				E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */,
 				DB5EC9AA1F81269B0000B8E0 /* CircleImageButton.swift in Sources */,
 				CE5E59261F88E6CB0065E4A0 /* Array+Common.swift in Sources */,
-				E487D8491F8E305C004E7FAD /* DataFile.swift in Sources */,
+				E487D8491F8E305C004E7FAD /* Json.swift in Sources */,
 				CE5142951F810E4A0071E0B6 /* CoreGraphics+Common.swift in Sources */,
 				DB16273B1F7EAF6300A3D709 /* R.generated.swift in Sources */,
 				DB5EC9A11F80A3160000B8E0 /* PopupLeftDrawAnimation.swift in Sources */,
