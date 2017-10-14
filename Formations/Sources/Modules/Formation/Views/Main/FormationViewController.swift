@@ -12,7 +12,9 @@ class FormationViewController: UIViewController {
     
     private var team: Team!
     private var isDidFirstLayout = false
-    private var template: FormationTemplate?
+    private var formation: Formation!
+    
+    //private var template: FormationTemplate?
     
     class func create(for team: Team) -> UIViewController {
         return R.storyboard.formationViewController.instantiate(self) { vc in
@@ -23,6 +25,7 @@ class FormationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareNavigationBar()
+        prepareFormation()
         preparePositionBoardView()
     }
     
@@ -34,20 +37,27 @@ class FormationViewController: UIViewController {
         }
     }
     
+    private func prepareFormation() {
+        formation = Realm.Formation.load(teamID: team.id)
+    }
+    
     private func preparePositionBoardView() {
-        //positionBoard.isMovable = false
+        positionBoard.moved = { [unowned self] pin, index in
+            self.formation.updatePercentage(pin.percentage, at: index)
+        }
         positionBoard.tapped = { [unowned self] pin, index in
             self.didTapPlayer(at: index)
         }
     }
     
     private func reloadPositionBoardView() {
-        if let template = template {
-            positionBoard.pins = template.items.map { item -> PositionBoardPin in
-                let view = FormationPin.create()
-                view.set(position: item.position, player: nil)
-                return PositionBoardPin(view: view, percentage: item.percentage)
-            }
+        positionBoard.pins = formation.startingMembers.map { member -> PositionBoardPin in
+            let view = FormationPin.create(
+                name: member.displayingName,
+                borderColor: member.positionColor,
+                image: member.memberedPlayer?.thumbImage
+            )
+            return PositionBoardPin(view: view, percentage: member.percentage)
         }
         positionBoard.reloadData()
     }
@@ -58,7 +68,7 @@ class FormationViewController: UIViewController {
     
     @IBAction private func didTapFormationTemplateButton() {
         let selector = FormationTemplateSelectViewController.create(for: team) { [unowned self] selectedTemplate in
-            self.template = selectedTemplate
+            self.formation.updateTemplate(selectedTemplate)
             self.reloadPositionBoardView()
         }
         show(controller: selector)
@@ -66,9 +76,13 @@ class FormationViewController: UIViewController {
     
     private func didTapPlayer(at index: Int) {
         let selector = PlayerSelectViewController.create(for: team) { [unowned self] selectedPlayer in
-            if let view = self.positionBoard.pins[index].view as? FormationPin {
-                view.set(position: nil, player: selectedPlayer)
-            }
+            self.formation.updateStartingMember(to: selectedPlayer, at: index)
+            
+            let memberedPlayer = self.formation.startingMembers.get(index)!.memberedPlayer!
+            let view = self.positionBoard.pins[index].view as! FormationPin
+            
+            view.setImage(memberedPlayer.thumbImage)
+            view.setName(memberedPlayer.displayingName)
         }
         show(controller: selector)
     }
@@ -78,7 +92,7 @@ class FormationViewController: UIViewController {
     }
     
     private func show(controller: UIViewController) {
-        let width = UIScreen.main.bounds.width * 0.6
+        let width = UIScreen.main.bounds.width * 0.8
         var options = PopupOptions(.leftDraw(width: width))
         options.overlayIsBlur = true
         Popup.show(controller.withinNavigation, from: self, options: options)
