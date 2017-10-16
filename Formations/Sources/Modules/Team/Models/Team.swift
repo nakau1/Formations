@@ -34,8 +34,7 @@ class Team: RealmSwift.Object {
     let players = List<Player>()
     /// フォーメーション雛形
     let formationTemplates = List<FormationTemplate>()
-    /// フォーメーション
-    let formations = List<Formation>()
+    
     
     // MARK: - Images
     
@@ -119,12 +118,15 @@ class Team: RealmSwift.Object {
         }
     }
     
+    /// フォーメーション
+    var formation = Formation()
+    
     // MARK: - Specs
     
     override class func primaryKey() -> String? { return "id" }
     
     override class func ignoredProperties() -> [String] {
-        return ["emblemImage", "smallEmblemImage", "teamImage", "info"]
+        return ["emblemImage", "smallEmblemImage", "teamImage", "formation", "info"]
     }
     
     override var description: String {

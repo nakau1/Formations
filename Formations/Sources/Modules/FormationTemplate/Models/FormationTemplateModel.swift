@@ -2,16 +2,17 @@
 //  Formations
 //  Copyright 2017 yuichi.nakayasu All rights reserved.
 // =============================================================================
-import Foundation
+import UIKit
 
 class FormationTemplateModel: RealmModel<FormationTemplate>, IdentifierGeneratable {
     
     static let maxlenOfName = 15
     
     override func create() -> Entity {
+        let preinstall = FormationTemplatePreInstalledData()
         let ret = super.create()
         ret.id = generateIdentifier()
-        ret.items.append(objectsIn: createDefaultItems())
+        ret.items.append(objectsIn: preinstall.defaultItems)
         return ret
     }
     
@@ -27,42 +28,13 @@ class FormationTemplateModel: RealmModel<FormationTemplate>, IdentifierGeneratab
     
     private func saveImages(entities: [Entity]) {
         entities.forEach { entity in
-            let imageCreator = FormationTemplateImageCreator()
-            let image = imageCreator.create(template: entity)
-            Image.formationTemplate(id: entity.id).save(image)
+            Image.formationTemplate(id: entity.id).save(UIImage(template: entity))
         }
     }
     
     private func deleteImages(entities: [Entity]) {
         entities.forEach { entity in
             Image.delete(category: .formationTemplates, id: entity.id)
-        }
-    }
-}
-
-// MARK: - FormationTemplateItem
-extension FormationTemplateModel {
-    
-    func createDefaultItems() -> [FormationTemplateItem] {
-        let data: [(percentage: CGPercentage, position: Position)] = [
-            (percentage: CGPercentage(0.358, 0.041), position: .forward),
-            (percentage: CGPercentage(0.632, 0.041), position: .forward),
-            (percentage: CGPercentage(0.500, 0.242), position: .midfielder),
-            (percentage: CGPercentage(0.246, 0.373), position: .midfielder),
-            (percentage: CGPercentage(0.773, 0.373), position: .midfielder),
-            (percentage: CGPercentage(0.500, 0.525), position: .midfielder),
-            (percentage: CGPercentage(0.069, 0.568), position: .defender),
-            (percentage: CGPercentage(0.934, 0.568), position: .defender),
-            (percentage: CGPercentage(0.318, 0.732), position: .defender),
-            (percentage: CGPercentage(0.678, 0.732), position: .defender),
-            (percentage: CGPercentage(0.500, 0.920), position: .goalKeeper),
-        ]
-        return data.enumerated().map { i, datum -> FormationTemplateItem in
-            let item = FormationTemplateItem()
-            item.percentage = datum.percentage
-            item.position   = datum.position
-            item.number     = i
-            return item
         }
     }
 }
@@ -118,4 +90,29 @@ extension Notification.Name {
 
 extension Realm {
     static let FormationTemplate = FormationTemplateModel()
+}
+
+// MARK: - Image
+
+extension UIImage {
+    
+    convenience init(template: FormationTemplate) {
+        let imageSize = CGSize(600, 480)
+        let pinWidth = 32.f
+        let baseImage = R.image.formationTemplateBg()!.scaled(to: imageSize)
+        let pinsImage = UIImage.imageFromContext(imageSize) { context in
+            let maxPoint = CGPoint(imageSize.width - pinWidth, imageSize.height - pinWidth)
+            template.items.forEach { item in
+                let center = (maxPoint * item.percentage) + CGPoint(pinWidth / 2, pinWidth / 2)
+                let size = CGSize(square: pinWidth)
+                let rect = CGRect(origin: center, size: size)
+                
+                context.saveGState()
+                context.setFillColor(item.position.backgroundColor.cgColor)
+                context.fillEllipse(in: rect)
+                context.restoreGState()
+            }
+        }
+        self.init(cgImage: baseImage.synthesized(image: pinsImage).cgImage!)
+    }
 }
