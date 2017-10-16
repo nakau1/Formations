@@ -41,28 +41,4 @@ class FormationPin: UIView {
     func setBorderColor(_ borderColor: UIColor?) {
         faceImageView.layer.borderColor = (borderColor ?? .gray).cgColor
     }
-    
-    /*
-    func set(position: Position?, player: Player?) {
-        faceImageView.isUserInteractionEnabled = true
-        faceImageView.layer.cornerRadius = faceImageView.bounds.width / 2
-        if let position = position {
-            faceImageView.layer.borderColor = position.backgroundColor.cgColor
-        }
-        faceImageView.layer.borderWidth = 2
-        faceImageView.clipsToBounds = true
-        
-        if let image = player?.loadThumbImage(force: true).thumbImage {
-            faceImageView.image = image
-        } else {
-            faceImageView.image = UIImage.filled(color: UIColor(white: 0.5, alpha: 0.5), size: CGSize(square: 80))
-        }
-        
-        if let name = player?.name, let uniformNumber = player?.uniformNumber {
-            nameLabel.text = "\(uniformNumber) \(name)"
-        } else {
-            nameLabel.text = ""
-        }
-    }
-     */
 }

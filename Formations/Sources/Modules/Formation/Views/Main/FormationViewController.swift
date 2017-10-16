@@ -14,8 +14,6 @@ class FormationViewController: UIViewController {
     private var isDidFirstLayout = false
     private var formation: Formation!
     
-    //private var template: FormationTemplate?
-    
     class func create(for team: Team) -> UIViewController {
         return R.storyboard.formationViewController.instantiate(self) { vc in
             vc.team = team
@@ -35,6 +33,11 @@ class FormationViewController: UIViewController {
             reloadPositionBoardView()
             isDidFirstLayout = true
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        Realm.Formation.save(entity: self.formation, toTeamID: team.id)
     }
     
     private func prepareFormation() {
@@ -70,6 +73,7 @@ class FormationViewController: UIViewController {
         let selector = FormationTemplateSelectViewController.create(for: team) { [unowned self] selectedTemplate in
             self.formation.updateTemplate(selectedTemplate)
             self.reloadPositionBoardView()
+            Realm.Formation.save(entity: self.formation, toTeamID: self.team.id)
         }
         show(controller: selector)
     }
@@ -83,6 +87,7 @@ class FormationViewController: UIViewController {
             
             view.setImage(memberedPlayer.thumbImage)
             view.setName(memberedPlayer.displayingName)
+            Realm.Formation.save(entity: self.formation, toTeamID: self.team.id)
         }
         show(controller: selector)
     }
