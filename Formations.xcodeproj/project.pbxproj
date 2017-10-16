@@ -133,6 +133,8 @@
 		E44DA28B1F85E5D70022460B /* UIImage+CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DA28A1F85E5D70022460B /* UIImage+CircleButton.swift */; };
 		E44FDBC51F8491DE00B502EC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44FDBC41F8491DE00B502EC /* Enums.swift */; };
 		E475F12F1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E475F12E1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift */; };
+		E47C47BD1F945DC300C0547E /* FormationMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47C47BC1F945DC300C0547E /* FormationMenuViewController.swift */; };
+		E47C47BF1F945DCC00C0547E /* FormationMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47C47BE1F945DCC00C0547E /* FormationMenuViewController.storyboard */; };
 		E487D8471F8E2D36004E7FAD /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487D8461F8E2D36004E7FAD /* FileType.swift */; };
 		E487D8491F8E305C004E7FAD /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487D8481F8E305C004E7FAD /* Json.swift */; };
 		E4A8A1C61F83740700A689E4 /* UIImage+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */; };
@@ -277,6 +279,8 @@
 		E44DA28A1F85E5D70022460B /* UIImage+CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CircleButton.swift"; sourceTree = "<group>"; };
 		E44FDBC41F8491DE00B502EC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E475F12E1F8DED4C0006027E /* FormationTemplatePreInstalledData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTemplatePreInstalledData.swift; sourceTree = "<group>"; };
+		E47C47BC1F945DC300C0547E /* FormationMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationMenuViewController.swift; sourceTree = "<group>"; };
+		E47C47BE1F945DCC00C0547E /* FormationMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormationMenuViewController.storyboard; sourceTree = "<group>"; };
 		E487D8461F8E2D36004E7FAD /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
 		E487D8481F8E305C004E7FAD /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		E4A8A1C51F83740700A689E4 /* UIImage+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Process.swift"; sourceTree = "<group>"; };
@@ -475,8 +479,10 @@
 			isa = PBXGroup;
 			children = (
 				CEF99B581F8105730079CDC9 /* FormationViewController.swift */,
+				E47C47BC1F945DC300C0547E /* FormationMenuViewController.swift */,
 				E4AB75901F8CB7000099BE59 /* FormationPin.swift */,
 				CEF99B571F8105730079CDC9 /* FormationViewController.storyboard */,
+				E47C47BE1F945DCC00C0547E /* FormationMenuViewController.storyboard */,
 				E4AB75921F8CB7130099BE59 /* FormationPin.xib */,
 			);
 			path = Main;
@@ -843,6 +849,7 @@
 				DBF79B4F1F83C9A600FCB2BE /* player-sample4-2.jpg in Resources */,
 				DBF79B591F83C9A600FCB2BE /* player-sample9-2.jpg in Resources */,
 				DBF79B3F1F83C9A600FCB2BE /* player-sample21-2.jpg in Resources */,
+				E47C47BF1F945DCC00C0547E /* FormationMenuViewController.storyboard in Resources */,
 				DBF79B581F83C9A600FCB2BE /* player-sample9-1.jpg in Resources */,
 				DBF79B4B1F83C9A600FCB2BE /* player-sample35-2.jpg in Resources */,
 				DBF79B351F83C9A600FCB2BE /* player-sample14-2.jpg in Resources */,
@@ -1008,6 +1015,7 @@
 				DB36AB0F1F7FDD3E00EEADD5 /* Popup.swift in Sources */,
 				DB36AB131F7FDDA200EEADD5 /* PopupZoomAnimation.swift in Sources */,
 				E4A8A1CA1F83948000A689E4 /* IdentifierGeneratable.swift in Sources */,
+				E47C47BD1F945DC300C0547E /* FormationMenuViewController.swift in Sources */,
 				E4069CB81F871F13002996F5 /* AlertDialog.swift in Sources */,
 				CEF99B301F8102220079CDC9 /* TeamModel.swift in Sources */,
 				CEF99B281F80F2890079CDC9 /* TextPicker.swift in Sources */,

@@ -37,11 +37,11 @@ class FormationViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        Realm.Formation.save(entity: self.formation, toTeamID: team.id)
+        Realm.Formation.save(entity: formation, toTeamID: team.id)
     }
     
     private func prepareFormation() {
-        formation = Realm.Formation.load(teamID: team.id)
+       formation = Realm.Formation.load(teamID: team.id)
     }
     
     private func preparePositionBoardView() {
@@ -66,16 +66,15 @@ class FormationViewController: UIViewController {
     }
     
     @IBAction private func didTapCloseButton() {
-        self.dismiss()
+        dismiss()
     }
     
-    @IBAction private func didTapFormationTemplateButton() {
-        let selector = FormationTemplateSelectViewController.create(for: team) { [unowned self] selectedTemplate in
-            self.formation.updateTemplate(selectedTemplate)
-            self.reloadPositionBoardView()
-            Realm.Formation.save(entity: self.formation, toTeamID: self.team.id)
-        }
-        show(controller: selector)
+    @IBAction private func didTapMenuButton() {
+        showRight(controller: FormationMenuViewController.create(delegate: self))
+    }
+    
+    @IBAction private func didTapShareButton() {
+        
     }
     
     private func didTapPlayer(at index: Int) {
@@ -89,16 +88,25 @@ class FormationViewController: UIViewController {
             view.setName(memberedPlayer.displayingName)
             Realm.Formation.save(entity: self.formation, toTeamID: self.team.id)
         }
-        show(controller: selector)
+        showLeft(controller: selector)
     }
     
     @IBAction private func didTapSaveButton() {
         self.dismiss()
     }
     
-    private func show(controller: UIViewController) {
+    private func showLeft(controller: UIViewController) {
         let width = UIScreen.main.bounds.width * 0.8
-        var options = PopupOptions(.leftDraw(width: width))
+        show(controller: controller, animation: .leftDraw(width: width))
+    }
+    
+    private func showRight(controller: UIViewController) {
+        let width = UIScreen.main.bounds.width * 0.8
+        show(controller: controller, animation: .rightDraw(width: width))
+    }
+    
+    private func show(controller: UIViewController, animation: PopupAnimation) {
+        var options = PopupOptions(animation)
         options.overlayIsBlur = true
         Popup.show(controller.withinNavigation, from: self, options: options)
     }
@@ -109,5 +117,29 @@ class FormationViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+}
+
+extension FormationViewController: FormationMenuViewControllerDelegate {
+    
+    func formationMenuDidSelectFormationText() {
+        
+    }
+    
+    func formationMenuDidSelectFormationTemplate() {
+        let selector = FormationTemplateSelectViewController.create(for: team) { [unowned self] selectedTemplate in
+            self.formation.updateTemplate(selectedTemplate)
+            self.reloadPositionBoardView()
+            Realm.Formation.save(entity: self.formation, toTeamID: self.team.id)
+        }
+        showLeft(controller: selector)
+    }
+    
+    func formationMenuDidSelectSubstituteNumber() {
+        
+    }
+    
+    func formationMenuDidSelectSkin() {
+        
     }
 }
